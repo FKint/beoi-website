@@ -3,7 +3,7 @@
 {% block content%}
 <h2>Halve finales<img src="/static/pictures/2010/oi2010-finals-sheet.jpg" width="350" height="231" class="withframe float-right" /></h2>
 
-<p>De halve finales van de Belgische Olympiades in de Informatica 2012 vonden plaats op woensdag 1 februari 2012 in de verschillende <a href="{% url semifinal-places LANGUAGE_CODE %}">regionale centra</a> in het land. {# De wedstrijd telde XXX deelnemers waarvan er XXX werden geselecteerd voor de finale. #} </p>
+<p>De halve finales van de Belgische Olympiades in de Informatica 2012 vonden plaats op woensdag 1 februari 2012 in de verschillende <a href="{% url semifinal-places LANGUAGE_CODE %}">regionale centra</a> in het land. De wedstrijd telde 137 deelnemers waarvan er 51 werden geselecteerd voor de finale. </p>
 
 <p>De vragen van de halve finale zijn <a href="/static/downloads/OI-2012-nl-halve-finale.pdf">hier te downloaden</a>. {# De <a href="/static/downloads/OI-2011-demi-finale-sol.pdf">oplossingen</a> zijn ook beschikbaar. #} </p>
 
@@ -11,38 +11,24 @@
 
 <p>De resultaten zullen hier binnenkort beschikbaar zijn.</p>
 
-{#<p>De proef staat op 100 punten, maar omdat enkele vragen <em>bonuspunten</em> opleverden was het mogelijk voor de besten om meer dan 100 punten te halen.</p>#}
+<p>De 4 beste scores zijn:</p>
 
+<ol>
+	<li><strong>Lambein Xavier</strong> - Athénée Royal de Rixensart - 6e secondaire - <em>91pts</em></li>
+	<li><strong>Maskens Oswald</strong> - Sint-Jan-Brechmanscollege, Brussel - 6e secondaire - <em>87pts</em></li>
+	<li><strong>Scheers Jan</strong> - Sint-Albertuscollege, Heverlee - 6e secondaire - <em>87pts</em></li>
+	<li><strong>Vandecasteele Hannes</strong> - Onze-Lieve-Vrouwecollege, Oostende - 5e secondaire - <em>87pts</em></li></ol>		
 
-{#<p>De 5 beste scores zijn:</p>#}
-
-{#<ol>#}
-{#	<li><strong>Legat Benoît</strong> - Lycée Martin V, Louvain-la-Neuve - <em>112pt</em></li>#}
-{#	<li><strong>Oostvogels Jonathan</strong> - Vita et Pax college, Schoten - <em>101pt</em></li>#}
-{#	<li><strong>Meynaert Nathan</strong> - Collège Saint Barthélemy, Liège - <em>101pt</em></li>#}
-{#	<li><strong>Jungers Thomas</strong> - Collège Notre-Dame du Bonlieu, Virton - <em>94pt</em></li>#}
-{#	<li><strong>Mezhoud Sami</strong> - Athénée Royal Jean Absil, Bruxelles - <em>94pt</em></li>#}
-{#</ol>		#}
+<p>De proef staat op 100 punten.</p>
 
 	
-{#<h3>Statistieken</h3>#}
+<h3>Statistieken</h3>
 	
-	
-{#<p>#}
-{#	<img src="http://chart.apis.google.com/chart?chf=c,ls,86.667,FFFFFF,0.1,FBFBFB,0.1&chxl=0:|50%25|100%25|||0%25&chxp=0,50,100,75,25,0&chxr=0,0,112&chxs=0,676767,9,0.167,lt,676767&chxtc=0,5&chxt=y&chbh=2,1,0&chs=337x193&cht=bvs&chco=A2C180,AA0033&chds=0,112,0,112&chd=t:112,101,101,94,94,93,92,92,89,82,82,81,80,76,76,74,73,72,72,70,70,69,69,69,68,67,67,65,63,62,60,59,59,59,57,57,57,57,56,55,54,54,53,53,52,52,52,52,51|0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,50,49,46,46,46,43,42,42,41,41,39,38,36,36,33,33,32,30,30,29,28,26,25,24,24,23,21,21,20,19,19,19,19,18,18,18,17,17,15,15,15,14,13,12,12,12,9,9,6,3,0,0,0,0,0&chdl=Finalisten|Niet-finalisten&chdlp=b&chg=-1,-1,0,0&chma=0,0,0,6&chm=h,FFCC33,1,0.402:5,1&chtt=Scores+in+de+categorie+%22secundair%22+(in+aflopende+volgorde)&chts=676767,10.167" width="337" height="193" alt="Scores in de categorie "secundair" (in aflopende volgorde)" />#}
-	
-{#</p>	#}
+<p><img src="http://chart.apis.google.com/chart?chf=c,ls,86.667,FFFFFF,0.1,FBFBFB,0.1&chxl=0:|50%25|100%25|||0%25&chxp=0,50,100,75,25,0&chxs=0,676767,9,0.167,lt,676767&chxtc=0,5&chxt=y&chbh=2,1,0&chs=450x193&cht=bvs&chco=A2C180,AA0033&chd=t:91,87,87,87,84,84,83,83,83,83,83,81,80,80,80,79,77,76,76,76,74,74,74,73,73,73,71,71,71,71,71,69,69,69,69,69,69,69,67,66,64,64,64,63,63,63,61,61,60,60,60|0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,57,57,57,57,56,56,56,55,55,55,54,54,54,54,54,53,51,51,50,50,49,49,48,48,47,47,46,46,45,45,44,43,43,43,41,41,41,39,39,39,39,38,38,37,36,36,35,34,34,34,33,32,32,32,32,32,31,31,31,31,29,29,29,28,28,27,26,26,26,26,25,24,24,24,24,23,22,22,22,22,22,19,18,12,11&chdl=Finalisten|Niet-finalisten&chdlp=b&chg=-1,-1,0,0&chma=0,0,0,6&chm=h,FFCC33,1,0.504:5,1&chtt=Scores+(in+aflopende+volgorde)&chts=676767,10.167" width="450" height="193" alt="Scores (in aflopende volgorde)" /></p>
 
-{#<p>#}
-{#	<img src="http://chart.apis.google.com/chart?chf=c,ls,0,FAFAFA,0.1,FFFFFF,0.1&chxl=0:|0|10|20|30|40|50|1:|7e+|6e+|5e+|4e+|3e+|&chxp=0,0,10,20,30,40,50&chxr=0,0,50&chxs=0,676767,11.5,0,t,676767&chxtc=0,5&chxt=x,y&chbh=a,3,0&chs=337x174&cht=bhs&chco=008000,80C65A,AA0033&chds=0,50,0,50,0,50&chd=t:0,3,1,6,0|0,5,9,24,1|1,12,21,20,2&chdl=TOP+10|Finalisten|Niet-finalisten&chdlp=b&chtt=Verdeling+van+de+deelnemerscategorie+secundair+volgens+leerjaar&chts=676767,9.8" width="337" height="174" alt="Verdeling van de deelnemerscategorie secundair volgens leerjaar" />#}
-	
-{#</p>#}
+<p><img src="http://chart.apis.google.com/chart?chf=c,ls,0,FAFAFA,0.09,FFFFFF,0.09&chxl=0:|0|10|20|30|40|50|1:|7e+|6e+|5e+|4e+|3e+|&chxp=0,0,10,20,30,40,50&chxr=0,0,55&chxs=0,676767,11.5,0,t,676767&chxtc=0,5&chxt=x,y&chbh=a,3,0&chs=337x174&cht=bhs&chco=008000,80C65A,AA0033&chds=0,55,0,55,0,55&chd=t:0,0,4,6,0|1,2,15,22,1|4,26,30,26,0&chdl=TOP+10|Finalisten|Niet-finalisten&chdlp=b&chtt=Verdeling+van+de+deelnemerscategorie+secundair+volgens+leerjaar&chts=676767,9.8" width="337" height="174" alt="Verdeling van de deelnemerscategorie secundair volgens leerjaar" /></p>
 
-{#<p>#}
-{#	<img src="http://chart.apis.google.com/chart?chf=c,ls,90,FFFFFF,0.1,FBFBFB,0.1&chxl=1:|Q1|Q2|Q3|Q4|Q5|Q6|Q7|Q8|Q9&chxs=0,676767,11.5,-0.333,lt,676767|1,676767,11.5,0,lt,676767&chxtc=0,5|1,0&chxt=y,x&chbh=a,1,7&chs=680x200&cht=bvg&chco=3399CC,FF9900&chd=t:23.97,62.54,39.52,48.33,48,30.16,37.75,62.14,0|26.19,57.37,46.26,42.86,48.44,35.15,53.06,84.52,23.93&chdl=secundair|hoger&chtt=Gemiddelde+(%25)+behaald+op+elke+vraag&chts=676767,10" width="680" height="200" alt="Gemiddelde (%) behaald op elke vraag" />#}
-		
-{#</p>#}
-
+<p><img src="http://chart.apis.google.com/chart?chf=c,ls,90,FFFFFF,0.1,FBFBFB,0.1&chxl=1:|Q1|Q2|Q3|Q4|Q5|Q6|Q7|Q8&chxs=0,676767,11.5,-0.333,lt,676767|1,676767,11.5,0,lt,676767&chxtc=0,5|1,0&chxt=y,x&chbh=a,1,7&chs=400x193&cht=bvg&chco=3399CC&chd=t:88.321,81.022,58.029,41.971,67.336,65.328,65.937,10.219&chtt=Gemiddelde+(%25)+behaald+op+elke+vraag&chts=676767,9.667" width="400" height="193" alt="Moyenne (%) obtenue à chaque question" /></p>
 
 
 {% endblock %}
