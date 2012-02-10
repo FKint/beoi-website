@@ -1,0 +1,9 @@
+Bonjour,
+Voici vos résultats à la demi-finale de l'Olympiade belge d'Informatique 2012 qui s'est déroulée le 1e février. Vous avez obtenu un score de {{SCORE}}, ce qui vous situe à la {{POSITION}}e position sur 137 participants.
+
+Malheureusement, ce score n'est pas suffisant pour vous permettre d'accéder à la finale. Nous espérons cependant que, si vous n'êtes pas en dernière année, vous retenterez votre chance l'an prochain.
+
+Pour ceux qui le désire, une formation gratuite à l'algorithmique et à la programmaton est organisée à Namur durant la semaine du carnaval. Vous trouverez toutes les infos pratiques sur http://be-oi.be/fr/training.
+
+Cordialement, 
+L'équipe beOI

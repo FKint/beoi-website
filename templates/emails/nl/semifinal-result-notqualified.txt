@@ -1,0 +1,10 @@
+Hallo,
+
+De halve finale van de Belgische Olympiade in de Informatica is afgelopen en de resultaten zijn bekend. Je behaalde een score van {{SCORE}}. Je behaalde de {{POSITION}}e plaats op 137 deelnemers.
+
+Helaas ben je niet geselecteerd om deel te nemen aan de finale. Als je nog niet in je laatste jaar zit, hopen we echter je volgend jaar opnieuw te kunnen verwelkomen!
+
+Je krijgt apart nog een email met een uitnodiging voor een korte cursus informatica die dit jaar aan de VUB in Brussel zal doorgaan. Deze cursus kan je goed voorbereiden op de finale, of op deelname in de volgende jaren.
+
+Hoogachtend,
+de Be-OI organisatoren.
