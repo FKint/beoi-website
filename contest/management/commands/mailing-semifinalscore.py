@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import activate, ugettext_lazy as _
 from django.template.loader import get_template
 from django.core.mail import send_mail
 from django.template import RequestContext, Context
@@ -26,12 +26,16 @@ class Command(BaseCommand):
 			lang = result.contestant.language
 			qualified = result.qualified
 			
-			title = _("beOI - Semifinal results")
+			if lang == LANG_FR :
+				activate("fr")
+				if qualified: tpl = "emails/fr/semifinal-result-qualified.txt"
+				else:  tpl = "emails/fr/semifinal-result-notqualified.txt"
+			if lang == LANG_NL:
+				activate("nl")
+				if qualified: tpl = "emails/nl/semifinal-result-qualified.txt"
+				else: tpl = "emails/nl/semifinal-result-notqualified.txt"
 			
-			if lang == LANG_FR and qualified: tpl = "emails/fr/semifinal-result-qualified.txt"
-			if lang == LANG_FR and not qualified: tpl = "emails/fr/semifinal-result-notqualified.txt"
-			if lang == LANG_NL and qualified: tpl = "emails/nl/semifinal-result-qualified.txt"
-			if lang == LANG_NL and not qualified: tpl = "emails/nl/semifinal-result-notqualified.txt"
+			title = _("beOI - Semifinal results")
 			
 			score = result.score
 			position = 1 + ResultSemifinal.objects.filter(
