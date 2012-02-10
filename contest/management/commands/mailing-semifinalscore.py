@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.loader import get_template
 from django.core.mail import send_mail
 from django.template import RequestContext, Context
+from optparse import make_option
 
 from beoi.contest.models import ResultSemifinal, LANG_FR, LANG_NL
 from beoi.core import contest_year
@@ -11,17 +12,14 @@ from beoi.core import contest_year
 import time
 
 class Command(BaseCommand):
-    args = '[--send]'
-    help = 'Give the API token for the given user'
-
-    def handle(self, *args, **options):
+	help = 'Send the email (fake send unless --send is given)'
+	option_list = BaseCommand.option_list + (
+	make_option('--send', action='store_true', dest='send', default=False,
+        help='Actually send the emails'),	)
 	
-		if len(args) > 1 : 
-			raise CommandError('Invalid number of arguments')
-		elif len(args) == 1 and args[0] != "--send":
-			raise CommandError('Invalid argument')
+	def handle(self, *args, **options):
 		
-		fake = len(args) == 0 
+		fake = (not options["send"])
 		queryset = ResultSemifinal.objects.select_related("contestant").filter(contestant__contest_year=contest_year())
 		
 		for result in queryset:
