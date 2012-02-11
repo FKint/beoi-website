@@ -20,7 +20,14 @@
 	<li><strong>Vandecasteele Hannes</strong> - Onze-Lieve-Vrouwecollege, Oostende - 5e secondaire - <em>87pts</em></li>
 </ol>		
 
-<p>Les autres participants ont reçu leur score par e-mail. Le score maximal était de 100.</p>
+<p>Le score maximal était de 100, chaque semi-finaliste a reçu son score et classement par e-mail. Tous les sélectionnés pour la finale sont repris par ordre alphabétique ci-dessous.</p>
+
+<dl>
+{% for result in object_list %}
+	<dt>{{result.contestant.surname}} {{result.contestant.firstname}}</dt>
+	<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e secondaire &mdash; {{result.contestant.school.city}}</p></dd>
+{% endfor %}
+</dl>
 
 
 <h3>Statistiques</h3>

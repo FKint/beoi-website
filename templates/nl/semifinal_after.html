@@ -19,8 +19,15 @@
 	<li><strong>Scheers Jan</strong> - Sint-Albertuscollege, Heverlee - 6e secondaire - <em>87pts</em></li>
 	<li><strong>Vandecasteele Hannes</strong> - Onze-Lieve-Vrouwecollege, Oostende - 5e secondaire - <em>87pts</em></li></ol>		
 
-<p>De proef staat op 100 punten.</p>
+<p>De proef staat op 100 punten. </p>
+<p> Alle geselecteerden voor de finale staan hieronder, in alfabetische volgorde:</p>
 
+<dl>
+{% for result in object_list %}
+	<dt>{{result.contestant.surname}} {{result.contestant.firstname}}</dt>
+	<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e secundair &mdash; {{result.contestant.school.city}}</p></dd>
+{% endfor %}
+</dl>
 	
 <h3>Statistieken</h3>
 	

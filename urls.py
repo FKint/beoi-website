@@ -4,6 +4,7 @@ admin.autodiscover()
 from os import path
 from django.conf.urls.defaults import patterns, include, url
 
+from beoi.core import contest_year
 from beoi.contest.models import *
 from beoi.news.feed import RssNews
 from beoi.news.views import news
@@ -26,14 +27,14 @@ multilang_patterns = patterns('',
 	url(r'^registration/confirm/(?P<object_id>\d+)$', list_detail.object_detail, {	'template_name': 'registration_confirm.html', 
 		"queryset": SemifinalCenter.objects.filter(active=True) }, "registration-confirm"),
 
-	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_after.html'}, "semifinal"),
+	# url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
 	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
 		"queryset": SemifinalCenter.objects.filter(active=True)},"semifinal-places"),
-	#url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_results.html',
-	#	"queryset": ResultSemifinal.objects.filter(qualified=True,contestant__contest_year=2012)
-	#										.order_by("contestant__surname","contestant__firstname")
-
+	url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_after.html',
+		"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
+											.filter(qualified=True,contestant__contest_year=contest_year())
+											.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 			
 	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
