@@ -27,12 +27,12 @@ class Command(BaseCommand):
 			
 			if lang == LANG_FR :
 				activate("fr")
-				tpl = "emails/fr/semifinal-finalreminder.txt"
+				tpl = "emails/fr/final-reminder.txt"
 			if lang == LANG_NL:
 				activate("nl")
-				tpl = "emails/nl/semifinal-finalreminder.txt"
+				tpl = "emails/nl/final-reminder.txt"
 			
-			title = "beOI - " + _("Finals")
+			title = "beOI - %s" % _("Finals")
 			
 			mail_template = get_template(tpl)
 			context = Context({})
