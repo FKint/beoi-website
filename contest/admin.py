@@ -74,6 +74,30 @@ class ResultSemifinalAdmin(admin.ModelAdmin):
 	list_display = ('contestant', 'score', 'qualified')
 	search_fields = ['contestant']
 	save_on_top = True
+	list_filter = ("qualified", "contestant__contest_year" )
+	actions = ['export_as_csv']
+	
+	def export_as_csv(self, request, queryset):
+		response = HttpResponse(mimetype='text/csv')
+		response['Content-Disposition'] = 'attachment; filename=finalists.csv'
+
+		def lang2txt(lang):
+			if lang == LANG_FR: return "fr"
+			else: return "nl"
+
+		csv_data = map(lambda result: {
+			'firstname': result.contestant.firstname, 
+			'lastname': result.contestant.surname, 
+			'lang': lang2txt(result.contestant.language), 
+		}, queryset.order_by("contestant__surname","contestant__firstname").select_related("contestant"))
+
+		t = loader.get_template('finalists.csv')
+		c = Context({
+			'data': csv_data,
+		})
+		response.write(t.render(c))
+		return response
+	export_as_csv.short_description = _("Export as CSV")
 
 class ResultFinalAdmin(admin.ModelAdmin):
 

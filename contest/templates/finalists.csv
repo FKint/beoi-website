@@ -1,0 +1,3 @@
+Lastname,Firstname,Lang
+{% for row in data %}{{ row.lastname }},{{ row.firstname }},{{ row.lang }}
+{% endfor %}
