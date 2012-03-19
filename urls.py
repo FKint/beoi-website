@@ -37,12 +37,11 @@ multilang_patterns = patterns('',
 											.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 			
-	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
+	#url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
 	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
-	#url(r'^final$', list_detail.object_list, { 'template_name': 'final.html',
-	#	"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
-	#		.filter(contestant__contest_year=2011).order_by("rank")	},"final"),
-	#	},"semifinal"),
+	url(r'^final$', list_detail.object_list, { 'template_name': 'final_after.html',
+		"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
+			.filter(contestant__contest_year=2012).order_by("rank")	}, "final"),
 
 	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
 	

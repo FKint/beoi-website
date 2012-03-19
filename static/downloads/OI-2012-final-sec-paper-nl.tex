@@ -1,0 +1,109 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[dutch, french]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz,pgf,pgfplots}
+\usepackage{times}
+\usepackage{multido}
+\usepackage{array}
+\usepackage{color}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{graphicx}
+\usepackage{wasysym}
+\usepackage{listings}
+\usepackage{wrapfig}
+%\usepackage{chess}
+\usepackage{eurosym}
+\usepackage{oldstyle}
+\usepackage{enumerate}
+\usepackage{ifthen}
+\usepackage{numprint}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+\usetikzlibrary{arrows,decorations.pathreplacing,calc,patterns}
+
+\lstset{basicstyle=\tt\small,frame=tblr,xleftmargin=4.9mm,xrightmargin=2mm,tabsize=4,framesep=5mm}
+\lstset{morekeywords={Input,Output,while,return,for,to,step,not,if,else,and,or,true,false,foreach,function,print,true,false}}
+\lstset{morecomment=[l]{//}}
+
+\lstMakeShortInline[basicstyle=\tt\small,mathescape]{°}
+
+\setlength\textheight{24cm}
+\setlength\topmargin{-15mm}
+\setlength\parindent{0.3cm}
+\setlength\parskip{0.3cm}
+\setlength\textwidth{18.5cm}
+\setlength\headwidth{18.9cm}
+\setlength\oddsidemargin{-1.5cm}
+\setlength\evensidemargin{-1cm}
+%\setlength\headheight{1.5cm}
+\setlength\parindent{5mm}
+
+\newcommand{\question}[2]{\vspace{3mm} \noindent \shadowbox{\setlength{\fboxrule}{0mm} \framebox[\textwidth]{\begin{minipage}[t]{0.95\textwidth} {\bf #2} \\[3mm] \color[gray]{0.3} \multido{\i=0+1}{#1}{\vspace{3mm} \color[gray]{0.7} \dotfill \\} \vspace{-8mm} \end{minipage}}}\smallskip}
+
+
+% Entête et pied de page
+\pagestyle{fancy}
+
+\fancyhead[L]{\begin{tabular}{|p{22mm}}\hline{\large\rule[-13mm]{0mm}{18mm} {\bf be-OI 2012}}\\\hline\end{tabular}}
+\fancyhead[C]{\begin{tabular}{p{13.5cm}c}\hline\small \rule[-13mm]{0mm}{18mm} Woensdag 14 maart 2012 \hfill{} \ &\\\hline\end{tabular}\begin{tikzpicture}[overlay,xshift=-5cm,yshift=1mm]\node[rotate=10,scale=4] at (4.5,0) {\oldstyle{\idnum}};\end{tikzpicture}}
+\fancyhead[R]{\hspace{30mm}\vline\begin{tabular}{p{50mm}|}\hline{\small \rule[-13mm]{0mm}{18mm} \bf Gereserveerd \hfill}\\\hline\end{tabular}}
+
+\fancyfoot[L]{Belgische Olympiade in de Informatica 2012 -- \textbf{Vragenlijst finale}}
+\fancyfoot[C]{}
+\fancyfoot[R]{{\thepage/\pageref{LastPage}}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\appendix}{\fancyfoot[C]{Annexes}}
+
+
+
+
+\newcommand{\pageheader}[3]{\clearpage \setlength\headheight{-0.5cm}\thispagestyle{empty} \noindent {\renewcommand{\arraystretch}{2}
+\begin{tabular}{|p{3.5cm}|m{12cm}|p{2cm}|}
+\hline
+\begin{minipage}{3.5cm}\center
+{\setlength{\fboxrule}{1mm} \fbox{\LARGE \bf \ be-OI 2012\ }} \\
+\vspace{3mm} {\bf #1} \\
+\ \\
+#2
+\end{minipage} & \rule[-1.5cm]{0mm}{3.5cm} \begin{minipage}{12cm}
+\begin{center} \bf Gegevens invullen in HOOFDLETTERS en LEESBAAR aub \end{center}
+VOORNAAM : \dotfill \vspace{2mm} \\
+NAAM : \dotfill \vspace{2mm} \\
+SCHOOL : \dotfill \vspace{4mm}
+\end{minipage} & \begin{minipage}{2cm}\center
+\vspace{2.5cm} \bf Gereserveerd
+\end{minipage} \\
+\hline
+\end{tabular}}
+
+\vspace{2mm} \hspace{-5mm} \framebox[18.8cm]{\rule[-2mm]{0cm}{7mm} #3}
+
+\vspace{5mm}}
+
+
+
+\renewcommand{\div}{\textrm{~~div~~}}
+\newcommand{\idnum}{001}
+
+
+\begin{document}
+
+\clearpage
+\multido{\i=1+1}{1}{
+	\renewcommand{\idnum}{0\ifthenelse{\i<10}{0}{}\i}
+%	\renewcommand{\idnum}{\phantom{101}}
+	\setcounter{page}{1}
+	\clearpage
+	\include{Finale-NL-core}
+}
+
+\end{document}
