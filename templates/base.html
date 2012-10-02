@@ -63,8 +63,29 @@ $(document).ready(function() {
 		</div> <!-- /main -->
       
 		<div id="sidebar"> <!-- sidebar -->
-			
+
 			<div class="sidemenu">
+			
+
+{% if LANGUAGE_CODE == "fr" %}
+<!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup" >
+<form action="http://be-oi.us6.list-manage.com/subscribe/post?u=4a51a9ab354aa26ba87f9a75f&amp;id=3236c060b0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="margin:0;width:235px;">
+	<label for="mce-EMAIL">Entrez votre e-mail pour recevoir un message lorsque les inscriptions beOI 2013 seront ouvertes.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required style="width:220px;">
+	<div class="clear"><input type="submit" value="S'inscrire" name="S'inscrire" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+{% endif %}
+
+<!--End mc_embed_signup-->
+
 				<h3>{% trans "Contest" %}</h3>
             	<ul>
 					<li><a href="{% url home LANGUAGE_CODE %}">{% trans "News" %}</a></li>
