@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-11 00:11+0100\n"
+"POT-Creation-Date: 2012-10-02 22:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr "Nom"
 msgid "Mark selected contestants as manual checked"
 msgstr "Marquer les participants sélectionnés comme vérifiés manuellement"
 
-#: contest/admin.py:69
+#: contest/admin.py:69 contest/admin.py:100
 msgid "Export as CSV"
 msgstr ""
 
@@ -304,7 +304,7 @@ msgstr "résultats de la finale"
 msgid "Registering to Belgian Olympiads in Informatics"
 msgstr "Inscription aux Olympiades belges d'Informatique"
 
-#: contest/management/commands/mailing-semifinalscore.py:31
+#: contest/management/commands/mailing-semifinalscore.py:38
 msgid "beOI - Semifinal results"
 msgstr "beOI - Résultats de la demi-finale"
 
@@ -393,85 +393,100 @@ msgstr ""
 msgid "Programming, algorithmic and logic"
 msgstr "Programmation, algorithmique et logique"
 
-#: templates/base.html:68 templates/base.html.py:72
+#: templates/base.html:78
+msgid ""
+"Enter your e-mail to receive a message when the beOI 2013 registrations are "
+"open."
+msgstr ""
+"Entrez votre e-mail pour recevoir un message lorsque les inscriptions beOI "
+"2013 seront ouvertes."
+
+#: templates/base.html:80
+msgid "Register (to mailing list)"
+msgstr "S'inscrie"
+
+#: templates/base.html:90 templates/base.html.py:94
 msgid "Contest"
 msgstr "Épreuve"
 
-#: templates/base.html:70
+#: templates/base.html:92
 msgid "News"
 msgstr ""
 
-#: templates/base.html:71
+#: templates/base.html:93
 msgid "FAQ"
 msgstr "Foire aux Questions"
 
-#: templates/base.html:74
+#: templates/base.html:96
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: templates/base.html:75
+#: templates/base.html:97
 msgid "Registering"
 msgstr "Inscription"
 
-#: templates/base.html:76
+#: templates/base.html:98
 msgid "Semifinal"
 msgstr "Demi-finale"
 
-#: templates/base.html:77
+#: templates/base.html:99
 msgid "Training"
 msgstr "Formation"
 
-#: templates/base.html:78
+#: templates/base.html:100
 msgid "Final"
 msgstr "Finale"
 
-#: templates/base.html:79
+#: templates/base.html:101
 msgid "International Olympiad"
 msgstr "Olympiade Internationale"
 
-#: templates/base.html:82
+#: templates/base.html:104
 msgid "Rules"
 msgstr "Réglement"
 
-#: templates/base.html:83
+#: templates/base.html:105
 msgid "Sample Questions"
 msgstr "Exemples de Questions"
 
-#: templates/base.html:84
+#: templates/base.html:106
 msgid "Archives"
 msgstr "Archives"
 
-#: templates/base.html:94
+#: templates/base.html:116
 msgid "Organisation"
 msgstr "Organisation"
 
-#: templates/base.html:96
+#: templates/base.html:118
 msgid "be-OI Team"
 msgstr "Equipe be-OI"
 
-#: templates/base.html:97
+#: templates/base.html:119
 msgid "Sponsors & Partners"
 msgstr "Sponsors & Partenaires"
 
-#: templates/base.html:98
+#: templates/base.html:120
 msgid "Press"
 msgstr "Presse"
 
-#: templates/base.html:103
+#: templates/base.html:125
 msgid "Sponsors"
 msgstr ""
 
-#: templates/base.html:156
+#: templates/base.html:178
 msgid "Updates"
 msgstr "Restez informé"
 
-#: templates/base.html:175
+#: templates/base.html:197
 msgid "Stay up to date. Subscribe via"
 msgstr "Restez informé des derniers changements. Suivez-nous via"
 
-#: templates/base.html:177
+#: templates/base.html:199
 msgid "or"
 msgstr "ou"
+
+#~ msgid "Register"
+#~ msgstr "Inscription"
 
 #~ msgid "With support from"
 #~ msgstr "Avec le soutien de"
