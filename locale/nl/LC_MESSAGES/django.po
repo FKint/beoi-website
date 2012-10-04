@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-02 22:03+0200\n"
+"POT-Creation-Date: 2012-10-04 23:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -406,83 +406,83 @@ msgstr ""
 msgid "Register (to mailing list)"
 msgstr "Inschrijven"
 
-#: templates/base.html:90 templates/base.html.py:94
+#: templates/base.html:85 templates/base.html.py:89
 msgid "Contest"
 msgstr "Wedstrijd"
 
-#: templates/base.html:92
+#: templates/base.html:87
 msgid "News"
 msgstr "Nieuws"
 
-#: templates/base.html:93
+#: templates/base.html:88
 msgid "FAQ"
 msgstr ""
 
-#: templates/base.html:96
+#: templates/base.html:91
 msgid "Calendar"
 msgstr "Kalender"
 
-#: templates/base.html:97
+#: templates/base.html:92
 msgid "Registering"
 msgstr "Inschrijven"
 
-#: templates/base.html:98
+#: templates/base.html:93
 msgid "Semifinal"
 msgstr "Halve finale"
 
-#: templates/base.html:99
+#: templates/base.html:94
 msgid "Training"
 msgstr "Training"
 
-#: templates/base.html:100
+#: templates/base.html:95
 msgid "Final"
 msgstr "Finale"
 
-#: templates/base.html:101
+#: templates/base.html:96
 msgid "International Olympiad"
 msgstr "Internationale Olympiade"
 
-#: templates/base.html:104
+#: templates/base.html:99
 msgid "Rules"
 msgstr "Reglement"
 
-#: templates/base.html:105
+#: templates/base.html:100
 msgid "Sample Questions"
 msgstr "Voorbeeldvragen"
 
-#: templates/base.html:106
+#: templates/base.html:101
 msgid "Archives"
 msgstr "Archieven"
 
-#: templates/base.html:116
+#: templates/base.html:111
 msgid "Organisation"
 msgstr "Organisatie"
 
-#: templates/base.html:118
+#: templates/base.html:113
 msgid "be-OI Team"
 msgstr "be-OI Team"
 
-#: templates/base.html:119
+#: templates/base.html:114
 msgid "Sponsors & Partners"
 msgstr ""
 
-#: templates/base.html:120
+#: templates/base.html:115
 msgid "Press"
 msgstr "Pers"
 
-#: templates/base.html:125
+#: templates/base.html:120
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/base.html:178
+#: templates/base.html:173
 msgid "Updates"
 msgstr "Updates"
 
-#: templates/base.html:197
+#: templates/base.html:192
 msgid "Stay up to date. Subscribe via"
 msgstr "Blijf op de hoogte. Abonneer je via"
 
-#: templates/base.html:199
+#: templates/base.html:194
 msgid "or"
 msgstr "of"
 
