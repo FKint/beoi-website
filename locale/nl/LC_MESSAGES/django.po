@@ -37,7 +37,7 @@ msgstr "Markeer de geselecteerde deelnemers als handmatig gecontroleerd"
 
 #: contest/admin.py:69 contest/admin.py:100
 msgid "Export as CSV"
-msgstr ""
+msgstr "Exporteer als CSV"
 
 #: contest/forms.py:11
 msgid "Firstname"
@@ -89,7 +89,7 @@ msgstr "Maak een keus"
 
 #: contest/forms.py:23
 msgid "School name"
-msgstr "Schoolnaam"
+msgstr "Naam van de school"
 
 #: contest/forms.py:27
 msgid "Year of study"
@@ -304,7 +304,7 @@ msgstr "eindresultaten"
 
 #: contest/views.py:101
 msgid "Registering to Belgian Olympiads in Informatics"
-msgstr "Inschrijven voor de Belgische Olympiade in de Informatica"
+msgstr "Inschrijven voor de Belgische Informatica-olympiade"
 
 #: contest/management/commands/mailing-semifinalscore.py:38
 msgid "beOI - Semifinal results"
@@ -312,7 +312,7 @@ msgstr "beOI - Resultaten halve finale"
 
 #: faq/models.py:21 faq/models.py:22
 msgid "Text only. No html tags!"
-msgstr ""
+msgstr "Alleen tekst. Geen html tags!"
 
 #: faq/models.py:23 news/models.py:40
 msgid "language"
@@ -331,12 +331,13 @@ msgid "Body"
 msgstr "Tekst"
 
 #: news/feed.py:26
+#, fuzzy
 msgid "be-OI News"
 msgstr "be-OI Nieuws"
 
 #: news/feed.py:27 templates/base.html:5 templates/base.html.py:50
 msgid "Belgian Olympiads in Informatics"
-msgstr "Belgische Olympiade in de Informatica"
+msgstr "Belgische Informatica-olympiade"
 
 #: news/models.py:20
 msgid "Offline"
@@ -368,7 +369,7 @@ msgstr "datum van publicatie"
 
 #: news/models.py:38
 msgid "If in the future, the news will be visible from this time"
-msgstr "Als in de toekomst, het nieuws zichtbaar zal zijn vanaf dit tijdstip"
+msgstr "Indien in de toekomst, zal het nieuws zichtbaar zijn vanaf dit tijdstip"
 
 #: news/models.py:39
 msgid "status"
@@ -480,7 +481,7 @@ msgstr "Updates"
 
 #: templates/base.html:192
 msgid "Stay up to date. Subscribe via"
-msgstr "Blijf op de hoogte. Abonneer je via"
+msgstr "Blijf op de hoogte. Volg ons via"
 
 #: templates/base.html:194
 msgid "or"
