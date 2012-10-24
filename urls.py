@@ -27,21 +27,21 @@ multilang_patterns = patterns('',
 	url(r'^registration/confirm/(?P<object_id>\d+)$', list_detail.object_detail, {	'template_name': 'registration_confirm.html', 
 		"queryset": SemifinalCenter.objects.filter(active=True) }, "registration-confirm"),
 
-	# url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
-	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
+	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
+	#url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
 		"queryset": SemifinalCenter.objects.filter(active=True)},"semifinal-places"),
-	url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_after.html',
-		"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
-											.filter(qualified=True,contestant__contest_year=contest_year())
-											.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
+	#url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_after.html',
+	#	"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
+	#										.filter(qualified=True,contestant__contest_year=contest_year())
+	#										.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 			
-	#url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
-	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
-	url(r'^final$', list_detail.object_list, { 'template_name': 'final_after.html',
-		"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
-			.filter(contestant__contest_year=2012).order_by("rank")	}, "final"),
+	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
+	#url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
+	#url(r'^final$', list_detail.object_list, { 'template_name': 'final_after.html',
+	#	"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
+	#		.filter(contestant__contest_year=2012).order_by("rank")	}, "final"),
 
 	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
 	
