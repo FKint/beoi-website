@@ -58,6 +58,10 @@ multilang_patterns = patterns('',
 	url(r'^archives/2011/semifinal$', direct_to_template, {'template': '2011/semifinal.html'}, "archives-2011-semifinal"),
 	url(r'^archives/2011/final$', direct_to_template, {'template': '2011/final.html'}, "archives-2011-final"),
 	url(r'^archives/2011/ioi$', direct_to_template, {'template': '2011/ioi.html'}, "archives-2011-ioi"),
+	url(r'^archives/2012$', direct_to_template, {'template': '2012/index.html'}, "archives-2012"),
+	url(r'^archives/2012/semifinal$', direct_to_template, {'template': '2012/semifinal.html'}, "archives-2012-semifinal"),
+	url(r'^archives/2012/final$', direct_to_template, {'template': '2012/final.html'}, "archives-2012-final"),
+	url(r'^archives/2012/ioi$', direct_to_template, {'template': '2012/ioi.html'}, "archives-2012-ioi"),
 	
 	
 	# unlinked pages

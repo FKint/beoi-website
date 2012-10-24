@@ -1,0 +1,44 @@
+{% extends "fr/base.html" %}
+
+{% block content%}
+<h2>be-OI 2012</h2>
+
+<p>En 2012 avait lieu la troisième édition consécutive de l'Olympiade belge d'Informatique. Les grandes nouveautés de cette année étaient l'abandon du concours du supérieur pour se concenter sur les élèves du secondaire, et la sélection de la délégation belge à l'olympiade internationale via un programme d'entraînement plus élaboré.</p>
+
+<p>137 participants étaient inscrits pour la demi-finale qui s'est déroulée le mercredi 2 février 2012. Cette demi-finale avait lieu sur papier dans des institutions universtitaires à travers le pays. 51 d'entre-eux ont été sélectionnés pour la finale. <a href="{% url archives-2012-semifinal LANGUAGE_CODE %}">Les résultats détaillés sont également disponibles</a>.</p>
+
+<p>La finale avait lieu à Namur le mercredi 14 mars 2012 et comportait, comme à l'habitude, une partie sur papier et une partie sur ordinateur, d'environ 1h30 chacunes. Le classement complet est également disponible sur <a href="{% url archives-2012-final LANGUAGE_CODE %}">la page détaillée de la finale</a>.</p>
+
+<img class="withframe" src="/static/pictures/2012/final-group.jpg" alt="Finalistes des Olympiades belges d'Informatique 2012" title="Finalistes des Olympiades belges d'Informatique 2012" /> 
+
+<p>Les lauréats du concours national sont :</p>
+
+<ol>
+	<li>Floris Kint, Collège Notre-Dame d'Ostende ;</li>
+	<li>Victor Lecomte, Lycée Martin V (Louvain-la-Neuve) ;</li>
+	<li>Jan Scheers, Sint-Albertuscollege (Heverlee) ;</li>
+	<li>Benoît Vernier, École Européenne de Bruxelles III (Bruxelles).</li>
+</ol>
+
+<p>Les candidats sélectionnés pour le pool d'entrainement à l'olympiade internationale étaitent les 13 premiers finalistes.</p>
+
+<p>Suite à une formation, un entrainement encadré en ligne et un dernier test dans des conditions similaires à l'épreuve internationale, les quatre sélectionnés pour faire partie de <a href="{% url archives-2012-ioi LANGUAGE_CODE %}">la délégation belge à l'Olympiade Internationale d'Informatique</a> qui s'est déroulée à Sirmione et Montichiari en Italie étaient :
+	</p>
+	
+	<ul>
+		<li>Floris Kint</li>
+		<li>Victor Lecomte</li>
+		<li>Benoît Vernier</li>
+		<li>Hannes Vandecasteele</li>
+	</ul>
+	
+<p>Ceux-ci étaient encadrés par Damien Leroy et Joachim Janseman, membres du comité  be-OI.</p>
+
+<h3>Sponsors</h3>
+
+<p>Ces Olympiades ont pu être organisées grâce au soutien reçu par divers organismes. Nous les remercions énormément pour leur support.</p>
+
+<p><a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" width="350" height="136" /></a>
+	<a href="http://www.ibbt.be" target="_blank"><img src="/static/logos/ibbt-logo.jpg" width="300"/></a><a href="http://www.ond.vlaanderen.be/" target="_blank"><img src="/static/logos/vlaams-overheid-logo.png" width="350" height="103" /></a></p>
+
+{% endblock %}
