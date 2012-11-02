@@ -1,0 +1,39 @@
+{% extends "fr/base.html" %}
+
+{% block content%}
+<h2>Parrainez vos amis à la beOI et gagnez un prix de 100&euro; !</h2>
+
+<p>Envie de gagner un prix d'une valeur de 100eur ? Pour cela, il vous suffit d'être le participant
+	ayant convaincu le plus grand nombre de personne à s'inscrire à l'Olympiade d'informatique. Invitez vos amis
+	à participer à l'Olympiade belge d'informatique en leur fournissant le lien ou le code reçu lors de votre inscription.
+	A chaque inscription d'un participant sous 
+	votre parrainage, vous et le participant parrainé (votre filleul) gagnez 1 point. Le participant
+	 qui aura récolté le plus grand nombre de points remportera un prix lors de la proclamation.
+</p>
+
+<h3>Quelques règles</h3>
+<ul>
+	<li>Les participants du concours ne participant à la demi-finale seront disqualifiés et ne compteront pas pour les points de leur parrain.</li>
+	<li>En cas d'égalité de points, la somme des scores à la demi-finale du participant et tous ses filleuls départagera les
+		meilleurs scores. Si il y a encore égalité à ce stade, le premier participant à s'être inscrit sera le gagnant.</li>
+</ul>
+
+{% if correcttoken %}
+
+<h3>Votre score</h3>
+
+{% if godchildren %}
+<p>Vous avez <strong>{{ points }}</strong> point(s). Vos filleuls sont:</p>
+<ul>
+	{% for godchild in godchildren %}
+	<li>{{ godchild.firstname }} {{ godchild.surname }}</li>
+	{% endfor %}
+</ul>
+{% else %}
+
+	<p>Vous n'avez pas de filleul pour l'instant. Vous avez donc <strong>{{ points }}</strong> point pour l'instant.</p>
+
+{% endif %}
+{% endif %}
+
+{% endblock %}
