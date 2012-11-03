@@ -3,12 +3,14 @@
 {% block content%}
 <h2>Demi-finale<img src="/static/pictures/2010/oi2010-finals-sheet.jpg" width="350" height="231" class="withframe float-right" /></h2>
 
-<p>La demi-finale se déroule le mercredi 23 janvier 2013 <!-- et commencera à 14h30 --> dans les différents <a href="{% url semifinal-places LANGUAGE_CODE %}">centres régionaux</a> du pays.
+<p>La demi-finale se déroule le mercredi 23 janvier 2013 de 14h30 à 17h30 dans les différents <a href="{% url semifinal-places LANGUAGE_CODE %}">centres régionaux</a> du pays. Pour y participer, vous devez vous y <a href="{% url registration LANGUAGE_CODE %}">inscrire</a> préalablement sur ce site.</p>
 	
-<p>Le règlément de la demi-finale est disponible ci-dessous. Si vous désirez quelques indications sur les types de questions auxquels vous pourriez être confrontés, consultez <a href="{% url sample-questions LANGUAGE_CODE %}">les questions des années précédentes</a>.</p>
+<p>L'épreuve dure trois heures et se déroule uniquement sur papier. Le type de questions auxquelles vous devez vous attendre sont des questions de logique, d'algorithmique et de simple problème de programmation dont vous pourrez trouver des exemples parmi les <a href="{% url sample-questions LANGUAGE_CODE %}">questions des années précédentes</a>.</p>
 
-<h3>Règlement de l'épreuve</h3>
+<p>Vous pouvez répondre aux questions en français, néerlandais, anglais, en pseudo-code ou dans un des langages de programmation autorisés : C, C++, Pascal, Java, Python et PHP. Il est interdit d'utiliser des fonctions provenant de quelque librairie non-standard que ce soit.</p>
 
-{% include "fr/includes/semifinal_rules.html" %}
+<p>Dans la mesure du possible, inscrivez dans un centre de la même langue que celle dans laquelle vous souhaitez présenter l'épreuve. Les surveillants d'un centre ne sont pas tenus de parler une autre langue que la langue officielle du centre. Si toute fois vous vous inscrivez dans une langue différente, veillez à rappeler la langue de l'énoncé désiré au début de l'épreuve.</p>
+
+<p>Bonne chance à tous !</p>
 
 {% endblock %}
