@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from django.template import RequestContext, Context
 from beoi.contest.models import *
 from beoi.contest.forms import *
+from beoi.contest.token import *
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.db import IntegrityError
@@ -15,17 +17,18 @@ from django.contrib.syndication.views import add_domain
 from django.utils.translation import ugettext_lazy as _
 from django.db import transaction
 from beoi.core import registration_open,contest_year
+from django.core.exceptions import ObjectDoesNotExist
 
-def _gen_token():
+# def _gen_token():
 	
-	_MAX_TOKEN = 18446744073709551616L     # 2 << 63
+# 	_MAX_TOKEN = 18446744073709551616L	 # 2 << 63
 	
-	if hasattr(random, 'SystemRandom'):
-	    randrange = random.SystemRandom().randint
-	else:
-	    randrange = random.randint
+# 	if hasattr(random, 'SystemRandom'):
+# 		randrange = random.SystemRandom().randint
+# 	else:
+# 		randrange = random.randint
 	
-	return md5_constructor("%s%s" % (randrange(0, _MAX_TOKEN), SECRET_KEY)).hexdigest()
+# 	return md5_constructor("%s%s" % (randrange(0, _MAX_TOKEN), SECRET_KEY)).hexdigest()[0:6]
 
 
 def registration(request, template):
@@ -56,7 +59,6 @@ def registration(request, template):
 				school = cd["school"]
 
 			# create the contestant
-			token = _gen_token()
 			contestant = Contestant(
 				surname 			= cd["surname"],
 				firstname 			= cd["firstname"],
@@ -71,7 +73,7 @@ def registration(request, template):
 				year_study 			= cd["year_study"],
 				language 			= cd["language"],
 				semifinal_center 	= cd["semifinal_center"],
-				token 				= token,
+				token 				= "",
 				contest_year 		= contest_year()
 			)			
 			try :		
@@ -86,6 +88,10 @@ def registration(request, template):
 				
 				return HttpResponseRedirect(reverse("registration-error", args=[request.LANGUAGE_CODE])) 
 				
+			if not cd["token"]: cd["token"] = ""
+			contestant.token = full_token(cd["token"], contestant.registering_time)
+			contestant.save() 
+
 			# get the full url for mail data
 			if Site._meta.installed: current_site = Site.objects.get_current()
 			else: current_site = RequestSite(request)
@@ -93,29 +99,36 @@ def registration(request, template):
 			# mail sending
 			context = Context({
 						"NAME":cd["firstname"]+" "+cd["surname"], 
-						#"CONTEST": dict(CONTEST_CHOICES)[cd["contest_category"]],
-						"CENTER_NAME": cd["semifinal_center"]
+						"CENTER_NAME": cd["semifinal_center"],
+						"GODCHILDTOKEN": contestant.token,
+						"URLTOSHARE":  add_domain(current_site.domain,"%s?t=%s" % (reverse("home", args=[request.LANGUAGE_CODE]),contestant.token)), 
+						"URLSTAT": add_domain(current_site.domain,"%s?token=%s" % (reverse("referrals", args=[request.LANGUAGE_CODE]),stat_token(cd["token"], contestant.registering_time)))
 					 })
 			mail_template = get_template("emails/"+request.LANGUAGE_CODE+"/registration.txt")
 			context["CENTER_DETAILS"] = add_domain(current_site.domain,reverse("semifinal-places",args=[request.LANGUAGE_CODE]))  
 			send_mail(_("Registering to Belgian Olympiads in Informatics"), mail_template.render(context), "info@be-oi.be", [cd["email"]], fail_silently=True)
 		
 			# redirect to confirmation page
-			return HttpResponseRedirect(reverse("registration-confirm", args=[request.LANGUAGE_CODE, cd["semifinal_center"].id])) 
+			return HttpResponseRedirect("%s?token=%s" % (reverse("registration-confirm", args=[request.LANGUAGE_CODE, cd["semifinal_center"].id]),contestant.token) ) 
 			
  	else:
 		if request.LANGUAGE_CODE == "fr": 
 			initial_lang = LANG_FR 
 		else: 
 			initial_lang =  LANG_NL
-		form = RegisteringForm(initial={"language":initial_lang}) 
+
+		if "registration_token" in request.session:
+			token = request.session["registration_token"]
+		else: token = ""
+
+		form = RegisteringForm(initial={"language":initial_lang, "token":token}) 
 
 	return render_to_response(template, {
 			'form': form, 
 			"global_errors": form.non_field_errors(), 
 		}, context_instance=RequestContext(request)
 	)
-    
+	
 def stats(request, template):
 	from django.conf import settings
 	from datetime import datetime 
@@ -142,3 +155,36 @@ def stats(request, template):
 			} for year in xrange(1,8) ],
 		}, context_instance=RequestContext(request)
 	)
+
+
+def referrals(request, template="", confirm=None):
+
+	if "token" in request.GET:
+
+		full_token_computed = full_token_from_stat_token(request.GET["token"])
+		try:
+			contestant = Contestant.objects.get(token=full_token_computed)
+			godchildren=[]
+			for godchild in Contestant.objects.filter(contest_year=contest_year()):
+				if full_token(full_token_computed, godchild.registering_time) == godchild.token:
+					godchildren.append(godchild)
+			invalid = False
+			points = len(godchildren)
+			if full_token("",contestant.registering_time) != contestant.token: points += 1
+
+			return 	render_to_response(template, 
+			{
+				"correcttoken" : True,
+				"godchildren":godchildren,
+				"points": points
+			 }, 
+			context_instance=RequestContext(request))
+
+		except ObjectDoesNotExist:
+			return 	render_to_response(template, {"correcttoken": False}, context_instance=RequestContext(request))
+
+	else: 
+		return 	render_to_response(template, {"correcttoken": False}, context_instance=RequestContext(request))
+
+
+

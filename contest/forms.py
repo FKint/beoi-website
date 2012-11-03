@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from beoi.contest.models import *
+from beoi.contest.token import *
 from django import forms
 from django.utils.translation import ugettext_lazy as _
+from django.utils.hashcompat import md5_constructor
 
 SCHOOL_EXISTS = 1
 SCHOOL_NOT_EXIST = 0
@@ -17,6 +19,8 @@ class RegisteringForm(forms.Form):
 	city			= forms.CharField(max_length=255, label=_('City'))
 	email			= forms.EmailField(max_length=255, label=_('Email'))
 	
+	token	 		= forms.CharField(max_length=255, label=_('Referral Token'), required=False)
+
 	school_exists	= forms.ChoiceField(choices=((SCHOOL_EXISTS,_("is in the list")),(SCHOOL_NOT_EXIST,_("is not in the list"))), label=_('Is the school in the list'))
 	school			= forms.ModelChoiceField(queryset=School.objects.order_by('postal_code',"name").filter(category=CONTEST_SEC), required=False, empty_label=_("Make a choice"))
 	
@@ -45,32 +49,26 @@ class RegisteringForm(forms.Form):
 	def clean(self):
 		
 		cleaned_data = self.cleaned_data
+		if cleaned_data.get("token") and not is_valid_token(cleaned_data.get("token")):
+			self._errors["token"] = self.error_class([_("This token is not valid")])
+			del cleaned_data["token"]
 
 		if cleaned_data.get("school_exists") == SCHOOL_EXISTS:
-			
 			if not cleaned_data.get("school"):
 				self._errors["school"] = self.error_class([_("Please choose your school")])
 				del cleaned_data["school"]
 				return cleaned_data
 			
 		elif cleaned_data.get("school_exists") == SCHOOL_NOT_EXIST:
-			error = False
 			if not cleaned_data.get("new_school_name"):
 				self._errors["new_school_name"] = self.error_class([_("This field is mandatory")])
 				if "new_school_name" in cleaned_data: del cleaned_data["new_school_name"]
-				error = True
 			if not cleaned_data.get("new_school_postal_code"):
 				self._errors["new_school_postal_code"] = self.error_class([_("This field is mandatory")])
 				if "new_school_postal_code" in cleaned_data: del cleaned_data["new_school_postal_code"]
-				error = True
 			if not cleaned_data.get("new_school_city"):
 				self._errors["new_school_city"] = self.error_class([_("This field is mandatory")])
 				if "new_school_city" in cleaned_data: del cleaned_data["new_school_city"]
-				error = True
-			if error: return cleaned_data
 			
-		else: 
-			return cleaned_data
-
 		return cleaned_data
 	

@@ -12,7 +12,7 @@
 {# 	à l'épreuve, nous vous demandons cependant de vous inscrire au plus vite afin de nous permettre d'estimer le nombre #}
 {# 	de participants au mieux.</strong></p> #}
 
-<p>Le concours est réservé aux élèves de moins de 25 ans inscrits dans une école secondaire belge. En s'inscrivant, le participant accepte <a href="{% url rules LANGUAGE_CODE %}">le règlement</a>.</p>
+<p>Le concours est réservé aux élèves de moins de 25 ans inscrits dans une école secondaire belge. En s'inscrivant, le participant accepte <a href="{% url rules LANGUAGE_CODE %}">le règlement</a>. </p>
 
 <div class="errors">
 {% if form.errors %}
@@ -33,7 +33,8 @@
 	<p class="form-1">{{ form.address.label_tag }}{{ form.address }}{% if form.address.errors %}<span class="error">{{ form.address.errors|join:"<br/>" }}</span>{% endif %}</p>
 	<p class="form-2a">{{ form.postal_code.label_tag }}{{ form.postal_code }}{% if form.postal_code.errors %}<span class="error">{{ form.postal_code.errors|join:"<br/>" }}</span>{% endif %}</p>
 	<p class="form-2b">{{ form.city.label_tag }}{{ form.city }}{% if form.city.errors %}<span class="error">{{ form.city.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label for="id_email">Adresse e-mail <span class="details">(nous l'utiliserons uniquement dans le cadre des OI)</span></label>{{ form.email }}{% if form.email.errors %}<span class="error">{{ form.email.errors|join:"<br/>" }}</span>{% endif %}</p>
+	<p class="form-1"><label for="id_email">Adresse e-mail <span class="details">(uniquement utilisée dans le cadre de l'olympiade, jamais communiquée à un sponsor)</span></label>{{ form.email }}{% if form.email.errors %}<span class="error">{{ form.email.errors|join:"<br/>" }}</span>{% endif %}</p>
+	<p class="form-1"><label for="id_token">Code de parrainage <span class="details">(Optionnel, le code reçu si vous êtes parrainé par un autre participant.  <a href="{% url referrals LANGUAGE_CODE %}">Plus d'info sur notre programme de parrainage</a>.)</span></label>{{ form.token }}{% if form.token.errors %}<span class="error">{{ form.token.errors|join:"<br/>" }}</span>{% endif %}</p>
 	</div>
 	
 	<div class="fieldblock">

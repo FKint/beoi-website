@@ -47,7 +47,7 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-REGISTRATION_DEADLINE = datetime(2012,01,31,00,00,00)
+REGISTRATION_DEADLINE = datetime(2013,01,21,23,59,59)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -80,7 +80,8 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
-	'beoi.core.TranslationMiddleware'
+	'beoi.core.TranslationMiddleware',
+	'beoi.core.RegistrationTokenMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

@@ -1,10 +1,12 @@
 {{ NAME }},
 
-Nous confirmons votre inscription à la demi-finale des Olympiades belges d'Informatique. 
-Vous avez choisi de la présenter le 1er février 2012 au centre de "{{ CENTER_NAME }}". Vous trouverez plus d'informations sur comment vous y rendre sur la page {{ CENTER_DETAILS }}.
+Nous confirmons votre inscription à la demi-finale de l'Olympiade belge d'Informatique. 
+Vous avez choisi de la présenter le 21 janvier 2013 au centre de "{{ CENTER_NAME }}". Vous trouverez plus d'informations sur comment vous y rendre sur la page {{ CENTER_DETAILS }}.
 
-Vous ne devez rien apporter de particulier, si ce n'est de quoi écrire. Dans la mesure du possible, essayez d'arriver à 13h45. Le concours débute à 14h.
+Vous ne devez rien apporter de particulier, si ce n'est de quoi écrire. Dans la mesure du possible, essayez d'arriver à 14h15. Le concours débute à 14h30.
 
-Pour toute question, adressez-vous à inscription@be-oi.be.
+Pour toute question concernant le concours, adressez-vous à inscription@be-oi.be.
+
+Le participants qui convaincra le plus grand nombre de personnes de s'inscrire à l'olympiade gagnera un prix de 100 euros. Pour cela, faites-les s'inscrire via le lien {{ URLTOSHARE }} ou en leur demandant d'utiliser le code {{ TOKEN }} dans le formulaire d'inscription. Vous pouvez consulter le nombre de points que vous avez récolté ainsi que davantage d'information sur {{ URLSTAT }}.
 
 L'équipe be-OI

@@ -1,12 +1,13 @@
 {% extends "fr/base.html" %}
 
 {% block content%}
+
 <h2>Inscription</h2>
 
 {% if not error %}
 <p>Félicitation, vous êtes inscrit aux Olympiades belges d'Informatique 2012! Rendez-vous le 1e février dans votre centre régional.</p>
 {% if object %}
-<p>Vous avez choisi <i>{{object}}</i> comme centre pour passer votre demi-finale. Ce centre nous a donné les informations suivantes concernant le lieu exact de l'épreuve. Si nécessaire, vous recevrez davantage d'informations par e-mail.</p>
+<p>Vous avez choisi <i>{{object}}</i> comme centre pour votre demi-finale. Ce centre nous a donné les informations suivantes concernant le lieu exact de l'épreuve. Si nécessaire, vous recevrez davantage d'informations par e-mail.</p>
 <div style="padding-left:50px;">{{object.details|safe}}</div>
 {% endif %}
 <p></p>
@@ -15,7 +16,40 @@
 <p>Une erreur s'est produite lors de l'inscription. Probablement étiez-vous déjà inscrit ! </p>
 
 {% endif %}
-<p>&nbsp;</p>
+<br />
 <p>Si vous souhaitez modifier votre inscription, contactez-nous par e-mail à <a href="mailto:inscription@be-oi.be">inscription@be-oi.be</a>.</p>
+
+
+
+<h3>Invitez des amis à s'inscrire et gagnez un prix d'une valeur de 100&euro; !</h3>
+
+<p>Envie de gagner un prix d'une valeur de 100&euro; ? Pour cela, il vous suffit d'être le participant
+	ayant convaincu le plus grand nombre de personne à s'inscrire à l'Olympiade d'informatique. Invitez vos amis
+	à participer à l'Olympiade belge d'informatique en leur fournissant le lien <strong id="linktoshare"></strong> ou en leur demandant d'utiliser le code <strong id="sharetoken"></strong>. A chaque inscription d'un participant sous 
+	votre parrainage, vous et le participant parrainé gagnez 1 point. Le participant
+	 qui aura récolté le plus grand nombre de points remportera un prix lors de la proclamation.
+	 <a href="{% url referrals LANGUAGE_CODE %}">Plus d'info ...</a>
+</p>
+
+
+<p style="margin-top:20px;"><div style="padding:0 25px; 0 25px" class="fb-like" data-send="false" data-width="100" data-show-faces="false" data-action="recommend"></div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="fr" data-size="large" data-count="none">Tweeter</a>
+</p>
+
+<script type="text/javascript">
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+}
+var token =  getURLParameter('token');
+var sharedURL = "http://be-oi.be{% url home LANGUAGE_CODE %}?t=" + token;
+$("#sharetoken").html(token);
+$("#linktoshare").html(sharedURL);
+$(".fb-like").attr("data-href",sharedURL);
+$(".twitter-share-button").attr("data-url", sharedURL);
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
 
 {% endblock %}

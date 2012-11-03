@@ -29,6 +29,12 @@ class TranslationMiddleware(object):
 		translation.deactivate()
 		return response
 
+class RegistrationTokenMiddleware(object):
+	
+	def process_view(self, request, view, args, kwargs):
+		if "t" in request.GET:
+			request.session['registration_token'] = request.GET["t"]
+
 def switch_lang(lang):
 	if lang == "fr": return "nl"
 	else: return "fr"
@@ -51,4 +57,3 @@ def contest_context(request):
 	return {
 		"REGISTRATION_OPEN": registration_open()
 	}
-	

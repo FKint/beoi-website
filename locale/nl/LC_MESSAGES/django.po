@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 23:37+0200\n"
+"POT-Creation-Date: 2012-10-28 00:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,75 +39,83 @@ msgstr "Markeer de geselecteerde deelnemers als handmatig gecontroleerd"
 msgid "Export as CSV"
 msgstr "Exporteer als CSV"
 
-#: contest/forms.py:11
+#: contest/forms.py:23
 msgid "Firstname"
 msgstr "Voornaam"
 
-#: contest/forms.py:12
+#: contest/forms.py:24
 msgid "Surname"
 msgstr "Familienaam"
 
-#: contest/forms.py:13
+#: contest/forms.py:25
 msgid "Gender"
 msgstr "Geslacht"
 
-#: contest/forms.py:14
+#: contest/forms.py:26
 msgid "Date of birth"
 msgstr "Geboortedatum"
 
-#: contest/forms.py:15
+#: contest/forms.py:27
 msgid "Address"
 msgstr "Adres"
 
-#: contest/forms.py:16 contest/forms.py:24
+#: contest/forms.py:28 contest/forms.py:38
 msgid "Postal code"
 msgstr "Postcode"
 
-#: contest/forms.py:17 contest/forms.py:25
+#: contest/forms.py:29 contest/forms.py:39
 msgid "City"
 msgstr "Stad"
 
-#: contest/forms.py:18 oi_core/forms.py:7
+#: contest/forms.py:30 oi_core/forms.py:7
 msgid "Email"
 msgstr "Email"
 
-#: contest/forms.py:20
+#: contest/forms.py:32
+msgid "Referral Token"
+msgstr ""
+
+#: contest/forms.py:34
 msgid "is in the list"
 msgstr "staat op de lijst"
 
-#: contest/forms.py:20
+#: contest/forms.py:34
 msgid "is not in the list"
 msgstr "staat niet op de lijst"
 
-#: contest/forms.py:20
+#: contest/forms.py:34
 msgid "Is the school in the list"
 msgstr "Staat de school op de lijst"
 
-#: contest/forms.py:21 contest/forms.py:31
+#: contest/forms.py:35 contest/forms.py:45
 msgid "Make a choice"
 msgstr "Maak een keus"
 
-#: contest/forms.py:23
+#: contest/forms.py:37
 msgid "School name"
 msgstr "Naam van de school"
 
-#: contest/forms.py:27
+#: contest/forms.py:41
 msgid "Year of study"
 msgstr "Studiejaar"
 
-#: contest/forms.py:29
+#: contest/forms.py:43
 msgid "Examination language"
 msgstr "Taal van de wedstrijd"
 
-#: contest/forms.py:38
+#: contest/forms.py:52
 msgid "Wrong value for this field"
 msgstr "Verkeerde waarde voor dit veld"
 
-#: contest/forms.py:52
+#: contest/forms.py:64
+msgid "This token is not valid"
+msgstr ""
+
+#: contest/forms.py:69
 msgid "Please choose your school"
 msgstr "Kies uw school"
 
-#: contest/forms.py:59 contest/forms.py:63 contest/forms.py:67
+#: contest/forms.py:75 contest/forms.py:78 contest/forms.py:81
 msgid "This field is mandatory"
 msgstr "Dit veld is verplicht"
 
@@ -302,7 +310,7 @@ msgstr "eindresultaat"
 msgid "final results"
 msgstr "eindresultaten"
 
-#: contest/views.py:101
+#: contest/views.py:105
 msgid "Registering to Belgian Olympiads in Informatics"
 msgstr "Inschrijven voor de Belgische Informatica-olympiade"
 
@@ -369,7 +377,8 @@ msgstr "datum van publicatie"
 
 #: news/models.py:38
 msgid "If in the future, the news will be visible from this time"
-msgstr "Indien in de toekomst, zal het nieuws zichtbaar zijn vanaf dit tijdstip"
+msgstr ""
+"Indien in de toekomst, zal het nieuws zichtbaar zijn vanaf dit tijdstip"
 
 #: news/models.py:39
 msgid "status"
@@ -455,35 +464,35 @@ msgstr "Voorbeeldvragen"
 msgid "Archives"
 msgstr "Archieven"
 
-#: templates/base.html:111
+#: templates/base.html:112
 msgid "Organisation"
 msgstr "Organisatie"
 
-#: templates/base.html:113
+#: templates/base.html:114
 msgid "be-OI Team"
 msgstr "be-OI Team"
 
-#: templates/base.html:114
+#: templates/base.html:115
 msgid "Sponsors & Partners"
 msgstr ""
 
-#: templates/base.html:115
+#: templates/base.html:116
 msgid "Press"
 msgstr "Pers"
 
-#: templates/base.html:120
+#: templates/base.html:121
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/base.html:173
+#: templates/base.html:174
 msgid "Updates"
 msgstr "Updates"
 
-#: templates/base.html:192
+#: templates/base.html:193
 msgid "Stay up to date. Subscribe via"
 msgstr "Blijf op de hoogte. Volg ons via"
 
-#: templates/base.html:194
+#: templates/base.html:195
 msgid "or"
 msgstr "of"
 

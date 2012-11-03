@@ -42,9 +42,6 @@ class OiCoreTest(TestCase):
 	def test_sample_questions(self):
 		self._check_multilang_page("sample-questions")
 
-	def test_keepinformed(self):
-		self._check_multilang_page("keepinformed")
-
 	def test_registration(self):
 		self._check_multilang_page("registration")
 

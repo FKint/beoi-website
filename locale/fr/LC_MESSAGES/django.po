@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 23:37+0200\n"
+"POT-Creation-Date: 2012-10-28 00:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,75 +39,83 @@ msgstr "Marquer les participants sélectionnés comme vérifiés manuellement"
 msgid "Export as CSV"
 msgstr ""
 
-#: contest/forms.py:11
+#: contest/forms.py:23
 msgid "Firstname"
 msgstr "Prénom"
 
-#: contest/forms.py:12
+#: contest/forms.py:24
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: contest/forms.py:13
+#: contest/forms.py:25
 msgid "Gender"
 msgstr "Sexe"
 
-#: contest/forms.py:14
+#: contest/forms.py:26
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: contest/forms.py:15
+#: contest/forms.py:27
 msgid "Address"
 msgstr "Adresse"
 
-#: contest/forms.py:16 contest/forms.py:24
+#: contest/forms.py:28 contest/forms.py:38
 msgid "Postal code"
 msgstr "Code postal"
 
-#: contest/forms.py:17 contest/forms.py:25
+#: contest/forms.py:29 contest/forms.py:39
 msgid "City"
 msgstr "Ville"
 
-#: contest/forms.py:18 oi_core/forms.py:7
+#: contest/forms.py:30 oi_core/forms.py:7
 msgid "Email"
 msgstr "E-mail"
 
-#: contest/forms.py:20
+#: contest/forms.py:32
+msgid "Referral Token"
+msgstr ""
+
+#: contest/forms.py:34
 msgid "is in the list"
 msgstr "est dans la liste"
 
-#: contest/forms.py:20
+#: contest/forms.py:34
 msgid "is not in the list"
 msgstr "n'est pas dans la liste"
 
-#: contest/forms.py:20
+#: contest/forms.py:34
 msgid "Is the school in the list"
 msgstr "L'école se trouve-t-elle dans la liste"
 
-#: contest/forms.py:21 contest/forms.py:31
+#: contest/forms.py:35 contest/forms.py:45
 msgid "Make a choice"
 msgstr "Faites votre choix"
 
-#: contest/forms.py:23
+#: contest/forms.py:37
 msgid "School name"
 msgstr "Nom de l'établissement"
 
-#: contest/forms.py:27
+#: contest/forms.py:41
 msgid "Year of study"
 msgstr "Année d'étude"
 
-#: contest/forms.py:29
+#: contest/forms.py:43
 msgid "Examination language"
 msgstr "Langue de l'épreuve"
 
-#: contest/forms.py:38
+#: contest/forms.py:52
 msgid "Wrong value for this field"
 msgstr "Value erronée dans ce champ"
 
-#: contest/forms.py:52
+#: contest/forms.py:64
+msgid "This token is not valid"
+msgstr "Ce code n'est pas valide"
+
+#: contest/forms.py:69
 msgid "Please choose your school"
 msgstr "Choisissez votre école"
 
-#: contest/forms.py:59 contest/forms.py:63 contest/forms.py:67
+#: contest/forms.py:75 contest/forms.py:78 contest/forms.py:81
 msgid "This field is mandatory"
 msgstr "Ce champ est obligatoire"
 
@@ -300,9 +308,9 @@ msgstr "résultat de la finale"
 msgid "final results"
 msgstr "résultats de la finale"
 
-#: contest/views.py:101
+#: contest/views.py:105
 msgid "Registering to Belgian Olympiads in Informatics"
-msgstr "Inscription aux Olympiades belges d'Informatique"
+msgstr "Inscription à l'Olympiade belge d'Informatique"
 
 #: contest/management/commands/mailing-semifinalscore.py:38
 msgid "beOI - Semifinal results"
@@ -453,35 +461,35 @@ msgstr "Exemples de Questions"
 msgid "Archives"
 msgstr "Archives"
 
-#: templates/base.html:111
+#: templates/base.html:112
 msgid "Organisation"
 msgstr "Organisation"
 
-#: templates/base.html:113
+#: templates/base.html:114
 msgid "be-OI Team"
 msgstr "Equipe be-OI"
 
-#: templates/base.html:114
+#: templates/base.html:115
 msgid "Sponsors & Partners"
 msgstr "Sponsors & Partenaires"
 
-#: templates/base.html:115
+#: templates/base.html:116
 msgid "Press"
 msgstr "Presse"
 
-#: templates/base.html:120
+#: templates/base.html:121
 msgid "Sponsors"
 msgstr ""
 
-#: templates/base.html:173
+#: templates/base.html:174
 msgid "Updates"
 msgstr "Restez informé"
 
-#: templates/base.html:192
+#: templates/base.html:193
 msgid "Stay up to date. Subscribe via"
 msgstr "Restez informé des derniers changements. Suivez-nous via"
 
-#: templates/base.html:194
+#: templates/base.html:195
 msgid "or"
 msgstr "ou"
 

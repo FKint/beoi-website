@@ -44,6 +44,15 @@ $(document).ready(function() {
 </head>
 <body>
 	
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="header-wrap"><div id="header">
 	<a name="top"></a>
 	<img id="logo" src="/static/images/be-oi-logo-120px.png" />
@@ -86,10 +95,10 @@ $(document).ready(function() {
             	<ul>
 					<li><a href="{% url home LANGUAGE_CODE %}">{% trans "News" %}</a></li>
 					<li><a href="{% url faq LANGUAGE_CODE %}">{% trans "FAQ" %}</a></li>
-					<li><a href="{% url agenda LANGUAGE_CODE %}">{% trans "Contest" %} 2013</a>
+					<li><a href="{% url registration LANGUAGE_CODE %}">{% trans "Contest" %} 2013</a>
 						<ul>
 							<li><a href="{% url agenda LANGUAGE_CODE %}">{% trans "Calendar" %}</a></li>
-<!-- 							{% if REGISTRATION_OPEN %}<li><a href="{% url registration LANGUAGE_CODE %}">{% trans "Registering" %}</a></li>{% endif %}-->
+ 							{% if REGISTRATION_OPEN %}<li><a href="{% url registration LANGUAGE_CODE %}">{% trans "Registering" %}</a></li>{% endif %}
 							<li><a href="{% url semifinal LANGUAGE_CODE %}">{% trans "Semifinal" %}</a></li>
 							<li><a href="{% url training LANGUAGE_CODE %}">{% trans "Training" %}</a></li>
 							<li><a href="{% url final LANGUAGE_CODE %}">{% trans "Final" %}</a></li>
@@ -117,11 +126,11 @@ $(document).ready(function() {
 				</ul>
 			</div>
 			
-			<div class="sidemenu">
+			<!-- <div class="sidemenu">
 				<h3>{% trans "Sponsors" %} 2012</h3>
 				<a href="http://www.ibm.com/be/{{LANGUAGE_CODE}}/" target="_blank"><img src="/static/logos/ibm_logo-200.jpg" width="200" height="77" /></a> 
 				<a href="http://www.ibbt.be/" target="_blank"><img src="/static/logos/ibbt-logo.jpg" width="180" /></a>
-			</div>
+			</div> -->
 			
 			{# <div class="sidemenu"> #}
 			{# 				<h3>{% trans "Prizes offered by" %}</h3> #}
@@ -208,14 +217,6 @@ $(document).ready(function() {
 			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 			  })();
 			</script>
-			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
 		</div>
 
 		<div class="col-a">
