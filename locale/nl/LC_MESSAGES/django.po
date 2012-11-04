@@ -213,7 +213,7 @@ msgstr "handmatig geverifieerd"
 
 #: contest/models.py:70
 msgid "token"
-msgstr "token"
+msgstr ""
 
 #: contest/models.py:71
 msgid "contest year"

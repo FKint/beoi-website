@@ -32,6 +32,7 @@
 	<p class="form-2a">{{ form.postal_code.label_tag }}{{ form.postal_code }}{% if form.postal_code.errors %}<span class="error">{{ form.postal_code.errors|join:"<br/>" }}</span>{% endif %}</p>
 	<p class="form-2b">{{ form.city.label_tag }}{{ form.city }}{% if form.city.errors %}<span class="error">{{ form.city.errors|join:"<br/>" }}</span>{% endif %}</p>
 	<p class="form-1"><label for="id_email">Emailadres <span class="details">(we gebruiken dit enkel in het kader van de OI)</span></label>{{ form.email }}{% if form.email.errors %}<span class="error">{{ form.email.errors|join:"<br/>" }}</span>{% endif %}</p>
+	<p class="form-1"><label for="id_token">Inschrijvingscode <span class="details">(Optioneel, kan je hier de code ingeven die je hebt gekregen als je werd uitgenodigd door een andere deelnemer. <a href="{% url referrals LANGUAGE_CODE %}">Meer over onze uitnodigingsactie</a>.)</span></label>{{ form.token }}{% if form.token.errors %}<span class="error">{{ form.token.errors|join:"<br/>" }}</span>{% endif %}</p>
 	</div>
 	
 	<div class="fieldblock">
@@ -47,7 +48,7 @@
 	
 	<p class="form-2a">{{ form.year_study.label_tag }}{{ form.year_study }}{% if form.year_study.errors %}<span class="error">{{ form.year_study.errors|join:"<br/>" }}</span>{% endif %}</p>
 	<p class="form-2b"><label for="id_language">Taal <span class="details">(van het opgavenblad)</span></label>{{ form.language }}{% if form.language.errors %}<span class="error">{{ form.language.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label for="id_semifinal_center">Gekozen centrum voor de halve finale <span class="details">(Pas op: ontvangst en assistentie voor deelnemers is slechts gegarandeerd in de lokale taal van het centrum)</span></label>{{ form.semifinal_center }}{% if form.semifinal_center.errors %}<span class="error">{{ form.semifinal_center.errors|join:"<br/>" }}</span>{% endif %}</p>
+	<p class="form-1"><label for="id_semifinal_center">Gekozen centrum voor de halve finale <span class="details">(Let op: ontvangst en assistentie voor deelnemers is slechts gegarandeerd in de lokale taal van het centrum)</span></label>{{ form.semifinal_center }}{% if form.semifinal_center.errors %}<span class="error">{{ form.semifinal_center.errors|join:"<br/>" }}</span>{% endif %}</p>
 	</div>
 	
 	
