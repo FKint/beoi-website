@@ -1,11 +1,17 @@
 {{ NAME }},
 
-We bevestigen uw inschrijving voor de halve finale van de Belgische Olympiade in de Informatica. 
-U hebt gekozen om op 1 februari 2012 deel te nemen in het regionaal centrum "{{ CENTER_NAME }}" . 
-Meer informatie over hoe daarheen te gaan vindt u op de volgende pagina: {{ CENTER_DETAILS }}.
+We bevestigen jouw inschrijving voor de halve finale van de Belgische Informatica-Olympiade. 
+Je hebt gekozen om op 21 janvier 2013 deel te nemen in het regionaal centrum "{{ CENTER_NAME }}" . 
+Meer informatie over hoe daarheen te gaan vindt je op de volgende pagina: {{ CENTER_DETAILS }}.
 
-U moet niets speciaals meebrengen, behalve iets om te schrijven. Probeer om 13u45 ter plaatse te zijn. De wedstrijd begint om 14 uur.
+Je moet niets speciaals meebrengen, behalve iets om te schrijven. Probeer om 14u15 ter plaatse te zijn. De wedstrijd begint om 14u30.
 
-Als u nog vragen hebt, kunt u ze sturen naar inschrijving@be-oi.be.
+Voor alle vragen over de wedstrijd, kan je mailen naar inscription@be-oi.be.
 
-Het be-OI team
+De deelnemer die de meeste personen kan overtuigen om mee te doen met deze olympiade wint onze speciale prijs ter waarde van 100 euro! Je kan punten winnen door anderen aan te moedigen in te schrijven en daarbij deze code te gebruiken : {{ TOKEN }} , of nog gemakkelijker, hen deze link door te sturen: {{ URLTOSHARE }} . Je kan die link ook gemakkelijk delen op Facebook of Twitter! Je totaalscore voor deze prijs kan je altijd raadplegen op {{ URLSTAT }} .
+
+Veel succes!
+
+De be-OI organisatie
+
+

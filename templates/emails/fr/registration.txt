@@ -1,7 +1,7 @@
 {{ NAME }},
 
 Nous confirmons votre inscription à la demi-finale de l'Olympiade belge d'Informatique. 
-Vous avez choisi de la présenter le 21 janvier 2013 au centre de "{{ CENTER_NAME }}". Vous trouverez plus d'informations sur comment vous y rendre sur la page {{ CENTER_DETAILS }}.
+Vous avez choisi de la présenter le 23 janvier 2013 au centre de "{{ CENTER_NAME }}". Vous trouverez plus d'informations sur comment vous y rendre sur la page {{ CENTER_DETAILS }}.
 
 Vous ne devez rien apporter de particulier, si ce n'est de quoi écrire. Dans la mesure du possible, essayez d'arriver à 14h15. Le concours débute à 14h30.
 
