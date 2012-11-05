@@ -30,6 +30,29 @@
 	<p>Je hebt nog geen vriend(inn)en uitgenodigd, of ze hebben zich nog niet ingeschreven. Op dit moment heb je dus <strong>{{ points }}</strong> punt.</p>
 
 {% endif %}
+
+
+<p>Geef je vriend(inn)en deze link: <strong id="linktoshare"></strong> of gebruik de knoppen hieronder om hem te delen op Twitter of Facebook. De inschrijvingen die via die link gebeuren zullen automatisch worden meegeteld voor jouw score.</p>
+
+<p style="margin-top:20px;"><div style="padding:0 25px; 0 25px" class="fb-like" data-send="false" data-width="100" data-show-faces="false" data-action="recommend"></div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="nl" data-size="large" data-count="none">Tweeter</a>
+</p>
+
+<script type="text/javascript">
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+}
+var token =  getURLParameter('token');
+var sharedURL = "http://be-oi.be{{ sharinglink }}";
+$(".fb-like").attr("data-href",sharedURL);
+$(".twitter-share-button").attr("data-url", sharedURL);
+$("#linktoshare").html(sharedURL);
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+
 {% endif %}
 
 {% endblock %}
