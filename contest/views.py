@@ -176,7 +176,8 @@ def referrals(request, template="", confirm=None):
 			{
 				"correcttoken" : True,
 				"godchildren":godchildren,
-				"points": points
+				"points": points,
+				"sharinglink": "%s?token=%s" % (reverse("home", args=[request.LANGUAGE_CODE]),full_token_computed)
 			 }, 
 			context_instance=RequestContext(request))
 
