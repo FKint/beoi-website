@@ -1,0 +1,35 @@
+{% extends "nl/base.html" %}
+
+{% block content%}
+<h2>Breng je vrienden mee en win 100&euro; !</h2>
+
+<p>We geven onze speciale prijs ter waarde van 100 euro aan diegene die de meeste vriend(inn)en kan overtuigen om ook deel te nemen aan de Belgische Informatica-olympiade. Nodig je vrienden uit en geef hen de link of de code die je krijgt bij je eigen inschrijving. Voor elke deelnemer die zich inschrijft met jouw code, krijgen zowel jij als die deelnemer 1 punt. De deelnemer met de meeste punten krijgt onze prijs in ontvangst op de proclamatie.
+</p>
+
+
+
+<h3>Enkele regels</h3>
+<ul>
+	<li>Ingeschrevenen die niet opdagen voor de halve finale zijn gediskwalificeerd en tellen niet mee voor punten voor deze prijs.</li>
+	<li>In het geval van een ex-aequo, zal de som van de scores van de deelnemer en al diens aangebrachte deelnemers op de halve finale de winnaar bepalen. Indien er dan nog steeds een ex-aequo is, wint diegene die zich als eerste inschreef voor de wedstrijd.</li>
+</ul>
+
+{% if correcttoken %}
+
+<h3>Jouw score</h3>
+
+{% if godchildren %}
+<p>Je hebt <strong>{{ points }}</strong> punt(en) verdiend, voor het aanbrengen van de volgende personen:</p>
+<ul>
+	{% for godchild in godchildren %}
+	<li>{{ godchild.firstname }} {{ godchild.surname }}</li>
+	{% endfor %}
+</ul>
+{% else %}
+
+	<p>Je hebt nog geen vriend(inn)en uitgenodigd, of ze hebben zich nog niet ingeschreven. Op dit moment heb je dus <strong>{{ points }}</strong> punt.</p>
+
+{% endif %}
+{% endif %}
+
+{% endblock %}
