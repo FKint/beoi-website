@@ -6,7 +6,7 @@ Meer informatie over hoe daarheen te gaan vindt je op de volgende pagina: {{ CEN
 
 Je moet niets speciaals meebrengen, behalve iets om te schrijven. Probeer om 14u15 ter plaatse te zijn. De wedstrijd begint om 14u30.
 
-Voor alle vragen over de wedstrijd, kan je mailen naar inscription@be-oi.be.
+Voor alle vragen over de wedstrijd, kan je mailen naar inschrijving@be-oi.be.
 
 De deelnemer die de meeste personen kan overtuigen om mee te doen met deze olympiade wint onze speciale prijs ter waarde van 100 euro! Je kan punten winnen door anderen aan te moedigen in te schrijven en daarbij deze code te gebruiken : {{ TOKEN }} , of nog gemakkelijker, hen deze link door te sturen: {{ URLTOSHARE }} . Je kan die link ook gemakkelijk delen op Facebook of Twitter! Je totaalscore voor deze prijs kan je altijd raadplegen op {{ URLSTAT }} .
 
