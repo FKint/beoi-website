@@ -5835,6 +5835,11 @@ a.badge:hover {
   color: #ffffff;
 }
 
+.carousel-caption a,
+.carousel-caption a:hover {
+  color: #eeeeee;
+}
+
 .carousel-caption h4 {
   margin: 0 0 5px;
 }
