@@ -1,8 +1,22 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-sample-questions").addClass("active");
+</script>
+{% endblock js %}
+
+{% block header %}
+<h1>Exemples de Questions</h1>
+<p>Questionnaires des années précédentes </p>
+{% endblock header %}
+
 
 {% block content%}
-<h2>Exemples de questions</h2>
-
 <p>Afin de vous entrainer au concours, vous pouvez télécharger des exemples de questions accompagnés d'une solution possible, expliquée en détails. N'hésitez pas non plus à lire le document <a href="/static/downloads/OI-2010-intro-algo.pdf">Introduction à l'algorithmique</a> qui vous propose une introduction à l'algorithmique à partir d'exemples détaillés. Ce dernier n'est pas encore complet, mais le sera très prochainement.</p>
 
 <ul>
@@ -11,8 +25,6 @@
 </ul>
 
 <p>N'hésitez pas non plus à consulter les questions des épreuves passées :</p>
-
-
 
 
 <ul>

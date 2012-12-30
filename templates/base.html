@@ -1,250 +1,84 @@
+{% extends "base-empty.html" %}
 {% load i18n %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title>{% block title %}{% trans "Belgian Olympiads in Informatics" %}{% endblock %}</title>
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<meta http-equiv="Content-language" content="{{LANGUAGE_CODE}}" />
-<link rel="stylesheet" type="text/css" media="screen" href="/static/css/screen.css" />
-<link rel="alternate" type="application/rss+xml" href="{% url rss LANGUAGE_CODE %}" title="{% trans "RSS feed" %}">
-{% if not debug %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20319365-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-{% endif %}
-<script type="text/javascript" src="/static/js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript">
-jQuery.jQueryRandom = 0;
-jQuery.extend(jQuery.expr[":"],
-{
-    random: function(a, i, m, r) {
-        if (i == 0) {
-            jQuery.jQueryRandom = Math.floor(Math.random() * r.length);
-        };
-        return i == jQuery.jQueryRandom;
-    }
-});
-$(document).ready(function() {
-	$('.fadein_support img:not(:random)').hide();
-	setInterval(function(){
-			$('.fadein_support img:visible').fadeOut(1000);
-			$('.fadein_support img:hidden:random').fadeIn(1000);
-		}, 
-		5500
-	);
-});
-</script>
-</head>
-<body>
-	
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="header-wrap"><div id="header">
-	<a name="top"></a>
-	<img id="logo" src="/static/images/be-oi-logo-120px.png" />
-	<h1 id="logo-text"><a href="{% url home LANGUAGE_CODE %}" >{% trans "Belgian Olympiads in Informatics" %}</a></h1>
-	<p id="slogan">{% trans "Programming, algorithmic and logic" %}</p>
-	<div id="lang">{% block langswitch %}{% endblock %}</div>
-</div></div><!--/header-->
+{% block body %}
 
-{# to insert block, code, js in the body #}
-<!-- TEMPLATE {{ LANGUAGE_CODE|upper }} --> {# For test validation ! #}
+<div id="wrap">
 
-<div id="content-wrap" class="clear" > <!-- content-outer -->
-    <div id="content"> <!-- content -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <!-- the three lines of the icon when narrow screen -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="{% url home %}">beOI</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li id="menu-home"><a href="{% url home LANGUAGE_CODE %}">{% trans "News" %}</a></li>
+            <li id="menu-contest"><a href="{% url contest LANGUAGE_CODE %}">{% trans "Contest" %}</a></li>
+            <li id="menu-training"><a href="{% url preparing LANGUAGE_CODE %}">{% trans "Preparing" %}</a></li>
+            <li id="menu-sponsors"><a href="{% url sponsors LANGUAGE_CODE %}">{% trans "Press-Sponsors" %}</a></li>
+            <li id="menu-about"><a href="{% url about LANGUAGE_CODE %}">{% trans "About beOI" %}</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <div class="lang-switch">
+          {% if LANGUAGE_CODE == "fr" %}fr/<a href="{{SWITCH_LANG_URL}}">nl</a>
+          {% else %}<a href="{{SWITCH_LANG_URL}}">fr</a>/>nl{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
 
-	    <div id="main"> <!-- main -->
-		{% block content %}{% endblock %}
-		</div> <!-- /main -->
-      
-		<div id="sidebar"> <!-- sidebar -->
+  <header>
+    <div class="container">
+      <a href="{% url home LANGUAGE_CODE %}"><img src="/static/img/beoi-logo-dark.png" class="logo" /></a>
+      {% block header %}
+        <h1>{% block title %}{% endblock %}</h1>
+        <p>{% block subtitle %}{% endblock %}</p>
+      {% endblock header %}
+    </div>
+  </header>
 
-			<div class="sidemenu">
-			
-<!-- Begin MailChimp Signup Form -->
-<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup" >
-<form action="http://be-oi.us6.list-manage.com/subscribe/post?u=4a51a9ab354aa26ba87f9a75f&amp;id={% if LANGUAGE_CODE == "fr" %}3236c060b0{% else %}914e93b285{% endif %}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="margin:0;width:235px;">
-	<label for="mce-EMAIL">{% trans "Enter your e-mail to receive a message when the beOI 2013 registrations are open." %}</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required style="width:220px;">
-	<div class="clear"><input type="submit" value="{% trans "Register (to mailing list)" %}" name="{% trans "Register (to mailing list)" %}" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
-<!--End mc_embed_signup-->
+  <div class="container">
+    <div class="row">
+      <div class="span3">
+        <div id="side-menu" style="margin-left: 0px !important;" data-spy="affix" data-offset-top="247">
+        {% block leftmenu %}{% endblock %}
 
-				<h3>{% trans "Contest" %}</h3>
-            	<ul>
-					<li><a href="{% url home LANGUAGE_CODE %}">{% trans "News" %}</a></li>
-					<li><a href="{% url faq LANGUAGE_CODE %}">{% trans "FAQ" %}</a></li>
-					<li><a href="{% url registration LANGUAGE_CODE %}">{% trans "Contest" %} 2013</a>
-						<ul>
-							<li><a href="{% url agenda LANGUAGE_CODE %}">{% trans "Calendar" %}</a></li>
- 							{% if REGISTRATION_OPEN %}<li><a href="{% url registration LANGUAGE_CODE %}">{% trans "Registering" %}</a></li>{% endif %}
-							<li><a href="{% url semifinal LANGUAGE_CODE %}">{% trans "Semifinal" %}</a></li>
-							<li><a href="{% url training LANGUAGE_CODE %}">{% trans "Training" %}</a></li>
-							<li><a href="{% url final LANGUAGE_CODE %}">{% trans "Final" %}</a></li>
-							<li><a href="{% url ioi LANGUAGE_CODE %}">{% trans "International Olympiad" %}</a></li>
- 						</ul>
-					</li>
-					<li><a href="{% url rules LANGUAGE_CODE %}">{% trans "Rules" %}</a></li>
-					<li><a href="{% url sample-questions LANGUAGE_CODE %}">{% trans "Sample Questions" %}</a></li>
-					<li><a href="{% url archives LANGUAGE_CODE %}">{% trans "Archives" %}</a>
-						<ul>
-							<li><a href="{% url archives-2010 LANGUAGE_CODE %}">2010</a>
-							<li><a href="{% url archives-2011 LANGUAGE_CODE %}">2011</a>
-							<li><a href="{% url archives-2012 LANGUAGE_CODE %}">2012</a>
-						</ul>
-					</li>
-				</ul>
-			</div>
+        <!-- Supported by ... -->
+        <div class="sidemenu-header"><h3>{% trans "Sponsors" %}</h3></div>
+        <a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" class="sponsor-logo" /></a>
+        <a href="http://www.lavenir.net/" target="_blank"><img src="/static/logos/lavenir-2012.jpg" class="sponsor-logo"></a>
+        <a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" class="sponsor-logo"></a>
 
-			<div class="sidemenu">
-				<h3>{% trans "Organisation" %}</h3>
-            	<ul>
-					<li><a href="{% url team LANGUAGE_CODE %}">{% trans "be-OI Team" %}</a></li>
-					<li><a href="{% url sponsors LANGUAGE_CODE %}">{% trans "Sponsors & Partners" %}</a></li>
-					<li><a href="{% url press LANGUAGE_CODE %}">{% trans "Press" %}</a></li>
-				</ul>
-			</div>
-			
-			<!-- <div class="sidemenu">
-				<h3>{% trans "Sponsors" %} 2012</h3>
-				<a href="http://www.ibm.com/be/{{LANGUAGE_CODE}}/" target="_blank"><img src="/static/logos/ibm_logo-200.jpg" width="200" height="77" /></a> 
-				<a href="http://www.ibbt.be/" target="_blank"><img src="/static/logos/ibbt-logo.jpg" width="180" /></a>
-			</div> -->
-			
-			{# <div class="sidemenu"> #}
-			{# 				<h3>{% trans "Prizes offered by" %}</h3> #}
-			{# 				<div class="fadein_prizes"> #}
-			{# 				<div><a href="http://www.plantyn.com/wps/portal/{{LANGUAGE_CODE}}" target="_blank"><img src="/static/logos/plantyn-logo-{{LANGUAGE_CODE|upper}}.jpg" width="140"/></a></div> #}
-			{# 				</div> #}
-			{# 			</div> #}
-			
-			{# <div class="sidemenu"> #}
-			{# 	<h3>{% trans "With support from" %}</h3> #}
-			{#             	<div class="fadein_support"> #}
-			{# 		<img src="/static/logos/ua-logo.jpg" /> #}
-			{# 		<img src="/static/logos/henam-logo.png" /> #}
-			{# 		<img src="/static/logos/ugent-logo.png" /> #}
-			{# 		<img src="/static/logos/umons-logo.png" /> #}
-			{# 		<img src="/static/logos/fundp-logo.png" /> #}
-			{# 		<img src="/static/logos/hecfh-logo.png" /> #}
-			{# 		<img src="/static/logos/ucl-logo.png" /> #}
-			{# 		<img src="/static/logos/helb-prigogine-logo.png" /> #}
-			{# 		<img src="/static/logos/acmsc-logo.png" /> #}
-			{# 		<img src="/static/logos/ulg-logo.png" /> #}
-			{# 		<img src="/static/logos/ephec-logo.png" /> #}
-			{# 		<img src="/static/logos/hers-logo.png" /> #}
-			{# 		<img src="/static/logos/kul-logo.jpg" /> #}
-			{# 		<img src="/static/logos/helha-logo.png" /> #}
-			{# 		<img src="/static/logos/vinci-logo.png" /> #}
-			{# 		<img src="/static/logos/ulb-logo.png" /> #}
-			{# 		<img src="/static/logos/helmo-logo.png" /> #}
-			{# 		<img src="/static/logos/uhasselt-logo.png" /> #}
-			{# 		<img src="/static/logos/hepl-logo.png" /> #}
-			{# 		<img src="/static/logos/vub-logo.jpg" /> #}
-			{# 		<img src="/static/logos/hel-logo.png" /> #}
-			{# 		<img src="/static/logos/hephs-logo.png" /> #}
-			{# 		<img src="/static/logos/heph-condorcet-logo.png" /> #}
-			{# 		<img src="/static/logos/henam-logo.png" /> #}
-			{# 	</div>  #}
-			{# </div> #}
-			 
-		</div>  <!-- /sidebar -->
-	</div><!-- content -->
-</div> <!-- /content-out -->
+        </div>
+      </div><!--/span-->
+      <div class="span9" style="padding-bottom:50px;">
+        {% block content %}
+        {% endblock content %}
+      </div><!--/span-->
+    </div><!--/row-->
+  </div> <!--/container-->
 
-<div id="footer-outer" class="clear">
-	<div id="footer-wrap">
+  <div id="push"></div>
+</div> <!-- /wrap -->
 
-		{# <div id="gallery" class="clear"> #}
-		{# 	    </div> #}
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <a href="http://www.be-oi.be/"><img src="/static/img/beoi-logo-dark-tiny.png" class="logo"/></a>
+        <p>beOI ASBL/VZW</p>
+        <p class="hidden-phone">Belgische Informatica-olympiade - Olympiade belge d’Informatique</p>
+        <p>&copy; 2011-2012. {% trans "All rights reserved" %}.</p>
+      </div>
+    </div>
+  </div>
+</footer> 
 
-		<div class="col-a">
-			<h3>{% trans "Updates" %}</h3>
-			<ul class="subscribe-stuff">
-			 	<li>
-					<a title="RSS" href="{% url rss LANGUAGE_CODE %}" rel="nofollow">
-						<img alt="RSS" title="RSS" src="/static/images/social_rss.png" />
-					</a>
-				</li>
-				<li>
-					<a title="Twitter" href="http://twitter.com/beoi_{{ LANGUAGE_CODE }}" rel="nofollow">
-						<img alt="Twitter" title="Twitter" src="/static/images/social_twitter.png" />
-					</a>
-				</li>
-				<li>
-					<a title="Facebook" href="http://www.facebook.com/group.php?gid=303863304852" rel="nofollow">
-						<img alt="Facebook" title="Facebook" src="/static/images/social_facebook.png" />
-					</a>
-				</li>
-			</ul>
+{% endblock body %}
 
-			<div style="clear:left;"><p>{% trans "Stay up to date. Subscribe via" %}
-				<a href="{% url rss LANGUAGE_CODE %}">RSS</a>, 
-				<a href="http://twitter.com/beoi_{{ LANGUAGE_CODE }}">Twitter</a> {% trans "or" %} 
-				<a href="http://www.facebook.com/group.php?gid=303863304852">Facebook</a></p>
-			</div>
-		</div>
 
-		<div class="col-a">
-			<div class="social-widget"><div class="g-plusone" data-size="tall" data-href="http://www.be-oi.be"></div></div>
-			<div class="fb-like social-widget" data-href="http://www.be-oi.be" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div>
-			
-			<script type="text/javascript">
-			  (function() {
-			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			    po.src = 'https://apis.google.com/js/plusone.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			  })();
-			</script>
-		</div>
-
-		<div class="col-a">
-			&nbsp;			
-		</div>
-
-		<div class="col-b">
-			<h3>Contact</h3>
-        	<p><strong>E-mail: </strong>info <emph>[at]</emph> be-oi.be</p>
-			
-		</div>
-
-	</div>
-</div> <!-- /footer-outer -->
-
-<div id="footer-bottom">
-    <p class="bottom-left">
-		&copy; 2010-2012 <strong>be-OI</strong>&nbsp; &nbsp; &nbsp;
-		<a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> 
-		by <a href="http://www.styleshout.com/">styleshout</a>
-	</p>
-	<p class="bottom-right">
-		<a href="/">Home</a> |
-		<a href="{% url home "fr" %}">Fr</a> |
-		<a href="{% url home "nl" %}">Nl</a> |
-		<a href="#top">Back to Top</a>
-    </p>
-</div> <!-- /footer-bottom -->
-
-</body>
-</html>

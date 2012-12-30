@@ -1,60 +1,192 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-registration").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Inscription{% endblock %}
+{% block subtitle %}Gratuit, facile et rapide, mais tant à gagner.{% endblock %}
+
 
 {% block content%}
-<h1>Inscription</h1>
 
-{# <p><strong>Important: Les inscriptions en ligne sont officiellement clôturées depuis le dimanche 13 février, 23h59. #}
-{# 	Néanmoins, ce formulaire restera ouvert jusqu'à l'épreuve (mercredi 16 février) pour les retardataires.  #}
-{# 	Les centres régionaux #}
-{# 	accepteront (dans la limite des places et des énoncés disponibles) tout le monde le jour de l'épreuve, que vous #}
-{# 	soyez inscrit via ce formulaire ou pas. Si vous n'êtes pas sur leurs listes, ils vous demanderont  #}
-{# 	de compléter un formulaire d'inscription papier similaire à celui-ci. Si vous comptez participer #}
-{# 	à l'épreuve, nous vous demandons cependant de vous inscrire au plus vite afin de nous permettre d'estimer le nombre #}
-{# 	de participants au mieux.</strong></p> #}
+<!-- <div class="alert alert-info">
+ <p><strong>Important: Les inscriptions en ligne sont officiellement clôturées depuis le dimanche 13 février, 23h59. 
+ 	Néanmoins, ce formulaire restera ouvert jusqu'à l'épreuve (mercredi 16 février) pour les retardataires.  
+ 	Les centres régionaux 
+ 	accepteront (dans la limite des places et des énoncés disponibles) tout le monde le jour de l'épreuve, que vous 
+ 	soyez inscrit via ce formulaire ou pas. Si vous n'êtes pas sur leurs listes, ils vous demanderont  
+ 	de compléter un formulaire d'inscription papier similaire à celui-ci. Si vous comptez participer 
+ 	à l'épreuve, nous vous demandons cependant de vous inscrire au plus vite afin de nous permettre d'estimer le nombre 
+ 	de participants au mieux.</strong></p> 
+</div> -->
 
-<p>Le concours est réservé aux élèves de moins de 25 ans inscrits dans une école secondaire belge. En s'inscrivant, le participant accepte <a href="{% url rules LANGUAGE_CODE %}">le règlement</a>. </p>
+<div class="alert alert-info">
+  <p>Le concours est réservé aux élèves inscrits dans l'<strong>enseignement secondaire</strong>. Les participants doivent, par ailleurs, avoir la <strong>nationalité belge ou être inscrit dans un établissement scolaire établi en Belgique</strong>. Les candidats doivent également avoir <strong>moins de 21 ans</strong> au 1er juillet de l'année au cours de laquelle a lieu l'épreuve.  En s'inscrivant, le participant accepte <a href="{% url rules LANGUAGE_CODE %}">le règlement</a>. </p>
+</div>
 
-<div class="errors">
-{% if form.errors %}
+{% if form.errors or global_errors  %}
+<div class="alert alert-error">
     <p>
         Veuillez corriger l{{ form.errors|pluralize:"',es"}} erreur{{ form.errors|pluralize}} ci-dessous.
     </p>
+    {{ global_errors }} 
+</div>
 {% endif %}
 
-{{ global_errors }} 
-</div>
+<form action="" method="post" name="registrationform" class="form-horizontal"> {% csrf_token %}
 
-<form action="" method="post" name="registrationform"> {% csrf_token %}
-	<div class="fieldblock">
-	<p class="form-2a">{{ form.firstname.label_tag }}{{ form.firstname }}{% if form.firstname.errors %}<span class="error">{{ form.firstname.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2b">{{ form.surname.label_tag }}{{ form.surname }}{% if form.surname.errors %}<span class="error">{{ form.surname.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2a">{{ form.gender.label_tag }}{{ form.gender }}{% if form.gender.errors %}<span class="error">{{ form.gender.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2b"><label for="id_dob">Date de naissance<span class="details">(jour/mois/année)</span></label>{{ form.dob }}{% if form.dob.errors %}<span class="error">{{ form.dob.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1">{{ form.address.label_tag }}{{ form.address }}{% if form.address.errors %}<span class="error">{{ form.address.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2a">{{ form.postal_code.label_tag }}{{ form.postal_code }}{% if form.postal_code.errors %}<span class="error">{{ form.postal_code.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2b">{{ form.city.label_tag }}{{ form.city }}{% if form.city.errors %}<span class="error">{{ form.city.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label for="id_email">Adresse e-mail <span class="details">(uniquement utilisée dans le cadre de l'olympiade, jamais communiquée à un sponsor)</span></label>{{ form.email }}{% if form.email.errors %}<span class="error">{{ form.email.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label for="id_token">Code de parrainage <span class="details">(Optionnel, le code reçu si vous êtes parrainé par un autre participant.  <a href="{% url referrals LANGUAGE_CODE %}">Plus d'info sur notre programme de parrainage</a>.)</span></label>{{ form.token }}{% if form.token.errors %}<span class="error">{{ form.token.errors|join:"<br/>" }}</span>{% endif %}</p>
-	</div>
+  <div class="well">
+   
+    <div class="control-group {% if form.firstname.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.firstname.html_name }}">{{ form.firstname.label }}</label>
+      <div class="controls">
+        <input type="text" id="{{ form.firstname.html_name }}" name="{{ form.firstname.html_name }}" value="{{ form.firstname.value|default_if_none:"" }}" class="input-large">
+        <span class="help-inline">{{ form.firstname.errors|join:" " }}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.surname.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.surname.html_name }}">{{ form.surname.label }}</label>
+      <div class="controls">
+        <input type="text" id="{{ form.surname.html_name }}" name="{{ form.surname.html_name }}" value="{{ form.surname.value|default_if_none:"" }}" class="input-large">
+        <span class="help-inline">{{ form.surname.errors|join:" " }}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.dob.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.dob.html_name }}">{{ form.dob.label }}</label>
+      <div class="controls">
+        <input type="text" id="{{ form.dob.html_name }}" name="{{ form.dob.html_name }}" value="{{ form.dob.value|default_if_none:"" }}" class="input-small" placeholder="jj/mm/aaaa">
+        <span class="help-inline">{{ form.dob.errors|join:" " }}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.gender.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.gender.html_name }}">{{ form.gender.label }}</label>
+      <div class="controls">
+        <select class="input-small" name="{{ form.gender.html_name }}">
+      	{% for choice in form.gender.field.choices %}
+      	 <option value="{{ choice.0|add:0 }}" {% if form.gender.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %}>{{ choice.1 }}</option>
+  		  {% endfor %}
+        </select>
+        <span class="help-inline">{{ form.gender.errors|join:" " }}</span>
+  	 </div>
+    </div>
+
+    <div class="control-group {% if form.postal_code.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.postal_code.html_name }}">{{ form.postal_code.label }}, {{ form.city.label }}</label>
+      <div class="controls controls-row">
+        <input type="text" id="{{ form.postal_code.html_name }}" name="{{ form.postal_code.html_name }}" value="{{ form.postal_code.value|default_if_none:"" }}" class="input-mini" >
+        <input type="text" id="{{ form.city.html_name }}" name="{{ form.city.html_name }}" value="{{ form.city.value|default_if_none:"" }}" class="input-large">
+        <span class="help-inline">{{ form.postal_code.errors|join:" " }}</span>
+        <span class="help-inline">{{ form.city.errors|join:" " }}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.email.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.email.html_name }}">{{ form.email.label }}</label>
+      <div class="controls">
+        <input type="text" id="{{ form.email.html_name }}" name="{{ form.email.html_name }}" value="{{ form.email.value|default_if_none:"" }}" class="input-large">
+        <span class="help-inline">{{ form.email.errors|join:" " }} {{ form.email.help_text}}</span>
+      </div>
+    </div>
+
+    <div class="control-group {% if form.token.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.token.html_name }}">{{ form.token.label }}</label>
+      <div class="controls">
+        <input type="text" id="{{ form.token.html_name }}" name="{{ form.token.html_name }}" value="{{ form.token.value|default_if_none:"" }}" class="input-small" >
+        <span class="help-inline">{{ form.token.errors|join:" " }} {{ form.token.help_text}} (<a href="{% url referrals LANGUAGE_CODE %}">{% trans "More information on our sponsorship program" %}</a>.)</span> 
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="control-group {% if form.school_exists.error or form.school.errors %}error{% endif %}">
+      <label class="control-label" for="{{ form.gender.html_name }}">{% trans "Current school" %}</label>
+      <div class="controls">
+        {% if form.school_exists.errors %}<span class="help-inline">{% trans "Selecting one option is mandatory." %}</span>{% endif %}
+
+        <label for="id_school_exists_1" >
+          <input id="id_school_exists_1" type="radio" name="school_exists" value="1" onchange="javascript:new_school_postal_code.disabled=(value==1); new_school_name.disabled=(value==1); new_school_city.disabled=(value==1); school.disabled=(value==0);"  {% if form.school_exists.data == "1" or not form.is_bound %}checked="checked" {% endif %}/> {% trans "My school is in this list"%} : <span class="help-inline">({% trans "ordered by post code" %})</span>
+        </label>
+        <select class="input-xlarge" name="{{ form.school.html_name }}" >
+          {% for choice in form.school.field.choices %}
+           <option value="{{ choice.0|add:0 }}" {% if form.gender.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %} >{{ choice.1 }}</option>
+          {% endfor %}
+        </select>
+        {% if form.school.errors %}<span class="help-inline">{{ form.school.errors|join:" " }}</span>{% endif %}
+        <label style="padding-top:15px;" class="forminputlabel" for="id_school_exists_0"><input id="id_school_exists_0" type="radio" name="school_exists" value="0" onchange="javascript:new_school_postal_code.disabled=(value==1); new_school_name.disabled=(value==1); new_school_city.disabled=(value==1); school.disabled=(value==0);"  {% if form.school_exists.data == "0" %}checked="checked" {% endif %}/> {% trans "Otherwise, I add it" %} :</label>
+    </div>
+  </div>
+
+  <div class="control-group {% if form.new_school_name.errors %}error{% endif %}">
+    <label class="control-label" for="{{ form.new_school_name.html_name }}">{{ form.new_school_name.label }}</label>
+    <div class="controls">
+      <input type="text" id="{{ form.new_school_name.html_name }}" name="{{ form.new_school_name.html_name }}" value="{{ form.new_school_name.value|default_if_none:"" }}" class="input-xlarge">
+      <span class="help-inline">{{ form.new_school_name.errors|join:" " }}</span>
+    </div>
+  </div>
+
+  <div class="control-group {% if form.new_school_postal_code.errors %}error{% endif %}">
+    <label class="control-label" for="{{ form.new_school_postal_code.html_name }}">{{ form.new_school_postal_code.label }}, {{ form.city.label }}</label>
+    <div class="controls controls-row">
+      <input type="text" id="{{ form.new_school_postal_code.html_name }}" name="{{ form.new_school_postal_code.html_name }}" value="{{ form.new_school_postal_code.value|default_if_none:"" }}" class="input-mini" >
+      <input type="text" id="{{ form.new_school_city.html_name }}" name="{{ form.new_school_city.html_name }}" value="{{ form.new_school_city.value|default_if_none:"" }}" class="input-large">
+      <span class="help-inline">{{ form.new_school_postal_code.errors|join:" " }}</span>
+      <span class="help-inline">{{ form.new_school_city.errors|join:" " }}</span>
+    </div>
+  </div>
+
+  {% if not form.is_bound %}<script type="text/javascript">document.registrationform.new_school_postal_code.disabled="disabled"; document.registrationform.new_school_name.disabled="disabled"; document.registrationform.new_school_city.disabled="disabled";</script>{% endif %}
+
+  <hr />
+
+  <div class="control-group {% if form.year_study.errors %}error{% endif %}">
+    <label class="control-label" for="{{ form.year_study.html_name }}">{{ form.year_study.label }}</label>
+    <div class="controls">
+      <select class="input-medium" name="{{ form.year_study.html_name }}">
+      {% for choice in form.year_study.field.choices %}
+       <option value="{{ choice.0|add:0 }}" {% if form.year_study.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %}>{{ choice.1 }}</option>
+      {% endfor %}
+      </select>
+      <span class="help-inline">{{ form.year_study.errors|join:" " }}</span>
+   </div>
+  </div>
+
+  <div class="control-group {% if form.language.errors %}error{% endif %}">
+    <label class="control-label" for="{{ form.language.html_name }}">{{ form.language.label }}</label>
+    <div class="controls">
+      <select class="input-medium" name="{{ form.language.html_name }}">
+      {% for choice in form.language.field.choices %}
+       <option value="{{ choice.0|add:0 }}" {% if form.language.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %}>{{ choice.1 }}</option>
+      {% endfor %}
+      </select>
+      <span class="help-inline">{{ form.language.errors|join:" " }}</span>
+   </div>
+  </div>
+
+  <div class="control-group {% if form.semifinal_center.errors %}error{% endif %}">
+    <label class="control-label" for="{{ form.semifinal_center.html_name }}">{{ form.semifinal_center.label }}</label>
+    <div class="controls">
+      <select class="input-xlarge" name="{{ form.semifinal_center.html_name }}">
+      {% for choice in form.semifinal_center.field.choices %}
+       <option value="{{ choice.0|add:0 }}" {% if form.semifinal_center.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %}>{{ choice.1 }}</option>
+      {% endfor %}
+      </select>
+      <span class="help-inline">{{ form.semifinal_center.errors|join:" " }} {{ form.semifinal_center.help_text}}</span>
+   </div>
+  </div>
 	
-	<div class="fieldblock">
-	<p class="form-1"><label for="id_school_exists">Etablissement scolaire actuel</label>{% if form.school_exists.errors %}<span class="error">Un choix parmi les deux options est obligatoire.</span>{% endif %}</p>
-	<p class="form-1"><label class="forminputlabel" for="id_school_exists_1"><input id="id_school_exists_1" type="radio" name="school_exists" value="1" onchange="javascript:new_school_postal_code.disabled=(value==1); new_school_name.disabled=(value==1); new_school_city.disabled=(value==1); school.disabled=(value==0);"  {% if form.school_exists.data == "1" or not form.is_bound %}checked="checked" {% endif %}/>Mon école est dans cette liste :<span class="details">(ordonnées par code postal)</span></label></p>
-	<p class="form-1demi">{{ form.school }}{% if form.school.errors %}<span class="error">{{ form.school.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label class="forminputlabel" for="id_school_exists_0"><input id="id_school_exists_0" type="radio" name="school_exists" value="0" onchange="javascript:new_school_postal_code.disabled=(value==1); new_school_name.disabled=(value==1); new_school_city.disabled=(value==1); school.disabled=(value==0);"  {% if form.school_exists.data == "0" %}checked="checked" {% endif %}/>Dans le cas contraire, je l'ajoute :</label></p>
-	<p class="form-1">{{ form.new_school_name.label_tag }}{{ form.new_school_name }}{% if form.new_school_name.errors %}<span class="error">{{ form.new_school_name.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2a">{{ form.new_school_postal_code.label_tag }}{{ form.new_school_postal_code }}{% if form.new_school_postal_code.errors %}<span class="error">{{ form.new_school_postal_code.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2b">{{ form.new_school_city.label_tag }}{{ form.new_school_city }}{% if form.new_school_city.errors %}<span class="error">{{ form.new_school_city.errors|join:"<br/>" }}</span>{% endif %}</p>
-	
-	{% if not form.is_bound %}<script type="text/javascript">document.registrationform.new_school_postal_code.disabled="disabled"; document.registrationform.new_school_name.disabled="disabled"; document.registrationform.new_school_city.disabled="disabled";</script>{% endif %}
-		
-	<p class="form-2a">{{ form.year_study.label_tag }}{{ form.year_study }}{% if form.year_study.errors %}<span class="error">{{ form.year_study.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-2b"><label for="id_language">Langue <span class="details">(des énoncés)</span></label>{{ form.language }}{% if form.language.errors %}<span class="error">{{ form.language.errors|join:"<br/>" }}</span>{% endif %}</p>
-	<p class="form-1"><label for="id_semifinal_center">Centre choisi pour la demi-finale <span class="details">(attention, l'accueil et l'assistance aux participants ne sont garantis que dans la langue du centre)</span></label>{{ form.semifinal_center }}{% if form.semifinal_center.errors %}<span class="error">{{ form.semifinal_center.errors|join:"<br/>" }}</span>{% endif %}</p>
-	</div>
-	
-	
-	<p class="no-border">  	<input type="submit" class="button" value="M'inscrire"> </p>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">{% trans "Register" %}</button>
+  </div>
 </form>
 
 {% endblock %}

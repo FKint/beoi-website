@@ -1,84 +1,48 @@
+{% extends "base.html" %}
 {% load i18n %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title>Olympiade belge d'Informatique &mdash; Belgische Informatica-olympiade</title>
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" media="screen" href="/static/css/screen.css" />
 
-{% if not debug %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20319365-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-{% endif %}
-<script type="text/javascript" src="/static/js/jquery-1.4.4.min.js"></script>
+{% block body %}
+<div id="home-frame">
+  <div class="container">
+    <div class="row">
 
-</head>
-<body>
-<a name="top"></a>
-	
-<!-- content-outer -->
-<div id="content-wrap" class="clear" >
+      <div class="span4">
+        <img src="/static/img/beoi-logo-root.png" class="logo" />
+      </div>
 
-    <!-- content -->
-    <div id="content">
-		
+      <div class="span4">
+        <div class="lang-teaser">
+          <h1>Belgische Informatica-olympiade</h1>
+          <p>De Belgische Informatica-olympiade (OI) is een wedstrijd in programmeren, algoritmiek en logica, bestemd voor leerlingen uit alle jaren en richtingen van het secundair onderwijs. Uit de laureaten worden deelnemers voor de International Olympiad in Informatics (IOI) geselecteerd.</p>
+          <a type="button" href="{% url home "nl" %}" class="btn btn-primary btn-large">Nederlands &raquo;</a>
+        </div>
+      </div>
 
-        <!-- main -->
-	    <div id="main">
-		
-		
-			<img id="logo" src="/static/images/be-oi-logo-120px.png" style="float:left;clear:left"/>
-			<div style="float:left;width:600px">
-				<h2>Belgische Informatica-olympiade</h2>
-				<p>De Belgische Informatica-olympiade (OI) is een wedstrijd in programmeren, algoritmiek en logica, bestemd voor leerlingen uit alle jaren en richtingen van het secundair onderwijs. Uit de laureaten worden deelnemers voor de International Olympiad in Informatics (IOI) geselecteerd. </p>
-				<p><a href="{% url home "nl" %}">	&raquo; Ga verder in het Nederlands</a></p>
-					
-				<hr />
-				<h2>Olympiade belge d'Informatique</h2>
+      <div class="span4">
+        <div class="lang-teaser">
+          <h1>Olympiade belge d'Informatique</h1>
+          <p>L'Olympiades belge d'Informatique (OI) est une compétition de programmation, d'algorithmique et de logique destinée aux élèves de secondaires de tout age et permettant d'identifier des candidats pour les Olympiades Internationales d'Informatique (IOI).</p>
+          <a type="button" href="{% url home "fr" %}" class="btn btn-primary btn-large">Français &raquo;</a>
+        </div>
+      </div>
 
-				<p>L'Olympiades belge d'Informatique (OI) est une compétition de programmation, d'algorithmique et de 
-					logique destinée aux élèves de secondaires de tout age et permettant d'identifier 
-					des candidats pour les Olympiades Internationales d'Informatique (IOI).</p>
-			    <p><a href="{% url home "fr" %}" >&raquo; Continuer en français</a></p>
-			</div>
-					
-       <!-- /main -->
-		</div>
-		
-		<!-- <div id="sidebar">
-		</div> -->
+    </div>
+  </div>
 
-    <!-- content -->
-	</div>
+  <div id="push"></div>
+</div> <!-- /wrap -->
 
-<!-- /content-out -->
-</div>
-		
-<!-- footer-bottom -->
-<div id="footer-bottom">
+ <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <a href="http://www.be-oi.be/"><img src="/static/img/beoi-logo-dark-tiny.png" class="logo"/></a>
+        <p>beOI ASBL/VZW</p>
+        <p class="hidden-phone">Belgische Informatica-olympiade - Olympiade belge d’Informatique</p>
+        <p>&copy; 2011-2012. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer> 
 
-    <p class="bottom-left">
-		&copy; 2010-2012 <strong>be-OI</strong>&nbsp; &nbsp; &nbsp;
-		<a href="http://www.bluewebtemplates.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
-
-	 </p>
-
-	 <p class="bottom-right">
-		<a href="/">Home</a> |
-		{% block bottom_links %}{% endblock%}
-      <strong><a href="#top">Back to Top</a></strong>
-    </p>
-
-<!-- /footer-bottom-->
-</div>
-
-</body>
-</html>
+{% endblock body %}

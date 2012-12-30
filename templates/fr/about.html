@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-about").addClass("active");
+</script>
+{% endblock js %}
+
+
+{% block title %}A propos{% endblock %}
+{% block subtitle %}L'équipe derrière toute cette organisation ...{% endblock %}
+
+{% block content %}
+
+<section>
+  <h2>L'ASBL</h2>
+  
+  <p>L'<strong>Olympiade belge d'Informatique</strong> est organisée par l'<em>ASBL beOI</em>.
+  L'association est responsable du contenu de ce site web. 
+  Les coordonnées de l'association sont les suivantes:</p>
+  <address>
+    Belgische Informatica-olympiade - Olympiade belge d’Informatique (beOI) ASBL<br />
+    Rue du Grand Hornu, 1 bte 207<br />
+    1348 Louvain-la-Neuve (Belgique)<br />
+    N° BCE: 0849.738.707
+  </address>
+  <p> Vous pouvez également nous contacter par e-mail à <a href="info@be-oi.be">info@be-oi.be</a></p> 
+</section>
+
+<section>
+  <h2>Equipe</h2>
+  
+  <p>Organiser un tel concours occupe de nombreuses personnes durant toute l'année et ce pendant des 
+  centaines d'heures. Ces personnes sont toutes bénévoles ou membres d'Universités et Hautes-Écoles de Belgique dispensant des formations en informatique. </p>
+
+  <h3>Liste des membres de l'ASBL</h3>
+  
+  <ul >
+    <li><strong>Mohammed  Benjelloun</strong> (UMons)</li>
+    <li><strong>Jean  Cardinal</strong> (ULB)</li>
+    <li><strong>Sébastien Combéfis</strong> (UCLouvain)</li>
+    <li><strong>Kris  Coolsaet</strong> (UGent) </li>
+    <li><strong>Joachim Ganseman</strong> (UAntwerp) &mdash; administrateur, responsable sponsoring et traductions</li>
+    <li><strong>Gilles  Geeraerts</strong> (ULB) &mdash; administrateur, coordinateur beOI</li>
+    <li><strong>Fabian  Gilson</strong> (UNamur) &mdash; administrateur, responsable sponsoring</li>
+    <li><strong>Bart  Jacobs</strong> (KULeuven)</li>
+    <li><strong>Joris Klerkx</strong> (KULeuven)</li>
+    <li><strong>Damien  Leroy</strong> &mdash; administrateur, coordinateur international, responsable site web</li>
+    <li><strong>Frank Neven</strong> (UHasselt)</li>
+    <li><strong>Charles Pecheur</strong> (UCLouvain)</li>
+    <li><strong>Cédric  Peeters</strong> (HERS)</li>
+    <li><strong>Chantal Poncin</strong> (UCLouvain)</li>
+    <li><strong>Bruno Quoitin</strong> (UMons)</li>
+    <li><strong>Tom Van Cutsem</strong> (VUB)</li>
+    <li><strong>Ragnhild  Van Der Straeten</strong> (VUB)</li>
+    <li><strong>Stijn Vansummeren</strong> (ULB)</li>
+  </ul>
+
+
+</section>
+
+
+<section>
+  <h2>Crédits et Remerciements divers</h2>
+
+  <ul>
+    <!-- <li>Le logo a été designé bénévolement par </li> -->
+   <li>Le design de ce site a été construit sur le framework <a href="http://twitter.github.com/bootstrap/">Twitter Bootstap</a>.</li>
+   <li>Le code de ce site (public) et nos documents de travail (privés) sont hébergés gratuitement sur <a href="https://github.com/">GitHub</a>.</li>
+   <li>L'image d'arrière plan de la première page du site (http://www.be-oi.be/) est dérivée de l'image <a href="http://www.flickr.com/photos/generated/84253301/in/pool-_aa/">substrate print</a> publiée par <a href="http://www.flickr.com/photos/generated/">jared</a> sous CC BY 2.0.</li>
+   <li>Certaines icônes utilisées sur la page concours sont issues de la collection <a href="http://tympanus.net/codrops/2012/10/02/freebie-application-icon-set-png-psd-csh/">http://tympanus.net/codrops/2012/10/02/freebie-application-icon-set-png-psd-csh/</a> par Matt Gentile (sous CC BY 3.0).</li>
+  </ul>
+
+</section>
+
+
+
+
+
+{% endblock content %}

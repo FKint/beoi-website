@@ -1,15 +1,26 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
 
-<h2>Centres régionaux</h2>
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+</script>
+{% endblock js %}
 
-<p>Les demi-finales se déroulent le même jour dans toute la Belgique dans plusieurs centres régionaux repris sur cette page. Les participants doivent choisir le centre où ils vont passer cette épreuve lors de l'inscription.</p>
+{% block header %}
+<h1>Centres pour la demi-finale</h1>
+<p>11 institutions dans laquelle passer la demi-finale</p>
+{% endblock header %}
+
+{% block content %}
+
+<p class="lead">Les demi-finales se déroulent le même jour dans toute la Belgique dans plusieurs centres régionaux repris sur cette page. Les participants doivent choisir le centre où ils vont passer cette épreuve lors de l'inscription.</p>
 
 {% for center in object_list %}
 <h3>{{center.city}}</h3>
 {{ center.details|safe }}
 {% endfor %}
-
 
 {% endblock %}

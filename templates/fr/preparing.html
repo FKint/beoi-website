@@ -1,4 +1,16 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-preparing").addClass("active");
+</script>
+{% endblock js %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block title %}Se préparer{% endblock %}
+{% block subtitle %}{% endblock %}
 
 {% block content%}
 <h2>Preparing yourself</h2>
