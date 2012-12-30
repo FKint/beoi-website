@@ -1,12 +1,21 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-rules").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Règlement{% endblock %}
+{% block subtitle %}de l'épreuve nationale belge{% endblock %}
 
 {% block content%}
-<h2>Règlement</h2>
-
 <ol>
-	<li>L'Olympiade belge d'Informatique (beOI) est une compétition de programmation, d'algorithmique et de logique organisée par la "<emph>Belgische Informatica-olympiade - Olympiade belge d’Informatique (beOI) ASBL</emph>", dénomée "l'association" dans la suite.</li>
-
-	<li>Le concours beOI est coordonnée par l'association composée principalement des corps enseignants d'Universités et Hautes-Écoles de Belgique. L'association est chargée de gérer tous les aspects liés au concours.</li>
+	<li>L'Olympiade belge d'Informatique (beOI) est une compétition de programmation, d'algorithmique et de logique organisée par la "<emph>Belgische Informatica-olympiade - Olympiade belge d’Informatique (beOI) ASBL</emph>", dénomée "l'association" dans la suite. Cette association est composée principalement des corps enseignants d'Universités et Hautes-Écoles de Belgique. L'association est chargée de gérer tous les aspects liés au concours.</li>
 	
 	<li>En s'inscrivant aux beOI, les candidats acceptent intégralement le présent règlement.</li>
 
@@ -40,5 +49,4 @@
 
 	<li>Tout point non prévu par le présent règlement sera tranché par l'association. Les décisions de l'association sont sans appel.</li>
  </ol>
-
 {% endblock %}

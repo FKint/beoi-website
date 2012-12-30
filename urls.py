@@ -14,19 +14,26 @@ from django.views.generic.simple import direct_to_template, redirect_to
 
 # Those urls are resolved with the lang prefix. This prefix is prepend before template file value.
 multilang_patterns = patterns('',
+
 	url(r'^(?P<page>[0-9]+)?$', news, {'template': "home.html"}, 'home'),
 	url(r'^rss$', RssNews(), {}, "rss"),
+
 	url(r'^agenda$', direct_to_template, {'template': 'calendar.html'}, "agenda"),
 	url(r'^rules$', direct_to_template, {'template': 'rules.html'}, "rules"),
 	url(r'^sample-questions$', direct_to_template, {'template': 'sample_questions.html'}, "sample-questions"),
 	url(r'^faq$', "beoi.faq.views.faq",  {'template': 'faq.html'}, "faq"),
 	url(r'^referrals$', "beoi.contest.views.referrals",  {'template': 'referrals.html'}, "referrals"),
+	url(r'^about$', direct_to_template,  {'template': 'about.html'}, "about"),
 
+	url(r'^contest$', direct_to_template,  {'template': 'contest.html'}, "contest"),
 	url(r'^registration$', "beoi.contest.views.registration",  {'template': 'registration.html'}, "registration"),
 	url(r'^registration/error$', direct_to_template, {'template': 'registration_confirm.html', "extra_context":{"error":1}}, "registration-error"),
 	url(r'^registration/confirm/(?P<object_id>\d+)$', list_detail.object_detail, {	'template_name': 'registration_confirm.html', 
 		"queryset": SemifinalCenter.objects.filter(active=True) }, "registration-confirm"),
 
+	url(r'^sponsors$', direct_to_template, {'template': 'sponsors.html'}, "sponsors"),
+	url(r'^press$', direct_to_template, {'template': 'press.html'}, "press"),
+	
 	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
 	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
@@ -35,7 +42,9 @@ multilang_patterns = patterns('',
 	#	"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
 	#										.filter(qualified=True,contestant__contest_year=contest_year())
 	#										.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
+
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
+	url(r'^preparing$', direct_to_template,  {'template': 'preparing.html'}, "preparing"),
 			
 	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
 	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
@@ -46,22 +55,21 @@ multilang_patterns = patterns('',
 	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
 	
 	url(r'^team$', direct_to_template, {'template': 'team.html'}, "team"),
-	url(r'^sponsors$', direct_to_template, {'template': 'sponsors.html'}, "sponsors"),
-	url(r'^press$', direct_to_template, {'template': 'press.html'}, "press"),
+
 	
-	url(r'^archives$', direct_to_template, {'template': 'archives.html'}, "archives"),
-	url(r'^archives/2010$', direct_to_template, {'template': '2010/index.html'}, "archives-2010"),
-	url(r'^archives/2010/semifinal$', direct_to_template, {'template': '2010/semifinal.html'}, "archives-2010-semifinal"),
-	url(r'^archives/2010/final$', direct_to_template, {'template': '2010/final.html'}, "archives-2010-final"),
-	url(r'^archives/2010/ioi$', direct_to_template, {'template': '2010/ioi.html'}, "archives-2010-ioi"),
-	url(r'^archives/2011$', direct_to_template, {'template': '2011/index.html'}, "archives-2011"),
-	url(r'^archives/2011/semifinal$', direct_to_template, {'template': '2011/semifinal.html'}, "archives-2011-semifinal"),
-	url(r'^archives/2011/final$', direct_to_template, {'template': '2011/final.html'}, "archives-2011-final"),
-	url(r'^archives/2011/ioi$', direct_to_template, {'template': '2011/ioi.html'}, "archives-2011-ioi"),
-	url(r'^archives/2012$', direct_to_template, {'template': '2012/index.html'}, "archives-2012"),
-	url(r'^archives/2012/semifinal$', direct_to_template, {'template': '2012/semifinal.html'}, "archives-2012-semifinal"),
-	url(r'^archives/2012/final$', direct_to_template, {'template': '2012/final.html'}, "archives-2012-final"),
-	url(r'^archives/2012/ioi$', direct_to_template, {'template': '2012/ioi.html'}, "archives-2012-ioi"),
+	# url(r'^archives$', direct_to_template, {'template': 'archives.html'}, "archives"),
+	url(r'^archives/2010$', direct_to_template, {'template': '2010.html'}, "archives-2010"),
+	# url(r'^archives/2010/semifinal$', direct_to_template, {'template': '2010/semifinal.html'}, "archives-2010-semifinal"),
+	# url(r'^archives/2010/final$', direct_to_template, {'template': '2010/final.html'}, "archives-2010-final"),
+	# url(r'^archives/2010/ioi$', direct_to_template, {'template': '2010/ioi.html'}, "archives-2010-ioi"),
+	url(r'^archives/2011$', direct_to_template, {'template': '2011.html'}, "archives-2011"),
+	#url(r'^archives/2011/semifinal$', direct_to_template, {'template': '2011/semifinal.html'}, "archives-2011-semifinal"),
+	#url(r'^archives/2011/final$', direct_to_template, {'template': '2011/final.html'}, "archives-2011-final"),
+	#url(r'^archives/2011/ioi$', direct_to_template, {'template': '2011/ioi.html'}, "archives-2011-ioi"),
+	url(r'^archives/2012$', direct_to_template, {'template': '2012.html'}, "archives-2012"),
+	#url(r'^archives/2012/semifinal$', direct_to_template, {'template': '2012/semifinal.html'}, "archives-2012-semifinal"),
+	#url(r'^archives/2012/final$', direct_to_template, {'template': '2012/final.html'}, "archives-2012-final"),
+	#url(r'^archives/2012/ioi$', direct_to_template, {'template': '2012/ioi.html'}, "archives-2012-ioi"),
 	
 	
 	# unlinked pages
