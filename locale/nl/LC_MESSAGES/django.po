@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-30 17:57+0100\n"
+"POT-Creation-Date: 2012-12-31 19:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -418,7 +418,7 @@ msgstr "Nieuws"
 msgid "Contest"
 msgstr "Wedstrijd"
 
-#: templates/base.html:22
+#: templates/base.html:22 templates/menu_training.html:4
 msgid "Preparing"
 msgstr ""
 
@@ -431,11 +431,21 @@ msgstr "Sponsors"
 msgid "About beOI"
 msgstr ""
 
-#: templates/base.html:52 templates/menu_press-sponsors.html:4
+#: templates/base.html:50
+#, fuzzy
+msgid "Register now!"
+msgstr "Inschrijven"
+
+#: templates/base.html:51
+#, python-format
+msgid "(%(timeleft)s left)"
+msgstr ""
+
+#: templates/base.html:56 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/base.html:77
+#: templates/base.html:80
 msgid "All rights reserved"
 msgstr ""
 
@@ -463,10 +473,6 @@ msgstr ""
 #: templates/menu_press-sponsors.html:5
 msgid "Press"
 msgstr "Pers"
-
-#: templates/menu_training.html:4
-msgid "Training"
-msgstr "Training"
 
 #: templates/menu_training.html:5
 msgid "Sample Questions"
@@ -506,6 +512,9 @@ msgstr ""
 #, fuzzy
 msgid "Register"
 msgstr "Inschrijven"
+
+#~ msgid "Training"
+#~ msgstr "Training"
 
 #~ msgid "Semifinal"
 #~ msgstr "Halve finale"
