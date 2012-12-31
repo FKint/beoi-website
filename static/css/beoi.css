@@ -74,6 +74,19 @@ address
 
 
 
+#fblikebox{
+ overflow: hidden;
+ border: solid #ddd 1px;
+ margin: 10px 0;
+ height: 202px;
+}
+
+#fblikebox iframe{
+  margin: -2px;
+   overflow: hidden;
+
+}
+
 
 /* Carousel 
 -------------------------------------------------- */
