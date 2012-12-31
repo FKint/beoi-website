@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-30 17:57+0100\n"
+"POT-Creation-Date: 2012-12-31 19:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -420,7 +420,7 @@ msgstr ""
 msgid "Contest"
 msgstr "Épreuve"
 
-#: templates/base.html:22
+#: templates/base.html:22 templates/menu_training.html:4
 msgid "Preparing"
 msgstr "Se préparer"
 
@@ -432,11 +432,20 @@ msgstr "Presse-Sponsors"
 msgid "About beOI"
 msgstr "A propos de beOI"
 
-#: templates/base.html:52 templates/menu_press-sponsors.html:4
+#: templates/base.html:50
+msgid "Register now!"
+msgstr "Inscrivez-vous dès maintenant!"
+
+#: templates/base.html:51
+#, python-format
+msgid "(%(timeleft)s left)"
+msgstr "(il reste %(timeleft)s)"
+
+#: templates/base.html:56 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr ""
 
-#: templates/base.html:77
+#: templates/base.html:80
 msgid "All rights reserved"
 msgstr "Tous droits réservés"
 
@@ -464,10 +473,6 @@ msgstr ""
 #: templates/menu_press-sponsors.html:5
 msgid "Press"
 msgstr "Presse"
-
-#: templates/menu_training.html:4
-msgid "Training"
-msgstr "Formation"
 
 #: templates/menu_training.html:5
 msgid "Sample Questions"
@@ -504,6 +509,9 @@ msgstr "Dans le cas contraire, je l'ajoute"
 #: templates/fr/registration.html:188
 msgid "Register"
 msgstr "M'inscrire"
+
+#~ msgid "Training"
+#~ msgstr "Formation"
 
 #~ msgid "Semifinal"
 #~ msgstr "Demi-finale"

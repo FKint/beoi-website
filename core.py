@@ -55,5 +55,6 @@ def contest_year():
 
 def contest_context(request):
 	return {
-		"REGISTRATION_OPEN": registration_open()
+		"REGISTRATION_OPEN": registration_open(),
+		"REGISTRATION_DEADLINE": settings.REGISTRATION_DEADLINE
 	}
