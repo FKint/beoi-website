@@ -1,0 +1,44 @@
+{% extends "fr/base.html" %}
+
+{% block content%}
+
+<img class="withframe" src="/static/pictures/2012/banner-ioi.jpg" alt="image post" width="680" height="200" />
+
+<p>L'Olympiade belge d'Informatique (be-OI) est une compétition de programmation, d'algorithmique et de logique destinée aux élèves en secondaire. Ce concours permet également d'identifier des candidats afin de réprésenter la Belgique à l'Olympiade Internationale d'Informatique (IOI).</p>
+
+<h3>Dernières news</h3>
+
+    {% for entry in object_list %}
+
+	<div class="post">
+		<div class="right">
+				<h4>{{ entry.title }}</h4>
+			{{ entry.body|safe }}
+		</div>
+		
+		<div class="left">
+			<p class="dateinfo">{{ entry.publication_date|date:"M" }}<span>{{ entry.publication_date|date:"d" }}</span></p>
+
+			<div class="post-meta">
+					<ul>
+						<li class="user">{% if entry.author.first_name %}{{ entry.author.first_name }} {{ entry.author.last_name }}{% else %}{{ entry.author }}{% endif %}</li>
+						<li class="time">{{ entry.publication_date|date:"H:i" }}</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+    {% endfor %}
+
+{% if paginator.num_pages > 1 %}
+	<p>[ pages: 
+	{% for page in paginator.page_range %}
+		{% if page != page_obj.number %} 
+		<a href="{% url home LANGUAGE_CODE,page %}">{{page}}</a> 
+		{% else%} 
+		<strong>{{page}}</strong>
+		{% endif %}
+	{% endfor %}
+	]</p>
+{% endif %}
+
+{% endblock %}
