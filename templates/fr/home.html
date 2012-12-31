@@ -4,8 +4,9 @@
 {% block js %}
 <script type="text/javascript">
 $("#menu-home").addClass("active");
-$("#home-carousel").carousel({interval: 4000});
+$("#home-carousel").carousel({interval: 5000});
 </script>
+<script src="/static/js/fb-likebox.js"></script>
 {% endblock js %}
 
 {% block title %}News{% endblock %}
@@ -17,6 +18,7 @@ $("#home-carousel").carousel({interval: 4000});
 
 
 {% block leftmenu %}
+<div id="fb-root"></div><div id="fblikebox" class="fb-like-box"></div>
 <a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Inscrivez-vous avant le 21 janvier !</a>
 {% endblock %}
 
