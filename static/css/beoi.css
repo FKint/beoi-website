@@ -73,6 +73,11 @@ address
 }
 
 
+.spaced li  { /* spacing beween <li> */
+  margin: 0 0 10px;
+}
+
+
 
 #fblikebox{
  overflow: hidden;
