@@ -9,46 +9,43 @@ $("#side-menu-preparing").addClass("active");
 
 {% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
 
-{% block title %}Se préparer{% endblock %}
-{% block subtitle %}{% endblock %}
+{% block title %}Préparation{% endblock %}
+{% block subtitle %}Comment vous préparer au mieux pour ces olympiades ?{% endblock %}
 
 {% block content%}
-<h2>Preparing yourself</h2>
 
-<p>From previous years we learned that many people want to participate in the Informatics Olympiad, but they don't know well what to expect. One of the most frequently asked questions we get is: "What do I need to know to participate"? Short answer: The Belgian Olympiad in Informatics wants to be as accessible as possible. In fact, everyone can participate with only a minimum of preparation.</p>
+<img src="/static/pictures/2010/final-comhelp.jpg" class="pull-right img-polaroid" />
 
+<p class="lead">Ces dernières années, nous avons appris que beaucoup de personnes étaient intéressées par l'Olympiade d'Informaituqe, la plupart ne savaient pas trop à quoi à s'attendre.  L'une des questions les plus fréquentes que nous recevons est &laquo; Que doit-on connaître pour participer ?&raquo;. Notre réponse est que nous souhaitons que le concours beOI soit accessible à tous, et qu'il est à la portée de tous de réaliser un score honorable à notre olympiade avec un préparation minimale.</p>
 
-<h4>Required knowledge</h4>
-<p>
+<h2>Connaissances requises</h2>
+
 <ul>
-	<li>For the semifinals <em>no prior knowledge</em> is required. You do not need to know programming, the test is entirely on paper. It is however handy if you know how an algorithm works, and how to write, read and understand it. Therefore certainly take a look at the <a href="{% url sample-questions  LANGUAGE_CODE %}">sample questions</a>.</li>
+	<li>Pour la <strong>demi-finale</strong>, première étape du concours, <strong>aucune connaissance particulière</strong> n'est requise. Cette étape du concours s'effectue entièrement sur papier et il n'est pas nécessaire de savoir programmer. Il est bon cependant bon de savoir de savoir ce qu'est un algorithme ainsi que comment en écrire et en comprendre un.  Si ce concours est nouveau pour vous, jetez un oeil aux <a href="{% url sample-questions LANGUAGE_CODE %}">questions des années précécentes</a> pour vous familiariser avec le genre de questions posées.</li>
 
-	<li>The final contains a small programming exercise. To be successful in the final you need to know your way around a little bit, in one of the following programming languages: <em>Java, C, C++, Pascal, PHP, Python</em>.</li>
+	<li>La <strong>finale</strong> comporte une partie de programmation sur ordinateur. Pour obtenir de bons résultats à la finale, il est donc nécessaire de pouvoir se débrouiller un minimum avec l'un des languages de programmation autorisé lors de l'épreuve: <em>Java, C, C++, Pascal, PHP, Python</em>.</li>
 
-	<li>The happy few that get selected to participate in the International Olympiad in Informatics will need to have a broad experience (or be willing to obtain it) with programming in <em>C, C++ of Pascal</em>.</li>
+	<li>La dizaine de participants sélectionnés pour faire partie du <strong>pool d'entraînement à l'Olympiade Internationale d'Informatique</strong> (IOI) aura besoin de s'entraîner plus en pronfondeur pour faire partie des 4 chanceux de la délégation belge. Cette partie se fera principalement en C++ et sera encadrée lors de plusieurs formations en ligne ou pas. </li>
 </ul>
-</p>
 
+Alors qu'attendez-vous pour <a href="{% url registration LANGUAGE_CODE %}">vous inscrire</a> ? 
 
-<h4>To help you get started</h4>
+<h2>Quelques ressources pour débuter ... </h2>
 
-<p>The page with <a href="{% url sample-questions  LANGUAGE_CODE %}">sample questions</a> contains all questions of previous years. There you will also find the document <a href="/static/downloads/OI-2010-FR-intro-algo.pdf">Introduction to Algorithmics</a>, that introduces algorithms and how they can be written down using pseudo-code. If you have no experience with algorithms, it's highly recommended to read it thoroughly!</p>
+<p>La page reprenant les <a href="{% url sample-questions  LANGUAGE_CODE %}">questions des années précédentes</a> est une bonne façon de découvrir le type de question qui peuvent être posées à la beOI. Cette même page reprend également un document d'<a href="/static/downloads/OI-2010-FR-intro-algo.pdf">introduction à l'algorithmique</a> qui donne une introduction à l'algorithmique et à la façon dont un algorithme peut être écrit en utilisant du pseudo-code. Si vous n'avez aucune expérience dans l'écriture d'algorithmes, ce document est probablement une bonne première lecture.</p>
 
-<p>In between the semifinal and the final, all participants get the opportunity during the Carnival Holiday to follow a <a href="{% url training LANGUAGE_CODE %}">mini-course Algorithmics and Programming</a>. Those who are selected for the final but have little programming experience, can thus (and by practicing at home) look forward to the final with confidence.</p>
+<p>Entre la demi-finale et la finale, un petit cours d'<em>introduction à l'algorithmique et à la programmation</em> est habituellement proposé aux candidats sélectionnés pour la finale. Cette formation 
+	permet d'introduire quelques concepts basiques mais bien utiles pour la finale à venir. Les participants sont également invités à s'entraîner à la maison afin de réaliser le meilleur résultat possible à la finale. </p>
 
-<p>The most important source of information is your <em>informatics teacher</em>. If you have questions about something you encountered, or you want additional study materials, he/she is best placed to help you. For example, ask to review a couple of the <a href="{% url sample-questions  LANGUAGE_CODE %}">sample questions</a> together!</p>
+<!-- <p>The most important source of information is your <em>informatics teacher</em>. If you have questions about something you encountered, or you want additional study materials, he/she is best placed to help you. For example, ask to review a couple of the <a href="{% url sample-questions  LANGUAGE_CODE %}">sample questions</a> together!</p> -->
 
-
-<h4>Computer infrastructure</h4>
+<!-- <h4>Computer infrastructure</h4>
 
 <p>The final will be partially at the computer. The software to submit and test your code is very clear and simple to use, you only need to know how to type. You will also get plenty of time to familiarize yourself with the computer that will be appointed to you. We cannot give the exact specifications of the software environment yet. </p>
 
 <p>For those who want a taste of it, we can give the following guidelines: we use <a href="http://www.ubuntu.com/" target="_blank">Ubuntu Linux</a>. You can use your favorite text editor, standard <a href="http://projects.gnome.org/gedit/" target="_blank">gEdit</a> will be installed. Those who want to test this environment without risk, can try to install it in a virtual machine like <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>.
 </p>
+ -->
 
-
-<h2>Registering!</h2>
-
-All in all there are no reasons not to participate, so do not hesitate to <em><a href="{% url registration LANGUAGE_CODE %}">register</a></em> for the Belgian Olympiad in de Informatics 2012! 
 
 {% endblock %}
