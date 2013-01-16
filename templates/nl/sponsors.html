@@ -1,76 +1,57 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
-<h2>Sponsors </h2>
+{% block js %}
+<script type="text/javascript">
+$("#menu-sponsors").addClass("active");
+$("#side-menu-sponsors").addClass("active");
+</script>
+{% endblock js %}
 
-<p>
-De Belgische Informatica-olympiade is enkel mogelijk dankzij de ondersteuning van onze sponsors. Zelf interesse om te sponsoren of om een prijs aan te bieden? Bekijk dan onze <a href="/static/downloads/OI-2013-sponsoring-nl.pdf">sponsoringsbrochure</a> en contacteer ons op <a href="mailto:sponsors@be-oi.be">sponsors@be-oi.be</a> .
+{% block leftmenu %}{% include "menu_press-sponsors.html" %}{% endblock %}
+
+{% block title %}Sponsors{% endblock %}
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+
+
+<p class="lead">De Belgische Informatica-olympiade is enkel mogelijk dankzij de ondersteuning van onze sponsors. Heeft u interesse om te sponsoren of om een prijs aan te bieden? Bekijk dan onze <a href="/static/downloads/OI-2013-sponsoring-nl.pdf">sponsoringsbrochure</a> en contacteer ons op <a href="mailto:sponsors@be-oi.be">sponsors@be-oi.be</a> .
 </p>
 
-<h3>Sponsor 2013</h3>
+<section>
+  <h2>Sponsors 2013</h2>
 
-<p><a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" width="350" height="136" /></a></p>
+  <h4>Premium Sponsor</h4>  
+  <a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" height="136" width="350"  style="padding:10px;"></a>
 
-<p><a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" width="250"/></a></p>
-<p><a href="http://www.lavenir.net/" target="_blank"><img src="/static/logos/lavenir-2012.jpg" width="250"/></a></p>
+  <h4>Standaard Sponsors</h4>
+  <a href="http://www.lavenir.net/" target="_blank"><img src="/static/logos/lavenir-2012.jpg" width="250"  style="padding:10px;"></a>
+  <a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" width="250"  style="padding:10px;"></a>
 
+</section>
+<section>
+  <h2>Partners en Institutionele Steun</h2>
 
-<!-- 
-<h3>Premium Internationaal Sponsor</h3>
-<p><a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" width="350" height="136" /></a></p>
+  <div class="row">
+    <div class="span9">
+      <p>Met de steun van de Vlaamse Gemeenschap en de Fédération Wallonie-Bruxelles</p>
+      <a href="http://www.ond.vlaanderen.be/" target="_blank"><img src="/static/logos/vlaams-overheid-logo.png" width="250" style="padding:10px;"/></a>
+      <a href="http://www.federation-wallonie-bruxelles.be" target="_blank"><img src="/static/logos/cfwb.jpg" width="250" style="padding:10px;"/></a>
+    </div>
+  </div> 
 
-<h3>Standaard Internationaal Sponsor</h3>
-<p><a href="http://www.ibbt.be" target="_blank"><img src="/static/logos/ibbt-logo.jpg" width="300"/></a></p>
+  <img src="/static/logos/ua-logo.jpg" width="100"  style="padding:10px;"/>
+  <img src="/static/logos/ugent-logo.png" width="100" style="padding:10px;"/>
+  <img src="/static/logos/umons-logo.png" width="100" style="padding:10px;" />
+  <img src="/static/logos/unamur-logo.jpg" width="100" style="padding:10px;"/>
+  <img src="/static/logos/ucl-logo.png" width="100"  style="padding:10px;"/>
+  <img src="/static/logos/ulg-logo.png" width="100" style="padding:10px;"/>
+  <img src="/static/logos/ulb-logo.png" width="100" style="padding:10px;"/>
+  <img src="/static/logos/kul-logo.jpg" width="100"  style="padding:10px;" />
+  <img src="/static/logos/vub-logo.jpg" width="100"  style="padding:10px;"/>
+  <img src="/static/logos/uhasselt-logo.png" width="100" style="padding:10px;" />
+  <img src="/static/logos/hers-logo.png" width="100" style="padding:10px;" />
+</section>
 
-<h3>Prijzen aangeboden door</h3>
-<p> -->
-<!-- 
-<a href="http://www.editions-eyrolles.com/Theme/020000/informatique" target="_blank"><img src="/static/logos/eyrolles-logo.jpg" width="200" height="51" /></a>
--->
-<!-- <a href="http://www.plantyn.com/wps/portal/{{LANGUAGE_CODE}}" target="_blank"><img src="/static/logos/plantyn-logo-NL.jpg" width="200" /></a> -->
-<!-- <a href="http://www.microsoft.com/" target="_blank"><img src="/static/logos/microsoft.jpg" width="200" /></a> -->
-<!--
-<a href="http://www1.euro.dell.com/content/default.aspx?c=be&l={{LANGUAGE_CODE}}" target="_blank"><img src="/static/logos/dell-2011-logo.jpg" width="200" height="143" /></a>
-<a href="http://www.redcorp.com/" target="_blank"><img src="/static/logos/redcorp-logo.jpg" width="200" height="51" /></a>
-<a href="http://www.irislink.com/" target="_blank"><img src="/static/logos/iris-2011-logo.jpg" width="200" height="125" /></a>
- 
-</p> -->
-
-
-<!--
-<h3>Institutionele steun</h3>
-
-<p><a href="http://www.ond.vlaanderen.be/" target="_blank"><img src="/static/logos/vlaams-overheid-logo.png" width="350" height="103" /></a></p>
---><!-- 
-
-<h2>Partners</h2>
-
-<div class="logos">
-		<img src="/static/logos/ua-logo.jpg" />
-		<img src="/static/logos/ugent-logo.png" />
-		<img src="/static/logos/umons-logo.png" />
-		<img src="/static/logos/fundp-logo.png" />
-		<img src="/static/logos/ucl-logo.png" />
-		<img src="/static/logos/ulg-logo.png" />
-		<img src="/static/logos/ulb-logo.png" />
-		<img src="/static/logos/kul-logo.jpg" />
-		<img src="/static/logos/vub-logo.jpg" />
-		<img src="/static/logos/uhasselt-logo.png" />
-		<img src="/static/logos/hers-logo.png" />
-		<img src="/static/logos/acmsc-logo.png" />
-		<img src="/static/logos/henam-logo.png" />
-		<img src="/static/logos/hecfh-logo.png" />
-		<img src="/static/logos/helb-prigogine-logo.png" />
-		<img src="/static/logos/ephec-logo.png" />
-		<img src="/static/logos/helha-logo.png" />
-		<img src="/static/logos/vinci-logo.png" />
-		<img src="/static/logos/helmo-logo.png" />
-		<img src="/static/logos/hepl-logo.png" />
-		<img src="/static/logos/hel-logo.png" />
-		<img src="/static/logos/hephs-logo.png" />
-		<img src="/static/logos/heph-condorcet-logo.png" />
-		<img src="/static/logos/henam-logo.png" />
-</div>
- -->
-
-{% endblock %}
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-registration").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Inschrijven{% endblock %}
+{% block subtitle %}Gratis, gemakkelijk, snel, en er valt veel te winnen.{% endblock %}
+
+{% block content%}
+
+<p>De inschrijvingen zijn nu gesloten. Afspraak volgend jaar voor een volgende editie van de Belgische Informatica-olympiade!</p>
+
+{% endblock %}

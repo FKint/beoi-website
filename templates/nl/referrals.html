@@ -1,11 +1,21 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
-<h2>Breng je vrienden mee en win 100&euro; !</h2>
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
 
-<p>We geven onze speciale prijs ter waarde van 100 euro aan diegene die de meeste vriend(inn)en kan overtuigen om ook deel te nemen aan de Belgische Informatica-olympiade. Nodig je vrienden uit en geef hen de link of de code die je krijgt bij je eigen inschrijving. Voor elke deelnemer die zich inschrijft met jouw code, krijgen zowel jij als die deelnemer 1 punt. De deelnemer met de meeste punten krijgt onze prijs in ontvangst op de proclamatie.
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Referrals{% endblock %}
+{% block subtitle %}Breng je vrienden mee en win een prijs t.w.v. 100&euro;! {% endblock %}
+
+{% block content %}
+
+<p class="lead">We geven onze speciale prijs ter waarde van 100 euro aan diegene die de meeste vriend(inn)en kan overtuigen om ook deel te nemen aan de Belgische Informatica-olympiade. Nodig je vrienden uit en geef hen de link of de code die je krijgt bij je eigen inschrijving. Voor elke deelnemer die zich inschrijft met jouw code, krijgen zowel jij als die deelnemer 1 punt. De deelnemer met de meeste punten krijgt onze prijs in ontvangst op de proclamatie.
 </p>
-
 
 
 <h3>Enkele regels</h3>
@@ -32,7 +42,7 @@
 {% endif %}
 
 
-<p>Geef je vriend(inn)en deze link: <strong id="linktoshare"></strong> of gebruik de knoppen hieronder om hem te delen op Twitter of Facebook. De inschrijvingen die via die link gebeuren zullen automatisch worden meegeteld voor jouw score.</p>
+<p>Geef je vriend(inn)en deze link: <strong id="linktoshare"></strong> of gebruik de knoppen hieronder om hem te delen op Twitter of Facebook. De inschrijvingen die via die link gebeuren tellen automatisch mee voor jouw score.</p>
 
 <p style="margin-top:20px;"><div style="padding:0 25px; 0 25px" class="fb-like" data-send="false" data-width="100" data-show-faces="false" data-action="recommend"></div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="nl" data-size="large" data-count="none">Tweeter</a>
 </p>

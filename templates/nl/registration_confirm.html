@@ -1,6 +1,22 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-registration").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Inschrijven{% endblock %}
+{% block subtitle %}Gratis, gemakkelijk, snel, en toch zoveel te winnen.{% endblock %}
+
+
+
+
+
 <h2>Inschrijven</h2>
 
 {% if not error %}

@@ -1,16 +1,29 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-sample-questions").addClass("active");
+</script>
+{% endblock js %}
+
+{% block header %}
+<h1>Voorbeeldvragen</h1>
+<p>Opgaven van de voorbije jaren </p>
+{% endblock header %}
+
 
 {% block content%}
-<h2>Voorbeeldvragen</h2>
 
-<p>Om te kunnen oefenen voor deze wedstrijd, kan je hier voorbeeldvragen downloaden, waarvan sommigen met een mogelijke oplossing en gedetailleerde uitleg.  Aarzel ook niet om het document <a href="/static/downloads/OI-2010-NL-intro-algo.pdf">Introductie tot de algoritmiek</a> eens door te nemen, dat je met behulp van gedetailleerde voorbeelden laat kennismaken met het gestructureerd oplossen van problemen. Dat laatste document is nog niet helemaal volledig maar zal het binnenkort wel zijn. </p>
 
-<ul>
-	<li><a href="/static/downloads/OI-2010-NL-intro-algo.pdf">Introductie tot de algoritmiek</li>
-	<li><a href="/static/downloads/OI-2010-NL-voorbeeldvragen-secundair.pdf">Voorbeeldvragen</a></li>
-</ul>
+<p>Om te kunnen oefenen voor deze wedstrijd, kan je hier voorbeeldvragen downloaden, waarvan sommigen met een mogelijke oplossing en gedetailleerde uitleg.  Aarzel ook niet om het document <a href="/static/downloads/OI-2010-NL-intro-algo.pdf">Introductie tot de algoritmiek</a> eens door te nemen, dat je met behulp van gedetailleerde voorbeelden laat kennismaken met het gestructureerd oplossen van problemen. </p>
 
-<p>Aarzel ook niet om de vragen van de vorige edities eens te bekijken:</p>
+
+
+<p>Vragen-archief</p>
 
 <ul>
 	<li>Vragen finale 2012: <a href="/static/downloads/OI-2012-final-sec-paper-nl.pdf">papier</a> &mdash; <a href="/static/downloads/OI-2012-final-sec-comp-nl.pdf">computer</a></li>
