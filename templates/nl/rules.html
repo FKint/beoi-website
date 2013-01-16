@@ -1,7 +1,21 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-rules").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Reglement{% endblock %}
+{% block subtitle %}van de Belgische nationale wedstrijd{% endblock %}
 
 {% block content%}
-<h2>Algemeen Reglement</h2>
+
+
 
 <ol>
 	<li>De Belgische Informatica-olympiade (beOI) is een wedstrijd in programmeren, algoritmiek en logica, georganiseerd door de "<emph>Belgische Informatica-olympiade - Olympiade belge d’Informatique (beOI) vzw</emph>"</li>

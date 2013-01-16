@@ -1,9 +1,25 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
-<h2>Pers<img src="/static/pictures/2010/press.jpg" width="350" height="233" alt="firefox" class="withframe float-right" /></h2>
+{% block js %}
+<script type="text/javascript">
+$("#menu-sponsors").addClass("active");
+$("#side-menu-press").addClass("active");
+</script>
+{% endblock js %}
 
-<p>U bent een journalist op zoek naar meer informatie over de Belgische Informatica-olympiade? Op deze pagina zetten we alvast onze persberichten, alsook de artikels die over ons verschijnen in de pers. Maar aarzel vooral niet om direct met ons contact op te nemen via het volgende emailadres: <a href="mailto:info@be-oi.be">info@be-oi.be</a>!</p>
+{% block leftmenu %}{% include "menu_press-sponsors.html" %}{% endblock %}
+
+{% block title %}Pers{% endblock %}
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+
+
+<img src="/static/pictures/2010/press.jpg" width="350" height="233"  class="pull-right img-polaroid" />
+<p class="lead">U bent een journalist op zoek naar meer informatie over de Belgische Informatica-olympiade? Contacteer ons via email naar <a href="mailto:info@be-oi.be">info@be-oi.be</a>, en we garanderen een snel antwoord!</p>
+
+
 
 {# <h3>Persberichten</h3> #}
 {# #}
@@ -13,16 +29,17 @@
 {# </ul> #}
 
 
-<h3>In het nieuws</h3>
+<section>
+  <h2>In het nieuws</h2>
 
-<h4>Editie 2013</h4>
+  <h3>Editie 2013</h3>
+  <ul>
+    <li>5/12/2012 - <a href="http://www.regional-it.be/2012/12/05/olympiade-informatique-inscription/">
+  Olympiade d’Informatique 2013: candidats, révélez-vous!</a></li>
+  </ul>
 
-<ul>
-	<li>5/12/2012 - <a href="http://www.regional-it.be/2012/12/05/olympiade-informatique-inscription/">
-Olympiade d’Informatique 2013: candidats, révélez-vous!</a></li>
-</ul>
+  <h3>Editie 2012</h3>
 
-<h4>Editie 2012</h4>
 
 <ul>
 	<li>3/10/2012 - <a href="http://www.focus-wtv.tv/?focus=5530">Interview op Focus-WTV.tv: "West-Vlaming haalt zilver op internationale olympiade voor informatica"</a></li>
@@ -48,7 +65,7 @@ Victor Lecomte (médaillé de bronze IOI): L’or est presque inaccessible pour 
 
 
 
-<h4>Editie 2011</h4>
+<h3>Editie 2011</h3>
 
 <ul>
 	<li>April 2011 - <a href="/static/press/2011-04-08-tourhorizon.pdf">La Meuse Verviers: Deux Verviétois en finale des olympiades d'informatique</a></li>
@@ -56,6 +73,8 @@ Victor Lecomte (médaillé de bronze IOI): L’or est presque inaccessible pour 
 	<li>Site du zéro : <a href="http://www.siteduzero.com/news-62-38747-les-olympiades-belges-d-informatique-2011-sont-lancees.html">News</a></li>
 	<li><a href="/static/medias/2011-ioi-benoit.m4a">Interview met Benoît Legat op RTBF radio naar aanleiding van zijn bronzen medaille op de IOI</a></li>
 </ul>
+
+	<h3>Editie 2010</h3>
 
 <ul>
 	<li><a href="http://www.tvcom.be/index.php?option=com_content&view=article&id=4307:vendredi-14-mai-2010-ucl-finale-des-olympiades-dinformatique-&catid=128:news&Itemid=348">TVCom</a>
@@ -85,5 +104,5 @@ Victor Lecomte (médaillé de bronze IOI): L’or est presque inaccessible pour 
 	<li><a href="http://www.channelworld.be/fr/article.php?news_id=1493">Channel World</a></li>
 	<li><a href="http://eskills-week.ec.europa.eu/web/guest/competition/-/journal_content/56_INSTANCE_WnM6/10416/22378/COMPETITION_MAIN_DISPLAY">e-Skills week (European Commission Enteprise and Industry)</a></li>
 </ul>
-
+</section>
 {% endblock %}

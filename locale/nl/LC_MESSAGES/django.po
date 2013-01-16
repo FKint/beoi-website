@@ -73,16 +73,17 @@ msgstr "Email"
 
 #: contest/forms.py:20
 msgid "Only used for olympiads. Will never be given to a sponsor or a third."
-msgstr "We gebruiken dit enkel in het kader van de OI."
+msgstr "Enkel gebruikt voor de olympiade. We geven dit nooit aan sponsors of derden."
 
 #: contest/forms.py:21
 msgid "Referral Token"
-msgstr ""
+msgstr "Referral Code"
 
 #: contest/forms.py:21
 msgid ""
 "Optional, the token you received if you are sponsored by another contestant."
 msgstr ""
+"Optioneel, de code die je kreeg als je werd uitgenodigd door een andere deelnemer."
 
 #: contest/forms.py:23
 msgid "is in the list"
@@ -116,6 +117,7 @@ msgstr "Taal van de wedstrijd"
 msgid ""
 "Welcome and assistance are only guaranteed in the center's main language."
 msgstr ""
+"Onthaal en assistentie zijn enkel verzekerd in de lokale taal van het centrum."
 
 #: contest/forms.py:41
 msgid "Wrong value for this field."
@@ -123,7 +125,7 @@ msgstr "Verkeerde waarde voor dit veld."
 
 #: contest/forms.py:52
 msgid "This token is not valid."
-msgstr ""
+msgstr "Deze code is niet geldig."
 
 #: contest/forms.py:57
 msgid "Please choose your school."
@@ -353,7 +355,6 @@ msgid "Body"
 msgstr "Tekst"
 
 #: news/feed.py:26
-#, fuzzy
 msgid "be-OI News"
 msgstr "be-OI Nieuws"
 
@@ -420,26 +421,24 @@ msgstr "Wedstrijd"
 
 #: templates/base.html:22 templates/menu_training.html:4
 msgid "Preparing"
-msgstr ""
+msgstr "Voorbereiding"
 
 #: templates/base.html:23
-#, fuzzy
 msgid "Press-Sponsors"
-msgstr "Sponsors"
+msgstr "Pers-Sponsors"
 
 #: templates/base.html:24
 msgid "About beOI"
-msgstr ""
+msgstr "Over beOI"
 
 #: templates/base.html:50
-#, fuzzy
 msgid "Register now!"
-msgstr "Inschrijven"
+msgstr "Schrijf je nu in!"
 
 #: templates/base.html:51
 #, python-format
 msgid "(%(timeleft)s left)"
-msgstr ""
+msgstr "(nog %(timeleft)s)"
 
 #: templates/base.html:56 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
@@ -447,7 +446,7 @@ msgstr "Sponsors"
 
 #: templates/base.html:80
 msgid "All rights reserved"
-msgstr ""
+msgstr "Alle rechten voorbehouden"
 
 #: templates/menu_contest.html:5
 msgid "Registering"
@@ -468,7 +467,7 @@ msgstr "Archieven"
 #: templates/menu_contest.html:9 templates/menu_contest.html.py:10
 #: templates/menu_contest.html:11
 msgid "Edition"
-msgstr ""
+msgstr "Editie"
 
 #: templates/menu_press-sponsors.html:5
 msgid "Press"
@@ -480,36 +479,33 @@ msgstr "Voorbeeldvragen"
 
 #: templates/menu_training.html:6
 msgid "Programming"
-msgstr ""
+msgstr "Programmeren"
 
 #: templates/fr/registration.html:105
 msgid "More information on our sponsorship program"
-msgstr ""
+msgstr "Meer info over onze uitnodigingscampagne"
 
 #: templates/fr/registration.html:112
-#, fuzzy
 msgid "Current school"
 msgstr "school"
 
 #: templates/fr/registration.html:114
 msgid "Selecting one option is mandatory."
-msgstr ""
+msgstr "Je moet een van de opties kiezen."
 
 #: templates/fr/registration.html:117
-#, fuzzy
 msgid "My school is in this list"
-msgstr "Staat de school op de lijst"
+msgstr "Mijn school staat op deze lijst"
 
 #: templates/fr/registration.html:117
 msgid "ordered by post code"
-msgstr ""
+msgstr "geordend op postcode"
 
 #: templates/fr/registration.html:125
 msgid "Otherwise, I add it"
-msgstr ""
+msgstr "Indien niet, dan voeg ik ze toe"
 
 #: templates/fr/registration.html:188
-#, fuzzy
 msgid "Register"
 msgstr "Inschrijven"
 

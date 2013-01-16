@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-contest").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Wedstrijd{% endblock %}
+{% block subtitle %}Van logica tot programmeren, <br/>van de Belgische tot de Internationale wedstrijd.{% endblock %}
+
+{% block content %}
+<section style="padding-top:30px;">
+  <img src="/static/pictures/2011/finale1.jpg" class="pull-right img-polaroid" width="175"/><p class="lead">De Informatica-olympiade is een wedstrijd in logica, algoritmiek en programmeren. Ze staat open voor <strong>leerlingen uit het secundair onderwijs</strong> (alle jaren, alle richtingen). De nationale wedstrijd bestaat uit een halve finale die plaatsvindt in regionale centra verspreid over het land, en een finale. Na een intensieve training worden de beste kandidaten weerhouden om deel te nemen aan de International Olympiad in Informatics.</p>
+</section>
+
+<div class="row">
+<section class="span9">
+  <h2>Have finale <small>op papier, <br/> 23 januari 2013</small></h2> 
+  <img src="/static/img/semifinal.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
+  <p>De halve finale is de eerste stap van de wedstrijd. Ze vindt tegelijkertijd plaats op <a href="{% url semifinal-places LANGUAGE_CODE %}">11 locaties</a> verspreid over het land.</p>
+
+   <p>Deze ronde is volledig <strong>op papier</strong>. Je kan je verwachten aan <strong> vragen over logica, algoritmiek en eenvoudige programmeerproblemen.</strong> Veel voorbeelden daarvan zijn te vinden in de <a href="{% url sample-questions LANGUAGE_CODE %}">vragen van de voorgaande jaren</a>. Je mag op de vragen antwoorden in het Nederlands, Frans, Engels, in pseudo-code of in een van de toegelaten programmeertalen: C, C++, Pascal, Java, Python en PHP. Maximum 60 deelnemers worden weerhouden om aan de finale deel te nemen.</p>
+
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Woensdag 23 januari 2013, van 14h30 tot 17h30</strong></p>
+
+  <p><a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Schrijf je in vòòr 21 januari!</a></p>
+</section>
+</div>
+
+<div class="alert alert-info">
+Een (optionele) tweedaagse cursus "introductie tot algoritmiek en programmeren" wordt normaalgezien tijdens de krokusvakantie aangeboden aan iedereen die de finale haalt. Meer informatie wordt later nog bezorgd aan iedereen die in aanmerking komt. </div>
+ 
+<div class="row">
+<section class="span9">
+  <h2>Finale <small>proef op papier en aan de computer <br/> 9 maart 2013, Louvain-la-Neuve</small></h2> 
+  <img src="/static/img/final.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
+  <p>De finale 2013 vindt plaats op zaterdag 9 maart in <strong>Louvain-la-Neuve</strong>. Ze bestaat uit <strong>een deel op papier en een deel aan de computer</strong>. Het papieren gedeelte zal in de voormiddag doorgaan, en in de namiddag volgt dan het deel aan de computer. Onmiddellijk nadien zal de proclamatie plaatsvinden.</p>
+
+  <p>Het papieren gedeelte is van hetzelfde type als de halve finale, alleen korter en van een iets moeilijker niveau. Het deel aan de computer bestaat uit verschillende problemen die de deelnemers moeten oplossen door een algoritme te programmeren in een van de toegestane programmeertalen. Deze programma's moeten vaak zo optimaal mogelijk geprogrammeerd zijn om het probleem binnen de gegeven tijdslimiet en geheugenlimiet op te kunnen lossen.</p>
+
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Zaterdag 9 maart 2013 (hele dag)</strong></p>
+</section>
+</div>
+
+<h3>Training en selectie voor de Internationale Olympiade</h3>
+<p>Een twaalftal laureaten van de nationale finale zal het voorstel krijgen om deel uit te maken van de trainingspool voor de Internationale Olympiade. De training bestaat uit verschillende dagen gezamenlijke lessen, maar vooral uit het deelnemen aan andere online wedstrijden op verschillende internationale websites. Na deze training wordt een laatste selectieproef georganiseerd voor de actiefste leden van de trainingspool. De twee beste Franstaligen en de twee beste Nederlandstaligen worden daarna uitgenodigd om de Belgische delegatie op de Internationale Olympiade te vormen.</p> 
+
+
+<div class="row">
+<section class="span9">
+  <h2>International Olympiad in Informatics <br/><small>6-13 juli 2013, Brisbane (Australië)</small></h2> 
+  <img src="/static/img/ioi.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
+
+  <p>De<strong> International Olympiad in Informatics</strong> (IOI) is een internationale programmeerwedstrijd voor leerlingen van het secundair onderwijs, en vindt elk jaar plaats in een ander land. In 2013 hebben de leden van de Belgische delegatie het geluk om naar <strong>Australië</strong> te mogen gaan om deel te nemen aan de 25e editie. Meer dan 300 deelnemers uit meer dan 80 landen zijn aanwezig voor een week van competitie maar ook van ontmoetingen en uitwisselingen.</p>
+
+  <p>Informatica is een van de 8 wetenschapsdisciplines waarin internationaal erkende olympiades worden georganiseerd, naast wiskunde, biologie, chemie, fysica, aardrijkskunde, astronomie en taalkunde. België nam eenmalig deel in 1992, en nadien in <a href="{% url archives-2010 LANGUAGE_CODE %}#IOI">2010</a>, <a href="{% url archives-2011 LANGUAGE_CODE %}#IOI">2011</a> en <a href="{% url archives-2012 LANGUAGE_CODE %}#IOI">2012</a>. Er werden drie medailles, <strong>een zilveren en twee bronzen</strong>, naar huis gebracht van de laatste twee edities.</p>
+
+  <p><i class="icon-calendar"></i>&nbsp;<strong>6 tot 13 juli 2013</strong></p>
+</section>
+</div>
+
+
+{% endblock content %}

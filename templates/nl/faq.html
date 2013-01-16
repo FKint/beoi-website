@@ -1,11 +1,25 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
 
-{% block title %}Veel gestelde vragen{% endblock title %}
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-faq").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Veel gestelde vragen{% endblock %}
+{% block subtitle %}Antwoorden op de vragen die we het vaakst in onze mailbox krijgen{% endblock %}
+
+
+
 {% block content %}
 
-<h2>Veel gestelde vragen</h2>
+<div class="alert alert-success">
+<strong>Een andere vraag ?</strong> Stel ze via email naar <a href="mailto:info@be-oi.be">info@be-oi.be</a>.
+</div>
 
-<p>Op deze pagina staan de antwoorden op de vragen die ons het vaakst gesteld worden, en waarvan het antwoord niet snel terug te vinden is op de website. Heb je toch nog een andere vraag, aarzel niet om ons te contacteren op (info [a] be-oi.be).</p>
 
 {% if categories %}
 <h3>Thema's</h3>
