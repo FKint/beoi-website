@@ -1,44 +1,74 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
+{% block js %}
+<script type="text/javascript">
+$("#menu-home").addClass("active");
+$("#home-carousel").carousel({interval: 5000});
+</script>
+<script src="/static/js/fb-likebox.js"></script>
+{% endblock js %}
 
-<img class="withframe" src="/static/pictures/2012/banner-ioi.jpg" alt="image post" width="680" height="200" />
+{% block title %}Nieuws{% endblock %}
 
-<p>De Belgische Informatica-olympiade (be-OI) is een wedstrijd in programmeren, algoritmiek en logica. Ze is bestemd voor leerlingen uit alle jaren en richtingen van het middelbaar onderwijs. De beste kandidaten maken kans op deelname aan de International Olympiad in Informatics (IOI).</p>
+{% block header %}
+<h1>Belgische Informatica-olympiade</h1>
+<p>Programmeren, algoritmiek en logica.</p>
+{% endblock header %}
 
-<h3>Laatste nieuws</h3>
 
-    {% for entry in object_list %}
-
-	<div class="post">
-		<div class="right">
-				<h4>{{ entry.title }}</h4>
-			{{ entry.body|safe }}
-		</div>
-		
-		<div class="left">
-			<p class="dateinfo">{{ entry.publication_date|date:"M" }}<span>{{ entry.publication_date|date:"d" }}</span></p>
-
-			<div class="post-meta">
-					<ul>
-						<li class="user">{% if entry.author.first_name %}{{ entry.author.first_name }} {{ entry.author.last_name }}{% else %}{{ entry.author }}{% endif %}</li>
-						<li class="time">{{ entry.publication_date|date:"H:i" }}</li>
-					</ul>
-			</div>
-		</div>
-	</div>
-    {% endfor %}
-
-	{% if paginator.num_pages > 1 %}
-		<p>[ pagina: 
-		{% for page in paginator.page_range %}
-			{% if page != page_obj.number %} 
-			<a href="{% url home LANGUAGE_CODE,page %}">{{page}}</a> 
-			{% else%} 
-			<strong>{{page}}</strong>
-			{% endif %}
-		{% endfor %}
-		]</p>
-	{% endif %}
-
+{% block leftmenu %}
+<div id="fb-root"></div><div id="fblikebox" class="fb-like-box"></div>
 {% endblock %}
+
+
+{% block content %}
+
+<div id="home-carousel" class="carousel slide img-polaroid">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+
+    <div class="active item">
+      <img src="/static/banners/help.jpg" />
+      <div class="carousel-caption">
+        <h4>Welkom!</h4>
+        <p>De Belgische Informatica-olympiade (be-OI) is een wedstrijd in programmeren, algoritmiek en logica. Ze is bestemd voor leerlingen uit alle jaren en richtingen van het middelbaar onderwijs. De beste kandidaten maken kans op deelname aan de International Olympiad in Informatics (IOI).</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="/static/banners/paper-closeup.jpg" />
+      <div class="carousel-caption">
+        <h4>Durf je de uitdaging aan?</h4>
+        <p>Editie 2013 start met de halve finale op woensdag 23 januari in de namiddag. Waar wacht je op om <a href="{% url registration LANGUAGE_CODE %}">je te registreren</a>?</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="/static/banners/ioi12group.jpg" />
+      <div class="carousel-caption">
+        <h4>Twee medailles!</h4>
+        <p><a href="{% url archives-2012 LANGUAGE_CODE %}">De Belgische delegatie kaapte een zilveren en een bronzen medaille weg op de International Olympiad in Informatics in 2012</a>. En als jij het nu eens was in 2013 in Australië?</p>
+      </div>
+    </div>
+
+  </div> <!-- /carousel-inner -->
+
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#home-carousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#home-carousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
+<section id="file-structure">
+  <h2>Laatste nieuws</h2>
+  {% for entry in object_list %}
+  <h3>{{ entry.title }}</h3>
+  <p class="pull-right well well-small" style="margin:0 0 5px 20px;"><i class="icon-calendar"></i>&nbsp;{{ entry.publication_date|date:"d M Y" }}<br/><i class="icon-user"></i>&nbsp;{% if entry.author.first_name %}{{ entry.author.first_name }} {{ entry.author.last_name }}{% else %}{{ entry.author }}{% endif %}</li></p>
+  <p>{{ entry.body|safe }}</p>
+  <hr />
+  {% endfor %}
+</section>
+
+{% endblock content %}
+

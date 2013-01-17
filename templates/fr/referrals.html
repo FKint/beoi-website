@@ -1,9 +1,20 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
-{% block content%}
-<h2>Parrainez vos amis à la beOI et gagnez un prix de 100&euro; !</h2>
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
 
-<p>Envie de gagner un prix d'une valeur de 100eur ? Pour cela, il vous suffit d'être le participant
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Parrainage{% endblock %}
+{% block subtitle %}Envie de gagner un prix d'une valeur de 100eur ? {% endblock %}
+
+{% block content %}
+
+<p class="lead">Envie de gagner un prix d'une valeur de 100eur ? Pour cela, il vous suffit d'être le participant
 	ayant convaincu le plus grand nombre de personne à s'inscrire à l'Olympiade d'informatique. Invitez vos amis
 	à participer à l'Olympiade belge d'informatique en leur fournissant le lien ou le code reçu lors de votre inscription.
 	A chaque inscription d'un participant sous 

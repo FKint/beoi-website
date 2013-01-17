@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h2>Finale<img src="/static/pictures/2012/final-floris.jpg" class="withframe float-right" /></h2>
+
+<p>La finale des Olympiades belges d'Informatique, qui voyait s'affronter 44 élèves du secondaire, a eu lieu le mercredi 14 mars 2012 à Namur. Félicitations à tous les participants et tout particulièrement à Floris Kint, le lauréat 2012. La finale consistait en une épreuve sur papier et une épreuve sur machine. Vous pouvez télécharger les questions de la <a href="/static/downloads/OI-2012-final-sec-paper-fr.pdf">partie papier</a> et la <a href="/static/downloads/OI-2012-final-sec-comp-fr.pdf">partie machine</a>.</p>
+
+<p>Près de 3000&nbsp;&euro; de prix ont été distribués aux meilleurs finalistes. Ces derniers étaient offerts par IBM, l'IBBT, Microsoft, Vers l'Avenir et Plantyn. Parmi les prix, on retrouve notamment un Lenovo ThinkPad (ordinateur portable), un iPad 3, un Windows phone, des Arduino starter kits (dispositifs électroniques programmables) et de nombreux livres.</p>
+
+<p>Enfin, 13 premiers candidats, 8 francophones et 5 néerlandophones, du concours ont été sélectionnés pour faire partie du pool d'entrainement ayant comme objectif la formation de la délégation belge aux les Olympiades Internationales d'Informatique qui sont dérouleront en Italie cette année.</p>
+
+<p>Vous trouverez ci-dessous les différents scores et classements officiels de la finale 2012. Le <a href="{% url final-rules LANGUAGE_CODE %}">règlement de la finale</a> est également toujours disponible.</p>
+
+
+<img class="withframe" src="/static/pictures/2012/final-group.jpg" alt="Finalistes des Olympiades belges d'Informatique 2012" title="Finalistes des Olympiades belges d'Informatique 2012" /> 
+
+<h3>Résultats</h3>
+
+
+{# <img class="withframe" src="/static/pictures/2011/group_sec.jpg" /> #}
+
+<table>
+<tr><th>#</th><th>Nom</th><th>Etablissement</th><th><img title="Score partie papier" class="icons" src="/static/icons/pen.png" /></th><th><img title="Score partie machine" class="icons" src="/static/icons/keyboard.png" /></th><th><img title="Score total" class="icons" src="/static/icons/sum.png" /></th></tr>
+	{% for finalist in object_list %}
+<tr>
+	<td>{{ finalist.rank }}</td>
+	<td nowrap="nowrap">{{finalist.contestant.surname}} {{finalist.contestant.firstname}}</td>
+	<td>{{ finalist.contestant.school.name }}, {{ finalist.contestant.school.city }} &mdash; {{ finalist.contestant.year_study }}e</td>
+	<td>{{ finalist.score_written }}%</td>
+	<td>{{ finalist.score_computer }}%</td>
+	<td><strong>{{ finalist.total }}%</strong></td>
+</tr>
+	{% endfor %}
+</table>
+
+
+
+{% endblock %}

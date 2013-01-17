@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-28 00:35+0200\n"
+"POT-Creation-Date: 2012-12-31 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,85 +39,101 @@ msgstr "Markeer de geselecteerde deelnemers als handmatig gecontroleerd"
 msgid "Export as CSV"
 msgstr "Exporteer als CSV"
 
-#: contest/forms.py:23
+#: contest/forms.py:13
 msgid "Firstname"
 msgstr "Voornaam"
 
-#: contest/forms.py:24
+#: contest/forms.py:14
 msgid "Surname"
 msgstr "Familienaam"
 
-#: contest/forms.py:25
+#: contest/forms.py:15
 msgid "Gender"
 msgstr "Geslacht"
 
-#: contest/forms.py:26
+#: contest/forms.py:16
 msgid "Date of birth"
 msgstr "Geboortedatum"
 
-#: contest/forms.py:27
+#: contest/forms.py:17
 msgid "Address"
 msgstr "Adres"
 
-#: contest/forms.py:28 contest/forms.py:38
+#: contest/forms.py:18 contest/forms.py:27
 msgid "Postal code"
 msgstr "Postcode"
 
-#: contest/forms.py:29 contest/forms.py:39
+#: contest/forms.py:19 contest/forms.py:28
 msgid "City"
 msgstr "Stad"
 
-#: contest/forms.py:30 oi_core/forms.py:7
+#: contest/forms.py:20 oi_core/forms.py:7
 msgid "Email"
 msgstr "Email"
 
-#: contest/forms.py:32
-msgid "Referral Token"
-msgstr ""
+#: contest/forms.py:20
+msgid "Only used for olympiads. Will never be given to a sponsor or a third."
+msgstr "Enkel gebruikt voor de olympiade. We geven dit nooit aan sponsors of derden."
 
-#: contest/forms.py:34
+#: contest/forms.py:21
+msgid "Referral Token"
+msgstr "Referral Code"
+
+#: contest/forms.py:21
+msgid ""
+"Optional, the token you received if you are sponsored by another contestant."
+msgstr ""
+"Optioneel, de code die je kreeg als je werd uitgenodigd door een andere deelnemer."
+
+#: contest/forms.py:23
 msgid "is in the list"
 msgstr "staat op de lijst"
 
-#: contest/forms.py:34
+#: contest/forms.py:23
 msgid "is not in the list"
 msgstr "staat niet op de lijst"
 
-#: contest/forms.py:34
+#: contest/forms.py:23
 msgid "Is the school in the list"
 msgstr "Staat de school op de lijst"
 
-#: contest/forms.py:35 contest/forms.py:45
+#: contest/forms.py:24 contest/forms.py:34
 msgid "Make a choice"
 msgstr "Maak een keus"
 
-#: contest/forms.py:37
+#: contest/forms.py:26
 msgid "School name"
 msgstr "Naam van de school"
 
-#: contest/forms.py:41
+#: contest/forms.py:30
 msgid "Year of study"
 msgstr "Studiejaar"
 
-#: contest/forms.py:43
+#: contest/forms.py:32
 msgid "Examination language"
 msgstr "Taal van de wedstrijd"
 
-#: contest/forms.py:52
-msgid "Wrong value for this field"
-msgstr "Verkeerde waarde voor dit veld"
-
-#: contest/forms.py:64
-msgid "This token is not valid"
+#: contest/forms.py:34
+msgid ""
+"Welcome and assistance are only guaranteed in the center's main language."
 msgstr ""
+"Onthaal en assistentie zijn enkel verzekerd in de lokale taal van het centrum."
 
-#: contest/forms.py:69
-msgid "Please choose your school"
-msgstr "Kies uw school"
+#: contest/forms.py:41
+msgid "Wrong value for this field."
+msgstr "Verkeerde waarde voor dit veld."
 
-#: contest/forms.py:75 contest/forms.py:78 contest/forms.py:81
-msgid "This field is mandatory"
-msgstr "Dit veld is verplicht"
+#: contest/forms.py:52
+msgid "This token is not valid."
+msgstr "Deze code is niet geldig."
+
+#: contest/forms.py:57
+msgid "Please choose your school."
+msgstr "Kies uw school."
+
+#: contest/forms.py:63 contest/forms.py:66 contest/forms.py:69
+msgid "This field is mandatory."
+msgstr "Dit veld is verplicht."
 
 #: contest/models.py:20
 msgid "secondary-school students"
@@ -310,7 +326,7 @@ msgstr "eindresultaat"
 msgid "final results"
 msgstr "eindresultaten"
 
-#: contest/views.py:105
+#: contest/views.py:109
 msgid "Registering to Belgian Olympiads in Informatics"
 msgstr "Inschrijven voor de Belgische Informatica-olympiade"
 
@@ -339,11 +355,10 @@ msgid "Body"
 msgstr "Tekst"
 
 #: news/feed.py:26
-#, fuzzy
 msgid "be-OI News"
 msgstr "be-OI Nieuws"
 
-#: news/feed.py:27 templates/base.html:5 templates/base.html.py:50
+#: news/feed.py:27 templates/base-empty.html:6
 msgid "Belgian Olympiads in Informatics"
 msgstr "Belgische Informatica-olympiade"
 
@@ -396,109 +411,146 @@ msgstr "nieuwsbericht"
 msgid "news entries"
 msgstr "nieuwsberichten"
 
-#: templates/base.html:9
-msgid "RSS feed"
-msgstr ""
-
-#: templates/base.html:51
-msgid "Programming, algorithmic and logic"
-msgstr "Programmeren, algoritmiek en logica"
-
-#: templates/base.html:78
-msgid ""
-"Enter your e-mail to receive a message when the beOI 2013 registrations are "
-"open."
-msgstr ""
-"Geef je emailadres op als je verwittigd wil worden zodra de inschrijvingen "
-"voor beOI 2013 starten"
-
-#: templates/base.html:80
-msgid "Register (to mailing list)"
-msgstr "Inschrijven"
-
-#: templates/base.html:85 templates/base.html.py:89
-msgid "Contest"
-msgstr "Wedstrijd"
-
-#: templates/base.html:87
+#: templates/base.html:20
 msgid "News"
 msgstr "Nieuws"
 
-#: templates/base.html:88
-msgid "FAQ"
-msgstr ""
+#: templates/base.html:21 templates/menu_contest.html:4
+msgid "Contest"
+msgstr "Wedstrijd"
 
-#: templates/base.html:91
-msgid "Calendar"
-msgstr "Kalender"
+#: templates/base.html:22 templates/menu_training.html:4
+msgid "Preparing"
+msgstr "Voorbereiding"
 
-#: templates/base.html:92
-msgid "Registering"
-msgstr "Inschrijven"
+#: templates/base.html:23
+msgid "Press-Sponsors"
+msgstr "Pers-Sponsors"
 
-#: templates/base.html:93
-msgid "Semifinal"
-msgstr "Halve finale"
+#: templates/base.html:24
+msgid "About beOI"
+msgstr "Over beOI"
 
-#: templates/base.html:94
-msgid "Training"
-msgstr "Training"
+#: templates/base.html:50
+msgid "Register now!"
+msgstr "Schrijf je nu in!"
 
-#: templates/base.html:95
-msgid "Final"
-msgstr "Finale"
+#: templates/base.html:51
+#, python-format
+msgid "(%(timeleft)s left)"
+msgstr "(nog %(timeleft)s)"
 
-#: templates/base.html:96
-msgid "International Olympiad"
-msgstr "Internationale Olympiade"
-
-#: templates/base.html:99
-msgid "Rules"
-msgstr "Reglement"
-
-#: templates/base.html:100
-msgid "Sample Questions"
-msgstr "Voorbeeldvragen"
-
-#: templates/base.html:101
-msgid "Archives"
-msgstr "Archieven"
-
-#: templates/base.html:112
-msgid "Organisation"
-msgstr "Organisatie"
-
-#: templates/base.html:114
-msgid "be-OI Team"
-msgstr "be-OI Team"
-
-#: templates/base.html:115
-msgid "Sponsors & Partners"
-msgstr ""
-
-#: templates/base.html:116
-msgid "Press"
-msgstr "Pers"
-
-#: templates/base.html:121
+#: templates/base.html:56 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/base.html:174
-msgid "Updates"
-msgstr "Updates"
+#: templates/base.html:80
+msgid "All rights reserved"
+msgstr "Alle rechten voorbehouden"
 
-#: templates/base.html:193
-msgid "Stay up to date. Subscribe via"
-msgstr "Blijf op de hoogte. Volg ons via"
+#: templates/menu_contest.html:5
+msgid "Registering"
+msgstr "Inschrijven"
 
-#: templates/base.html:195
-msgid "or"
-msgstr "of"
+#: templates/menu_contest.html:6
+msgid "Rules"
+msgstr "Reglement"
 
-#, fuzzy
-#~ msgid "Register"
+#: templates/menu_contest.html:7
+msgid "FAQ"
+msgstr ""
+
+#: templates/menu_contest.html:8
+msgid "Archives"
+msgstr "Archieven"
+
+#: templates/menu_contest.html:9 templates/menu_contest.html.py:10
+#: templates/menu_contest.html:11
+msgid "Edition"
+msgstr "Editie"
+
+#: templates/menu_press-sponsors.html:5
+msgid "Press"
+msgstr "Pers"
+
+#: templates/menu_training.html:5
+msgid "Sample Questions"
+msgstr "Voorbeeldvragen"
+
+#: templates/menu_training.html:6
+msgid "Programming"
+msgstr "Programmeren"
+
+#: templates/fr/registration.html:105
+msgid "More information on our sponsorship program"
+msgstr "Meer info over onze uitnodigingscampagne"
+
+#: templates/fr/registration.html:112
+msgid "Current school"
+msgstr "school"
+
+#: templates/fr/registration.html:114
+msgid "Selecting one option is mandatory."
+msgstr "Je moet een van de opties kiezen."
+
+#: templates/fr/registration.html:117
+msgid "My school is in this list"
+msgstr "Mijn school staat op deze lijst"
+
+#: templates/fr/registration.html:117
+msgid "ordered by post code"
+msgstr "geordend op postcode"
+
+#: templates/fr/registration.html:125
+msgid "Otherwise, I add it"
+msgstr "Indien niet, dan voeg ik ze toe"
+
+#: templates/fr/registration.html:188
+msgid "Register"
+msgstr "Inschrijven"
+
+#~ msgid "Training"
+#~ msgstr "Training"
+
+#~ msgid "Semifinal"
+#~ msgstr "Halve finale"
+
+#~ msgid "Final"
+#~ msgstr "Finale"
+
+#~ msgid "International Olympiad"
+#~ msgstr "Internationale Olympiade"
+
+#~ msgid "Programming, algorithmic and logic"
+#~ msgstr "Programmeren, algoritmiek en logica"
+
+#~ msgid ""
+#~ "Enter your e-mail to receive a message when the beOI 2013 registrations "
+#~ "are open."
+#~ msgstr ""
+#~ "Geef je emailadres op als je verwittigd wil worden zodra de "
+#~ "inschrijvingen voor beOI 2013 starten"
+
+#~ msgid "Register (to mailing list)"
 #~ msgstr "Inschrijven"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Organisation"
+#~ msgstr "Organisatie"
+
+#~ msgid "be-OI Team"
+#~ msgstr "be-OI Team"
+
+#~ msgid "Updates"
+#~ msgstr "Updates"
+
+#~ msgid "Stay up to date. Subscribe via"
+#~ msgstr "Blijf op de hoogte. Volg ons via"
+
+#~ msgid "or"
+#~ msgstr "of"
 
 #~ msgid "With support from"
 #~ msgstr "Met de steun van"

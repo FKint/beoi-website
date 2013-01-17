@@ -1,11 +1,23 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
 
-{% block title %}Foire aux Questions{% endblock title %}
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-faq").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Foire aux Questions{% endblock %}
+{% block subtitle %}Réponses aux questions plus souvent reçues{% endblock %}
+
+
 {% block content %}
 
-<h2>Foire aux Questions</h2>
-
-<p>Cette page reprend la plupart des questions qui nous sont adressées tout au long de l'année et qui ne sont pas nécessairement reprises dans le reste du site (ou difficilement trouvables). Pour toute autre question, n'hésitez pas à nous contacter (info [a] be-oi.be).</p>
+<div class="alert alert-success">
+<strong>Une autre question ?</strong> Posez-la nous par email au <a href="mailto:info@be-oi.be">info@be-oi.be</a>.
+</div>
 
 {% if categories %}
 <h3>Catégories</h3>

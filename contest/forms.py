@@ -14,12 +14,11 @@ class RegisteringForm(forms.Form):
 	surname 		= forms.CharField(max_length=255, label=_('Surname'))
 	gender 			= forms.ChoiceField(choices=Contestant.GENDER_CHOICES, label=_('Gender'))
 	dob				= forms.DateField(input_formats=['%d/%m/%Y','%d/%m/%y'], label=_("Date of birth"))
-	address			= forms.CharField(max_length=255, label=_('Address'))
+	address			= forms.CharField(max_length=255, label=_('Address'), required=False)
 	postal_code		= forms.IntegerField(min_value=1000, max_value=9999, label=_("Postal code"))
 	city			= forms.CharField(max_length=255, label=_('City'))
-	email			= forms.EmailField(max_length=255, label=_('Email'))
-	
-	token	 		= forms.CharField(max_length=255, label=_('Referral Token'), required=False)
+	email			= forms.EmailField(max_length=255, label=_('Email'), help_text=_("Only used for olympiads. Will never be given to a sponsor or a third."))
+	token	 		= forms.CharField(max_length=255, label=_('Referral Token'), required=False, help_text=_("Optional, the token you received if you are sponsored by another contestant."))
 
 	school_exists	= forms.ChoiceField(choices=((SCHOOL_EXISTS,_("is in the list")),(SCHOOL_NOT_EXIST,_("is not in the list"))), label=_('Is the school in the list'))
 	school			= forms.ModelChoiceField(queryset=School.objects.order_by('postal_code',"name").filter(category=CONTEST_SEC), required=False, empty_label=_("Make a choice"))
@@ -32,14 +31,14 @@ class RegisteringForm(forms.Form):
 	
 	language 		= forms.ChoiceField(choices=LANG_CHOICES, label=_("Examination language"))
 	
-	semifinal_center= forms.ModelChoiceField(queryset=SemifinalCenter.objects.filter(active=True).order_by('city','name'), empty_label=_("Make a choice"))
+	semifinal_center= forms.ModelChoiceField(queryset=SemifinalCenter.objects.filter(active=True).order_by('city','name'), empty_label=_("Make a choice"), help_text=_("Welcome and assistance are only guaranteed in the center's main language."))
 		
 	""" Force conversion to 'int' ... for comparison """
 	def __int_only(self, field):
 		try:
 			data = int(self.cleaned_data[field])
 		except: # unexpected
-			raise forms.ValidationError(_("Wrong value for this field"))
+			raise forms.ValidationError(_("Wrong value for this field."))
 		return data
 		
 	def clean_school_exists(self): return self.__int_only("school_exists")
@@ -50,24 +49,24 @@ class RegisteringForm(forms.Form):
 		
 		cleaned_data = self.cleaned_data
 		if cleaned_data.get("token") and not is_valid_token(cleaned_data.get("token")):
-			self._errors["token"] = self.error_class([_("This token is not valid")])
+			self._errors["token"] = self.error_class([_("This token is not valid.")])
 			del cleaned_data["token"]
 
 		if cleaned_data.get("school_exists") == SCHOOL_EXISTS:
 			if not cleaned_data.get("school"):
-				self._errors["school"] = self.error_class([_("Please choose your school")])
+				self._errors["school"] = self.error_class([_("Please choose your school.")])
 				del cleaned_data["school"]
 				return cleaned_data
 			
 		elif cleaned_data.get("school_exists") == SCHOOL_NOT_EXIST:
 			if not cleaned_data.get("new_school_name"):
-				self._errors["new_school_name"] = self.error_class([_("This field is mandatory")])
+				self._errors["new_school_name"] = self.error_class([_("This field is mandatory.")])
 				if "new_school_name" in cleaned_data: del cleaned_data["new_school_name"]
 			if not cleaned_data.get("new_school_postal_code"):
-				self._errors["new_school_postal_code"] = self.error_class([_("This field is mandatory")])
+				self._errors["new_school_postal_code"] = self.error_class([_("This field is mandatory.")])
 				if "new_school_postal_code" in cleaned_data: del cleaned_data["new_school_postal_code"]
 			if not cleaned_data.get("new_school_city"):
-				self._errors["new_school_city"] = self.error_class([_("This field is mandatory")])
+				self._errors["new_school_city"] = self.error_class([_("This field is mandatory.")])
 				if "new_school_city" in cleaned_data: del cleaned_data["new_school_city"]
 			
 		return cleaned_data

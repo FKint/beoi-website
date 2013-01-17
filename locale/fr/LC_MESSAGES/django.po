@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-28 00:35+0200\n"
+"POT-Creation-Date: 2012-12-31 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,85 +39,104 @@ msgstr "Marquer les participants sélectionnés comme vérifiés manuellement"
 msgid "Export as CSV"
 msgstr ""
 
-#: contest/forms.py:23
+#: contest/forms.py:13
 msgid "Firstname"
 msgstr "Prénom"
 
-#: contest/forms.py:24
+#: contest/forms.py:14
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: contest/forms.py:25
+#: contest/forms.py:15
 msgid "Gender"
 msgstr "Sexe"
 
-#: contest/forms.py:26
+#: contest/forms.py:16
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: contest/forms.py:27
+#: contest/forms.py:17
 msgid "Address"
 msgstr "Adresse"
 
-#: contest/forms.py:28 contest/forms.py:38
+#: contest/forms.py:18 contest/forms.py:27
 msgid "Postal code"
 msgstr "Code postal"
 
-#: contest/forms.py:29 contest/forms.py:39
+#: contest/forms.py:19 contest/forms.py:28
 msgid "City"
 msgstr "Ville"
 
-#: contest/forms.py:30 oi_core/forms.py:7
+#: contest/forms.py:20 oi_core/forms.py:7
 msgid "Email"
 msgstr "E-mail"
 
-#: contest/forms.py:32
-msgid "Referral Token"
+#: contest/forms.py:20
+msgid "Only used for olympiads. Will never be given to a sponsor or a third."
 msgstr ""
+"Uniquement utilisée dans le cadre de l'olympiade, jamais communiquée à un "
+"sponsor ou à un tiers."
 
-#: contest/forms.py:34
+#: contest/forms.py:21
+msgid "Referral Token"
+msgstr "Code de parrainage"
+
+#: contest/forms.py:21
+msgid ""
+"Optional, the token you received if you are sponsored by another contestant."
+msgstr ""
+"Optionnel, le code reçu si vous êtes parrainé par un autre participant."
+
+#: contest/forms.py:23
 msgid "is in the list"
 msgstr "est dans la liste"
 
-#: contest/forms.py:34
+#: contest/forms.py:23
 msgid "is not in the list"
 msgstr "n'est pas dans la liste"
 
-#: contest/forms.py:34
+#: contest/forms.py:23
 msgid "Is the school in the list"
 msgstr "L'école se trouve-t-elle dans la liste"
 
-#: contest/forms.py:35 contest/forms.py:45
+#: contest/forms.py:24 contest/forms.py:34
 msgid "Make a choice"
 msgstr "Faites votre choix"
 
-#: contest/forms.py:37
+#: contest/forms.py:26
 msgid "School name"
 msgstr "Nom de l'établissement"
 
-#: contest/forms.py:41
+#: contest/forms.py:30
 msgid "Year of study"
 msgstr "Année d'étude"
 
-#: contest/forms.py:43
+#: contest/forms.py:32
 msgid "Examination language"
 msgstr "Langue de l'épreuve"
 
+#: contest/forms.py:34
+msgid ""
+"Welcome and assistance are only guaranteed in the center's main language."
+msgstr ""
+"L'accueil et l'assistance aux participants ne sont garantis que dans la "
+"langue du centre."
+
+#: contest/forms.py:41
+msgid "Wrong value for this field."
+msgstr "Value erronée dans ce champ."
+
 #: contest/forms.py:52
-msgid "Wrong value for this field"
-msgstr "Value erronée dans ce champ"
+msgid "This token is not valid."
+msgstr "Ce code n'est pas valide."
 
-#: contest/forms.py:64
-msgid "This token is not valid"
-msgstr "Ce code n'est pas valide"
+#: contest/forms.py:57
+msgid "Please choose your school."
+msgstr "Choisissez votre école."
 
-#: contest/forms.py:69
-msgid "Please choose your school"
-msgstr "Choisissez votre école"
-
-#: contest/forms.py:75 contest/forms.py:78 contest/forms.py:81
-msgid "This field is mandatory"
-msgstr "Ce champ est obligatoire"
+#: contest/forms.py:63 contest/forms.py:66 contest/forms.py:69
+msgid "This field is mandatory."
+msgstr "Ce champ est obligatoire."
 
 #: contest/models.py:20
 msgid "secondary-school students"
@@ -266,11 +285,11 @@ msgstr ""
 
 #: contest/models.py:116
 msgid "semifinal center"
-msgstr "centre pour la demi-finale"
+msgstr "Centre pour la demi-finale"
 
 #: contest/models.py:117
 msgid "semifinal centers"
-msgstr "centres pour la demi-finale"
+msgstr "Centre pour la demi-finale"
 
 #: contest/models.py:123
 msgid "score"
@@ -308,7 +327,7 @@ msgstr "résultat de la finale"
 msgid "final results"
 msgstr "résultats de la finale"
 
-#: contest/views.py:105
+#: contest/views.py:109
 msgid "Registering to Belgian Olympiads in Informatics"
 msgstr "Inscription à l'Olympiade belge d'Informatique"
 
@@ -341,7 +360,7 @@ msgstr ""
 msgid "be-OI News"
 msgstr "Equipe be-OI"
 
-#: news/feed.py:27 templates/base.html:5 templates/base.html.py:50
+#: news/feed.py:27 templates/base-empty.html:6
 msgid "Belgian Olympiads in Informatics"
 msgstr "Olympiade belge d'Informatique"
 
@@ -393,108 +412,149 @@ msgstr ""
 msgid "news entries"
 msgstr ""
 
-#: templates/base.html:9
-msgid "RSS feed"
-msgstr ""
-
-#: templates/base.html:51
-msgid "Programming, algorithmic and logic"
-msgstr "Programmation, algorithmique et logique"
-
-#: templates/base.html:78
-msgid ""
-"Enter your e-mail to receive a message when the beOI 2013 registrations are "
-"open."
-msgstr ""
-"Entrez votre e-mail pour recevoir un message lorsque les inscriptions beOI "
-"2013 seront ouvertes."
-
-#: templates/base.html:80
-msgid "Register (to mailing list)"
-msgstr "S'inscrire"
-
-#: templates/base.html:85 templates/base.html.py:89
-msgid "Contest"
-msgstr "Épreuve"
-
-#: templates/base.html:87
+#: templates/base.html:20
 msgid "News"
 msgstr ""
 
-#: templates/base.html:88
-msgid "FAQ"
-msgstr "Foire aux Questions"
+#: templates/base.html:21 templates/menu_contest.html:4
+msgid "Contest"
+msgstr "Épreuve"
 
-#: templates/base.html:91
-msgid "Calendar"
-msgstr "Calendrier"
+#: templates/base.html:22 templates/menu_training.html:4
+msgid "Preparing"
+msgstr "Se préparer"
 
-#: templates/base.html:92
-msgid "Registering"
-msgstr "Inscription"
+#: templates/base.html:23
+msgid "Press-Sponsors"
+msgstr "Presse-Sponsors"
 
-#: templates/base.html:93
-msgid "Semifinal"
-msgstr "Demi-finale"
+#: templates/base.html:24
+msgid "About beOI"
+msgstr "A propos de beOI"
 
-#: templates/base.html:94
-msgid "Training"
-msgstr "Formation"
+#: templates/base.html:50
+msgid "Register now!"
+msgstr "Inscrivez-vous dès maintenant!"
 
-#: templates/base.html:95
-msgid "Final"
-msgstr "Finale"
+#: templates/base.html:51
+#, python-format
+msgid "(%(timeleft)s left)"
+msgstr "(il reste %(timeleft)s)"
 
-#: templates/base.html:96
-msgid "International Olympiad"
-msgstr "Olympiade Internationale"
-
-#: templates/base.html:99
-msgid "Rules"
-msgstr "Réglement"
-
-#: templates/base.html:100
-msgid "Sample Questions"
-msgstr "Exemples de Questions"
-
-#: templates/base.html:101
-msgid "Archives"
-msgstr "Archives"
-
-#: templates/base.html:112
-msgid "Organisation"
-msgstr "Organisation"
-
-#: templates/base.html:114
-msgid "be-OI Team"
-msgstr "Equipe be-OI"
-
-#: templates/base.html:115
-msgid "Sponsors & Partners"
-msgstr "Sponsors & Partenaires"
-
-#: templates/base.html:116
-msgid "Press"
-msgstr "Presse"
-
-#: templates/base.html:121
+#: templates/base.html:56 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr ""
 
-#: templates/base.html:174
-msgid "Updates"
-msgstr "Restez informé"
+#: templates/base.html:80
+msgid "All rights reserved"
+msgstr "Tous droits réservés"
 
-#: templates/base.html:193
-msgid "Stay up to date. Subscribe via"
-msgstr "Restez informé des derniers changements. Suivez-nous via"
+#: templates/menu_contest.html:5
+msgid "Registering"
+msgstr "Inscription"
 
-#: templates/base.html:195
-msgid "or"
-msgstr "ou"
+#: templates/menu_contest.html:6
+msgid "Rules"
+msgstr "Réglement"
 
-#~ msgid "Register"
-#~ msgstr "Inscription"
+#: templates/menu_contest.html:7
+msgid "FAQ"
+msgstr "Foire aux Questions"
+
+#: templates/menu_contest.html:8
+msgid "Archives"
+msgstr "Archives"
+
+#: templates/menu_contest.html:9 templates/menu_contest.html.py:10
+#: templates/menu_contest.html:11
+msgid "Edition"
+msgstr ""
+
+#: templates/menu_press-sponsors.html:5
+msgid "Press"
+msgstr "Presse"
+
+#: templates/menu_training.html:5
+msgid "Sample Questions"
+msgstr "Exemples de Questions"
+
+#: templates/menu_training.html:6
+msgid "Programming"
+msgstr ""
+
+#: templates/fr/registration.html:105
+msgid "More information on our sponsorship program"
+msgstr "Plus d'info sur notre programme de parrainage"
+
+#: templates/fr/registration.html:112
+msgid "Current school"
+msgstr "Etablissement scolaire"
+
+#: templates/fr/registration.html:114
+msgid "Selecting one option is mandatory."
+msgstr "Un choix parmi les deux options est obligatoire."
+
+#: templates/fr/registration.html:117
+msgid "My school is in this list"
+msgstr "Mon école est dans cette liste"
+
+#: templates/fr/registration.html:117
+msgid "ordered by post code"
+msgstr "ordonnées par code postal"
+
+#: templates/fr/registration.html:125
+msgid "Otherwise, I add it"
+msgstr "Dans le cas contraire, je l'ajoute"
+
+#: templates/fr/registration.html:188
+msgid "Register"
+msgstr "M'inscrire"
+
+#~ msgid "Training"
+#~ msgstr "Formation"
+
+#~ msgid "Semifinal"
+#~ msgstr "Demi-finale"
+
+#~ msgid "Final"
+#~ msgstr "Finale"
+
+#~ msgid "International Olympiad"
+#~ msgstr "Olympiade Internationale"
+
+#~ msgid "Programming, algorithmic and logic"
+#~ msgstr "Programmation, algorithmique et logique"
+
+#~ msgid ""
+#~ "Enter your e-mail to receive a message when the beOI 2013 registrations "
+#~ "are open."
+#~ msgstr ""
+#~ "Entrez votre e-mail pour recevoir un message lorsque les inscriptions "
+#~ "beOI 2013 seront ouvertes."
+
+#~ msgid "Register (to mailing list)"
+#~ msgstr "S'inscrire"
+
+#~ msgid "Calendar"
+#~ msgstr "Calendrier"
+
+#~ msgid "Organisation"
+#~ msgstr "Organisation"
+
+#~ msgid "be-OI Team"
+#~ msgstr "Equipe be-OI"
+
+#~ msgid "Sponsors & Partners"
+#~ msgstr "Sponsors & Partenaires"
+
+#~ msgid "Updates"
+#~ msgstr "Restez informé"
+
+#~ msgid "Stay up to date. Subscribe via"
+#~ msgstr "Restez informé des derniers changements. Suivez-nous via"
+
+#~ msgid "or"
+#~ msgstr "ou"
 
 #~ msgid "With support from"
 #~ msgstr "Avec le soutien de"

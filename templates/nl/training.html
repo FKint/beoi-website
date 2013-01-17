@@ -1,7 +1,18 @@
-{% extends "nl/base.html" %}
+{% extends "base.html" %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-training").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Cursussen{% endblock %}
+{% block subtitle %}{% endblock %}
 
 {% block content%}
-<h2>Training</h2>
 
 <p>De halve finale van de Olympiade verloopt volledig schriftelijk en vereist weinig of geen programmeerervaring. In de finale zal echter wel aan de computer geprogrammeerd moeten worden. Om eventuele gaten in voorkennis op te vangen en iedereen een eerlijke kans te geven, wordt er tussen de halve finale en de finale een gratis minicursus programmeren georganiseerd voor alle deelnemers. Deelname is gratis en volledig vrijwillig.</p>
 

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-registration").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Inscription{% endblock %}
+{% block subtitle %}Gratuit, facile et rapide, mais tant à gagner.{% endblock %}
+
+{% block content%}
+
+<p>Les inscriptions sont maintenant clôturées. Rendez-vous l'année prochaine pour une prochaine édition des Olympiades belges d'Informatique !</p>
+
+{% endblock %}

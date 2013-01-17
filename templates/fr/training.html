@@ -1,4 +1,16 @@
-{% extends "fr/base.html" %}
+{% extends "base.html" %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-training").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Se prp{% endblock %}
+{% block subtitle %}{% endblock %}
 
 {% block content%}
 <h2>Formation</h2>
