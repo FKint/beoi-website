@@ -18,7 +18,7 @@ multilang_patterns = patterns('',
 	url(r'^(?P<page>[0-9]+)?$', news, {'template': "home.html"}, 'home'),
 	url(r'^rss$', RssNews(), {}, "rss"),
 
-	url(r'^agenda$', direct_to_template, {'template': 'calendar.html'}, "agenda"),
+	#url(r'^agenda$', direct_to_template, {'template': 'calendar.html'}, "agenda"),
 	url(r'^rules$', direct_to_template, {'template': 'rules.html'}, "rules"),
 	url(r'^sample-questions$', direct_to_template, {'template': 'sample_questions.html'}, "sample-questions"),
 	url(r'^faq$', "beoi.faq.views.faq",  {'template': 'faq.html'}, "faq"),
@@ -34,8 +34,8 @@ multilang_patterns = patterns('',
 	url(r'^sponsors$', direct_to_template, {'template': 'sponsors.html'}, "sponsors"),
 	url(r'^press$', direct_to_template, {'template': 'press.html'}, "press"),
 	
-	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
-	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
+#	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
+#	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
 		"queryset": SemifinalCenter.objects.filter(active=True)},"semifinal-places"),
 	#url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_after.html',
@@ -46,15 +46,15 @@ multilang_patterns = patterns('',
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 	url(r'^preparing$', direct_to_template,  {'template': 'preparing.html'}, "preparing"),
 			
-	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
-	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
+#	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
+#	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
 	#url(r'^final$', list_detail.object_list, { 'template_name': 'final_after.html',
 	#	"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
 	#		.filter(contestant__contest_year=2012).order_by("rank")	}, "final"),
 
-	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
+#	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
 	
-	url(r'^team$', direct_to_template, {'template': 'team.html'}, "team"),
+#	url(r'^team$', direct_to_template, {'template': 'team.html'}, "team"),
 
 	
 	# url(r'^archives$', direct_to_template, {'template': 'archives.html'}, "archives"),
@@ -90,7 +90,19 @@ urlpatterns = patterns('',
 	# meta
 	(r'^(?P<language>(fr|nl))/', include(multilang_patterns)),
 	
-	# for transition/compatibity purpose
+	# for transition/compatibity purpose with migration 2013/01
+	(r'^fr/final', redirect_to, {'url': '/fr/contest'}),
+	(r'^fr/semifinal', redirect_to, {'url': '/fr/contest'}),
+	(r'^fr/ioi', redirect_to, {'url': '/fr/contest'}),
+	(r'^fr/agenda', redirect_to, {'url': '/fr/contest'}),
+	(r'^fr/team', redirect_to, {'url': '/fr/about'}),
+	(r'^nl/final', redirect_to, {'url': '/nl/contest'}),
+	(r'^nl/semifinal', redirect_to, {'url': '/nl/contest'}),
+	(r'^nl/ioi', redirect_to, {'url': '/nl/contest'}),
+	(r'^nl/agenda', redirect_to, {'url': '/nl/contest'}),
+	(r'^nl/team', redirect_to, {'url': '/nl/about'}),
+	
+	# for transition/compatibity purpose for migration in 2011
 	(r'^inscription', redirect_to, {'url': '/fr/registration'}),
 	(r'^inschrijven', redirect_to, {'url': '/nl/registration'}),
 	(r'^tenirajour$', redirect_to, {'url': '/fr'}),
