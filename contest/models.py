@@ -57,7 +57,7 @@ class Contestant(models.Model):
 	firstname 			= models.CharField(_('firstname'), max_length=255)
 	gender 				= models.IntegerField(_('gender'), choices=GENDER_CHOICES, default=GENDER_DEFAULT)
 	email 				= models.EmailField(_('email'))
-	address 			= models.CharField(_('address'), max_length=255)
+	address 			= models.CharField(_('address'), max_length=255, blank=True)
 	city 				= models.CharField(_('city'), max_length=255)
 	postal_code 		= models.IntegerField(_("postal code"), validators=[postal_code_belgium], max_length=4)
 	dob 				= models.DateField(_("date of birth"))
