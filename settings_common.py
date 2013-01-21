@@ -48,6 +48,7 @@ USE_I18N = True
 USE_L10N = True
 
 REGISTRATION_DEADLINE = datetime(2013,01,21,23,59,59)
+SEMIFINAL_STARTUP = datetime(2013,01,23,14,30,00)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"

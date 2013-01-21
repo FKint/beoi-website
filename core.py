@@ -50,6 +50,9 @@ def changelang_context_proc(request):
 def registration_open():
 	return settings.REGISTRATION_DEADLINE > datetime.now()
 
+def semifinal_started():
+	return settings.SEMIFINAL_STARTUP > datetime.now()
+
 def contest_year():
 	return settings.REGISTRATION_DEADLINE.year
 

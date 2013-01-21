@@ -33,7 +33,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 def registration(request, template):
 	
-	if not registration_open() :  
+	if not semifinal_started() :  
 		return render_to_response(
 			request.LANGUAGE_CODE+"/closed_registration.html", 
 			context_instance=RequestContext(request)
