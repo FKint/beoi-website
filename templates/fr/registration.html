@@ -16,7 +16,7 @@ $("#side-menu-registration").addClass("active");
 
 {% block content%}
 
-{% if REGISTRATION_OPEN %}
+{% if not REGISTRATION_OPEN %}
 <div class="alert alert-error">
  <p><strong>Important: Les inscriptions en ligne sont officiellement clôturées depuis le lundi 21 janvier 23h59. 
  	Néanmoins, ce formulaire restera ouvert jusqu'à l'épreuve (mercredi 23 janvier) pour les retardataires.  
