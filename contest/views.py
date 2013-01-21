@@ -16,7 +16,7 @@ from django.contrib.sites.models import Site, RequestSite
 from django.contrib.syndication.views import add_domain
 from django.utils.translation import ugettext_lazy as _
 from django.db import transaction
-from beoi.core import registration_open,contest_year
+from beoi.core import registration_open,contest_year,semifinal_started
 from django.core.exceptions import ObjectDoesNotExist
 
 # def _gen_token():
