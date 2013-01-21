@@ -16,18 +16,20 @@ $("#side-menu-registration").addClass("active");
 
 {% block content%}
 
+{% if REGISTRATION_OPEN %}
+<div class="alert alert-error">
+ <p><strong>Belangrijk: De online inschrijvingen zijn officieel gesloten sinds maandag 21 januari 23h59.
+	Het onderstaande formulier blijft echter bruikbaar tot de datum van de halve finale (woensdag 23 januari) voor laattijdige inschrijvingen.
+	Voor zover er nog plaatsen zijn, zullen de regionale centra iedereen die zich aanbiedt op de dag van de halve finales toelaten om deel te nemen, ingeschreven of niet.	
+	Als je dit formulier nog niet had ingevuld, zal je ter plaatse gevraagd worden om een gelijkaardig papieren formulier in te vullen.
+	
+	De enige beperking is dat we, om logisieke redenen, vragen om in te schrijven in een centrum van dezelfde taalrol als de taal waarin je wil deelnemen.
+	Als je alsnog wil deelnemen vragen we je om toch zo snel mogelijk online te registreren, zodat wij het aantal deelnemers zo goed mogelijk kunnen inschatten.
+</strong></p> 
+</div> 
+{% endif %}
 
 
-
-
-<!-- <div class="alert alert-info">
- <p><strong>Belangrijk: De online inschrijvingen zijn officieel gesloten sinds zondag 13 februari, 23u59. 	
-    Het onderstaande formulier blijft bruikbaar tot de datum van de halve finales (woensdag 16 februari) voor laattijdige inschrijvingen.	
-    Voor zover er nog plaatsen zijn, zullen de regionale centra iedereen die zich aanbiedt op de dag van de halve finales toelaten om deel te nemen.	
-    Als je dit formulier nog niet had ingevuld, zal je ter plaatse gevraagd worden om een gelijkaardig papieren formulier in te vullen.	
-    Als je nog niet ingeschreven bent en nog wil deelnemen, dan kan dat dus.    	
-    We vragen je wel om zo snel mogelijk te registreren, zodat wij het aantal deelnemers zo goed mogelijk kunnen inschatten.</strong></p>	
--->
 
 <div class="alert alert-info">
 <p>De wedstrijd is voorbehouden aan jongeren die ingeschreven zijn in het <strong>secundair onderwijs</strong>. Deelnemers moeten ofwel de <strong>Belgische nationaliteit</strong> hebben, of ingeschreven zijn in een <strong>school gevestigd in België</strong>. Deelnemers mogen de leeftijd van <strong>21 jaar niet bereikt hebben</strong> op de 1e juli van het jaar waarin de wedstrijd plaatsvindt. Door in te schrijven aanvaardt de deelnemer <a href="{% url rules LANGUAGE_CODE %}">het reglement</a>.</p>
