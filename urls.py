@@ -34,43 +34,15 @@ multilang_patterns = patterns('',
 	url(r'^sponsors$', direct_to_template, {'template': 'sponsors.html'}, "sponsors"),
 	url(r'^press$', direct_to_template, {'template': 'press.html'}, "press"),
 	
-#	url(r'^semifinal$', direct_to_template,  {'template': 'semifinal_before.html'}, "semifinal"),
-#	url(r'^semifinal/rules$', direct_to_template,  {'template': 'semifinal_rules.html'}, "semifinal-rules"),
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
 		"queryset": SemifinalCenter.objects.filter(active=True)},"semifinal-places"),
-	#url(r'^semifinal$', list_detail.object_list, { 'template_name': 'semifinal_after.html',
-	#	"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
-	#										.filter(qualified=True,contestant__contest_year=contest_year())
-	#										.order_by("contestant__surname","contestant__firstname")}, "semifinal"),
 
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 	url(r'^preparing$', direct_to_template,  {'template': 'preparing.html'}, "preparing"),
 			
-#	url(r'^final$', direct_to_template,  {'template': 'final_before.html'}, "final"),
-#	url(r'^final/rules$', direct_to_template,  {'template': 'final_rules.html'}, "final-rules"),
-	#url(r'^final$', list_detail.object_list, { 'template_name': 'final_after.html',
-	#	"queryset": ResultFinal.objects.extra(select={"total":"(score_written*2+score_computer)/3"})
-	#		.filter(contestant__contest_year=2012).order_by("rank")	}, "final"),
-
-#	url(r'^ioi$', direct_to_template,  {'template': 'ioi.html'}, "ioi"),
-	
-#	url(r'^team$', direct_to_template, {'template': 'team.html'}, "team"),
-
-	
-	# url(r'^archives$', direct_to_template, {'template': 'archives.html'}, "archives"),
 	url(r'^archives/2010$', direct_to_template, {'template': '2010.html'}, "archives-2010"),
-	# url(r'^archives/2010/semifinal$', direct_to_template, {'template': '2010/semifinal.html'}, "archives-2010-semifinal"),
-	# url(r'^archives/2010/final$', direct_to_template, {'template': '2010/final.html'}, "archives-2010-final"),
-	# url(r'^archives/2010/ioi$', direct_to_template, {'template': '2010/ioi.html'}, "archives-2010-ioi"),
 	url(r'^archives/2011$', direct_to_template, {'template': '2011.html'}, "archives-2011"),
-	#url(r'^archives/2011/semifinal$', direct_to_template, {'template': '2011/semifinal.html'}, "archives-2011-semifinal"),
-	#url(r'^archives/2011/final$', direct_to_template, {'template': '2011/final.html'}, "archives-2011-final"),
-	#url(r'^archives/2011/ioi$', direct_to_template, {'template': '2011/ioi.html'}, "archives-2011-ioi"),
 	url(r'^archives/2012$', direct_to_template, {'template': '2012.html'}, "archives-2012"),
-	#url(r'^archives/2012/semifinal$', direct_to_template, {'template': '2012/semifinal.html'}, "archives-2012-semifinal"),
-	#url(r'^archives/2012/final$', direct_to_template, {'template': '2012/final.html'}, "archives-2012-final"),
-	#url(r'^archives/2012/ioi$', direct_to_template, {'template': '2012/ioi.html'}, "archives-2012-ioi"),
-	
 	
 	# unlinked pages
 	url(r'^registration/stats$', "beoi.contest.views.stats", {'template': '../common/stats.html'}, "stats"),
@@ -93,8 +65,12 @@ urlpatterns = patterns('',
 	# for transition/compatibity purpose with migration 2013/01
 	(r'^fr/final', redirect_to, {'url': '/fr/contest'}),
 	(r'^nl/final', redirect_to, {'url': '/nl/contest'}),
+	(r'^fr/final/rules', redirect_to, {'url': '/fr/contest'}),
+	(r'^nl/final/rules', redirect_to, {'url': '/nl/contest'}),
 	(r'^fr/semifinal', redirect_to, {'url': '/fr/contest'}),
 	(r'^nl/semifinal', redirect_to, {'url': '/nl/contest'}),
+	(r'^fr/semifinal/rules', redirect_to, {'url': '/fr/contest'}),
+	(r'^nl/semifinal/rules', redirect_to, {'url': '/nl/contest'}),
 	(r'^fr/ioi', redirect_to, {'url': '/fr/contest'}),
 	(r'^nl/ioi', redirect_to, {'url': '/nl/contest'}),
 	(r'^fr/agenda', redirect_to, {'url': '/fr/contest'}),
