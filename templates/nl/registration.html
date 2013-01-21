@@ -16,7 +16,7 @@ $("#side-menu-registration").addClass("active");
 
 {% block content%}
 
-{% if REGISTRATION_OPEN %}
+{% if not REGISTRATION_OPEN %}
 <div class="alert alert-error">
  <p><strong>Belangrijk: De online inschrijvingen zijn officieel gesloten sinds maandag 21 januari 23h59.
 	Het onderstaande formulier blijft echter bruikbaar tot de datum van de halve finale (woensdag 23 januari) voor laattijdige inschrijvingen.
