@@ -35,7 +35,7 @@ def registration(request, template):
 	
 	if not semifinal_started() :  
 		return render_to_response(
-			request.LANGUAGE_CODE+"/closed_registration.html", 
+			request.LANGUAGE_CODE+"/registration_closed.html", 
 			context_instance=RequestContext(request)
 		)
 
