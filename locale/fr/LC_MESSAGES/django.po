@@ -74,7 +74,7 @@ msgstr "E-mail"
 #: contest/forms.py:20
 msgid "Only used for olympiads. Will never be given to a sponsor or a third."
 msgstr ""
-"Uniquement utilisée dans le cadre de l'olympiade, jamais communiquée à un "
+"Uniquement utilisée dans le cadre de l'Olympiade, jamais communiquée à un "
 "sponsor ou à un tiers."
 
 #: contest/forms.py:21
@@ -430,7 +430,7 @@ msgstr "Presse-Sponsors"
 
 #: templates/base.html:24
 msgid "About beOI"
-msgstr "A propos de beOI"
+msgstr "À propos de beOI"
 
 #: templates/base.html:50
 msgid "Register now!"
