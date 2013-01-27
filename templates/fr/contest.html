@@ -29,7 +29,7 @@ $("#side-menu-contest").addClass("active");
 
   <p><i class="icon-calendar"></i>&nbsp;<strong>Mercredi 23 Janvier 2013, de 14h30 à 17h30</strong></p>
 
-  <p><a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Inscrivez-vous avant le 21 janvier !</a></p>
+  {% if REGISTRATION_OPEN %}<p><a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Inscrivez-vous avant le {{REGISTRATION_DEADLINE|date:"DATE_FORMAT"}} !</a></p>{% endif %}
 </section>
 </div>
 

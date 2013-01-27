@@ -28,7 +28,7 @@ $("#side-menu-contest").addClass("active");
 
   <p><i class="icon-calendar"></i>&nbsp;<strong>Woensdag 23 januari 2013, van 14h30 tot 17h30</strong></p>
 
-  <p><a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Schrijf je in vòòr 21 januari!</a></p>
+  {% if REGISTRATION_OPEN %}<p><a class="btn btn-success btn-large" href="{% url registration LANGUAGE_CODE %}">Schrijf je in vòòr {{REGISTRATION_DEADLINE|date:"DATE_FORMAT"}}!</a></p>{% endif %}
 </section>
 </div>
 
