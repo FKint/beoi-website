@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+</script>
+{% endblock js %}
+
+{% block header %}
+<h1>Résultats de la demi-finale</h1>
+{% endblock header %}
+
+{% block content %}
+
+<h2>Quelques chiffres</h2>
+
+<ul>
+	<li><strong>174 élèves</strong> du secondaire ont participé à la demi-finale.</li>
+	<li>Le score de l'épreuve était sur un <strong>total de 81</strong> mais il était possible d'optenir jusqu'à 88 points grâce aux bonus.</li>
+	<li>Il fallait obtenir un minimum de <strong>60 points</strong> pour être finaliste.</li>
+	<li>Les <strong>47 premiers candidats</strong> de la demi-finale sont qualifiés pour la finale.</li>
+	<li>3 participants ont obtenus 88 points, 8 ont obtenu 81 points ou plus.</li>
+</ul>
+
+<h2>Top-3</h2>
+
+Les trois participants suivant ont tous les trois obtenus 88 points, le maximum possible incluant tous les bonus. 
+
+<ul>
+<li><strong>Floris Kint</strong> - Onze-Lieve-Vrouwecollege Oostende - 6e secondaire </li>
+<li><strong>Victor Lecomte</strong> - Lycée Martin V, Louvain-la-Neuve - 6e secondaire </li>
+<li><strong>Simon Tihon</strong> - Institut de l'Enfant-Jésus, Nivelles - 6e secondaire</li>
+</ul>	
+
+<h2>Finalistes</h2>
+
+<dl>
+{% for result in object_list %}
+<dt>{{result.contestant.surname}} {{result.contestant.firstname}}</dt>
+<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e secondaire &mdash; {{result.contestant.school.city}}</p></dd>
+{% endfor %}
+</dl>
+
+
+
+<h2>Statistiques</h2>
+
+<p><img src="//chart.googleapis.com/chart?chf=c,ls,86.667,FFFFFF,0.1,FBFBFB,0.1&chxl=0:|81|50|25|0&chxp=0,81,50,25,0&chxr=0,0,88&chxs=0,676767,9,0.167,lt,676767&chxtc=0,5&chxt=y&chbh=2,1,0&chs=557x193&cht=bvs&chco=A2C180,AA0033&chds=0,88,0,88&chd=t:88,88,88,84,83,83,82,81,80,80,79,79,79,77,76,75,75,72,72,71,71,71,71,71,71,70,70,69,68,67,67,67,67,66,66,66,66,66,65,65,64,62,62,61,61,61,60|0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,59,59,59,58,57,57,57,57,56,56,56,55,55,55,55,55,54,54,54,54,53,53,52,52,52,52,52,52,51,51,51,50,50,50,49,48,48,46,46,45,44,43,42,42,42,42,41,41,41,41,41,41,39,39,39,38,38,38,38,38,38,38,38,37,37,37,37,37,37,37,36,36,35,35,35,35,34,33,33,33,32,32,32,32,32,31,31,31,31,31,30,30,29,29,28,28,28,27,27,26,26,26,26,25,25,23,23,23,23,21,21,20,19,18,17,17,16,15,15,14,12,11,10,10,9,8&chdl=Finalistes|Non-finalistes&chdlp=b&chg=-1,-1,0,0&chma=0,0,0,6&chm=h,FFCC33,1,0.53:5,1&chtt=Scores+(par+ordre+d%C3%A9croissant)&chts=676767,10.167"  alt="Scores (par ordre décroissant)" /></p>
+
+<!-- <p><img src="http://chart.apis.google.com/chart?chf=c,ls,0,FAFAFA,0.09,FFFFFF,0.09&chxl=0:|0|10|20|30|40|50|1:|7e+|6e+|5e+|4e+|3e+|&chxp=0,0,10,20,30,40,50&chxr=0,0,55&chxs=0,676767,11.5,0,t,676767&chxtc=0,5&chxt=x,y&chbh=a,3,0&chs=337x174&cht=bhs&chco=008000,80C65A,AA0033&chds=0,55,0,55,0,55&chd=t:0,0,4,6,0|1,2,15,22,1|4,26,30,26,0&chdl=TOP+10|Finalistes|Non-finalistes&chdlp=b&chtt=R%C3%A9partition+des+participants+selon+l'ann%C3%A9e+secondaire&chts=676767,9.8" width="337" height="174" alt="Répartition des participants selon l'année secondaire" /></p> -->
+
+<p><img src="//chart.googleapis.com/chart?chf=c,ls,90,FFFFFF,0.1,FBFBFB,0.1&chxl=1:|Q1|Q2|Q3|Q4|Q5|Q6|Q7|Q8|Q9&chxs=0,676767,11.5,-0.333,lt,676767|1,676767,11.5,0,lt,676767&chxtc=0,5|1,0&chxt=y,x&chbh=a,1,7&chs=400x193&cht=bvg&chco=3399CC&chd=t:58.18,73.56,51.86,45.68,39.75,61.04,76.93,78.16,29.69&chtt=Moyenne+(%25)+obtenue+%C3%A0+chaque+question&chts=676767,9.667" alt="Moyenne (%) obtenue à chaque question" /></p>
+
+
+
+
+
+
+
+{% endblock %}
