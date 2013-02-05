@@ -23,6 +23,8 @@ $("#menu-contest").addClass("active");
 	<li>Il fallait obtenir un minimum de <strong>60 points</strong> pour être finaliste.</li>
 	<li>Les <strong>47 premiers candidats</strong> de la demi-finale sont qualifiés pour la finale.</li>
 	<li>3 participants ont obtenus 88 points, 8 ont obtenu 81 points ou plus.</li>
+	<li><strong>10 filles</strong> participaient à la demi-finale. Il n'y en aura cependant qu'une parmi les 47 finalistes.</li>
+	<li>Le plus jeune finaliste a <strong>13 ans</strong>. </li>
 </ul>
 
 <h2>Top-3</h2>
@@ -30,9 +32,9 @@ $("#menu-contest").addClass("active");
 Les trois participants suivant ont tous les trois obtenus 88 points, le maximum possible incluant tous les bonus. 
 
 <ul>
-<li><strong>Floris Kint</strong> - Onze-Lieve-Vrouwecollege Oostende - 6e secondaire </li>
 <li><strong>Victor Lecomte</strong> - Lycée Martin V, Louvain-la-Neuve - 6e secondaire </li>
 <li><strong>Simon Tihon</strong> - Institut de l'Enfant-Jésus, Nivelles - 6e secondaire</li>
+<li><strong>Floris Kint</strong> - Onze-Lieve-Vrouwecollege Oostende - 6e secondaire </li>
 </ul>	
 
 <h2>Finalistes</h2>
@@ -40,7 +42,7 @@ Les trois participants suivant ont tous les trois obtenus 88 points, le maximum 
 <dl>
 {% for result in object_list %}
 <dt>{{result.contestant.surname}} {{result.contestant.firstname}}</dt>
-<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e secondaire &mdash; {{result.contestant.school.city}}</p></dd>
+<dd><p>{{result.contestant.school.name}}, {{result.contestant.school.city}} &mdash; {{result.contestant.year_study}}e secondaire</p></dd>
 {% endfor %}
 </dl>
 
