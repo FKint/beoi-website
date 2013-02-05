@@ -30,9 +30,9 @@ $("#menu-contest").addClass("active");
 De volgende drie deelnemers hebben 88 punten behaald, wat de maximumscore is inclusief alle bonussen.
 
 <ul>
-<li><strong>Floris Kint</strong> - Onze-Lieve-Vrouwecollege Oostende - 6e secondaire </li>
-<li><strong>Victor Lecomte</strong> - Lycée Martin V, Louvain-la-Neuve - 6e secondaire </li>
-<li><strong>Simon Tihon</strong> - Institut de l'Enfant-Jésus, Nivelles - 6e secondaire</li>
+<li><strong>Floris Kint</strong> - Onze-Lieve-Vrouwecollege Oostende - 6e middelbaar </li>
+<li><strong>Victor Lecomte</strong> - Lycée Martin V, Louvain-la-Neuve - 6e middelbaar </li>
+<li><strong>Simon Tihon</strong> - Institut de l'Enfant-Jésus, Nivelles - 6e middelbaar </li>
 </ul>	
 
 <h2>Finalisten</h2>
@@ -40,7 +40,7 @@ De volgende drie deelnemers hebben 88 punten behaald, wat de maximumscore is inc
 <dl>
 {% for result in object_list %}
 <dt>{{result.contestant.surname}} {{result.contestant.firstname}}</dt>
-<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e secondaire &mdash; {{result.contestant.school.city}}</p></dd>
+<dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e middelbaar &mdash; {{result.contestant.school.city}}</p></dd>
 {% endfor %}
 </dl>
 
