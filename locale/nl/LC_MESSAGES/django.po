@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-05 01:07+0100\n"
+"POT-Creation-Date: 2013-03-11 21:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: settings_common.py:36 contest/models.py:13 faq/models.py:8
@@ -456,23 +456,28 @@ msgid "Registering"
 msgstr "Inschrijven"
 
 #: templates/menu_contest.html:6
+#, fuzzy
+msgid "Final Results"
+msgstr "eindresultaten"
+
+#: templates/menu_contest.html:7
 msgid "Semifinal Results"
 msgstr "Resultaten Halve Finale"
 
-#: templates/menu_contest.html:7
+#: templates/menu_contest.html:8
 msgid "Rules"
 msgstr "Reglement"
 
-#: templates/menu_contest.html:8
+#: templates/menu_contest.html:9
 msgid "FAQ"
 msgstr ""
 
-#: templates/menu_contest.html:9
+#: templates/menu_contest.html:10
 msgid "Archives"
 msgstr "Archieven"
 
-#: templates/menu_contest.html:10 templates/menu_contest.html.py:11
-#: templates/menu_contest.html:12
+#: templates/menu_contest.html:11 templates/menu_contest.html.py:12
+#: templates/menu_contest.html:13
 msgid "Edition"
 msgstr "Editie"
 
