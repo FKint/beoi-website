@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-11 21:00+0100\n"
+"POT-Creation-Date: 2013-03-11 23:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -443,11 +443,15 @@ msgstr "Schrijf je nu in!"
 msgid "(%(timeleft)s left)"
 msgstr "(nog %(timeleft)s)"
 
-#: templates/base.html:56 templates/menu_press-sponsors.html:4
+#: templates/base.html:53
+msgid "Keep me informed of"
+msgstr ""
+
+#: templates/base.html:58 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: templates/base.html:80
+#: templates/base.html:82
 msgid "All rights reserved"
 msgstr "Alle rechten voorbehouden"
 
