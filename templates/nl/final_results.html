@@ -11,17 +11,17 @@ $("#side-menu-final-results").addClass("active");
 {% endblock js %}
 
 {% block header %}
-<h1>Résultats de la finale</h1>
+<h1>Resultaten van de Finale</h1>
 {% endblock header %}
 
 {% block content %}
 
 <div class="alert alert-info">
-Les parties papier, machine et le total sont respectivement sur un maximum de 50, 150 et 125 points. Suite au divers problèmes rencontrés lors de l'épreuve machine, les scores de cette partie ont été divisés par deux. Les seize premiers du classement sont sélectionnés pour faire partie du pool d'entraînement pour l'Olympiade internationale d'informatique.
+De gedeeltes op papier, aan de computer en het totaal staan op respectievelijk 50, 150 en 125 punten. Als gevolg van de problemen die opdoken tijdens de proef aan de computer, werden de scores van dit gedeelte door twee gedeeld. De 16 best gerangschikten in het eindklassement werden geselecteerd om deel uit te maken van de trainingspool in aanloop naar de International Olympiad in Informatics.
 </div>
 
 <table class="table table-striped">
-  <tr><th>#</th><th>Nom</th><th>Etablissement</th><th>Papier</th><th>Machine</th><th>Total</th></tr>
+  <tr><th>#</th><th>Naam</th><th>School</th><th>Papier</th><th>Computer</th><th>Totaal</th></tr>
 {% for result in object_list %}
   <tr {% if result.rank <= 16 %} class="success" {% endif %}>
     <td>{{result.rank}}</td>

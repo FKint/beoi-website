@@ -39,7 +39,7 @@ multilang_patterns = patterns('',
 
 	url(r'^final/results$', list_detail.object_list, { 'template_name': 'final_results.html',
 		"queryset": ResultFinal.objects.select_related('contestant', 'contestant__school')
-		.extra(select={"total":"score_written+score_computer/3"})
+		.extra(select={"total":"score_written+score_computer/2"})
 		.filter(contestant__contest_year=contest_year())
 		.order_by("rank")}, "final-results"),
 
