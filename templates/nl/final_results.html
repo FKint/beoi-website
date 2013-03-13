@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-final-results").addClass("active");
+</script>
+{% endblock js %}
+
+{% block header %}
+<h1>Resultaten van de Finale</h1>
+{% endblock header %}
+
+{% block content %}
+
+<div class="alert alert-info">
+De gedeeltes op papier, aan de computer en het totaal staan op respectievelijk 50, 150 en 125 punten. Als gevolg van de problemen die opdoken tijdens de proef aan de computer, werden de scores van dit gedeelte door twee gedeeld. De 16 best gerangschikten in het eindklassement werden geselecteerd om deel uit te maken van de trainingspool in aanloop naar de International Olympiad in Informatics.
+</div>
+
+<table class="table table-striped">
+  <tr><th>#</th><th>Naam</th><th>School</th><th>Papier</th><th>Computer</th><th>Totaal</th></tr>
+{% for result in object_list %}
+  <tr {% if result.rank <= 16 %} class="success" {% endif %}>
+    <td>{{result.rank}}</td>
+    <td nowrap="nowrap">{{result.contestant.surname}} {{result.contestant.firstname}}</td>
+    <td>{{result.contestant.school.name}}, {{result.contestant.school.city}} — {{result.contestant.year_study}}e</td>
+    <td>{{result.score_written}}</td>
+    <td>{{result.score_computer}}</td>
+    <td><strong>{{result.total}}</strong></td>
+  </tr>
+{% endfor %}
+</table>
+
+
+{% endblock %}
