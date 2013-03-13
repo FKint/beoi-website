@@ -445,7 +445,7 @@ msgstr "(nog %(timeleft)s)"
 
 #: templates/base.html:53
 msgid "Keep me informed of"
-msgstr ""
+msgstr "Hou me op de hoogte van"
 
 #: templates/base.html:58 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
@@ -460,9 +460,8 @@ msgid "Registering"
 msgstr "Inschrijven"
 
 #: templates/menu_contest.html:6
-#, fuzzy
 msgid "Final Results"
-msgstr "eindresultaten"
+msgstr "Resultaten Finale"
 
 #: templates/menu_contest.html:7
 msgid "Semifinal Results"
