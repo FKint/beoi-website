@@ -37,16 +37,16 @@ multilang_patterns = patterns('',
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',
 		"queryset": SemifinalCenter.objects.filter(active=True)},"semifinal-places"),
 
-	url(r'^final/results$', list_detail.object_list, { 'template_name': 'final_results.html',
-		"queryset": ResultFinal.objects.select_related('contestant', 'contestant__school')
-		.extra(select={"total":"score_written+score_computer/2"})
-		.filter(contestant__contest_year=contest_year())
-		.order_by("rank")}, "final-results"),
+	# url(r'^final/results$', list_detail.object_list, { 'template_name': 'final_results.html',
+	# 	"queryset": ResultFinal.objects.select_related('contestant', 'contestant__school')
+	# 	.extra(select={"total":"score_written+score_computer/2"})
+	# 	.filter(contestant__contest_year=contest_year())
+	# 	.order_by("rank")}, "final-results"),
 
-	url(r'^semifinal/results$', list_detail.object_list, { 'template_name': 'semifinal_results.html',
-		"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
-		.filter(qualified=True,contestant__contest_year=contest_year())
-		.order_by("contestant__surname","contestant__firstname")}, "semifinal-results"),
+	# url(r'^semifinal/results$', list_detail.object_list, { 'template_name': 'semifinal_results.html',
+	# 	"queryset": ResultSemifinal.objects.select_related('contestant', 'contestant__school')
+	# 	.filter(qualified=True,contestant__contest_year=contest_year())
+	# 	.order_by("contestant__surname","contestant__firstname")}, "semifinal-results"),
 
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 	url(r'^preparing$', direct_to_template,  {'template': 'preparing.html'}, "preparing"),
