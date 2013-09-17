@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-11 23:41+0100\n"
+"POT-Creation-Date: 2013-09-18 01:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: settings_common.py:36 contest/models.py:13 faq/models.py:8
@@ -455,32 +455,29 @@ msgstr "Sponsors"
 msgid "All rights reserved"
 msgstr "Alle rechten voorbehouden"
 
-#: templates/menu_contest.html:5
+#: templates/menu_contest.html:6
 msgid "Registering"
 msgstr "Inschrijven"
 
-#: templates/menu_contest.html:6
-msgid "Final Results"
-msgstr "Resultaten Finale"
-
-#: templates/menu_contest.html:7
+#: templates/menu_contest.html:9
 msgid "Semifinal Results"
 msgstr "Resultaten Halve Finale"
 
-#: templates/menu_contest.html:8
+#: templates/menu_contest.html:10
 msgid "Rules"
 msgstr "Reglement"
 
-#: templates/menu_contest.html:9
+#: templates/menu_contest.html:11
 msgid "FAQ"
 msgstr ""
 
-#: templates/menu_contest.html:10
+#: templates/menu_contest.html:12
 msgid "Archives"
 msgstr "Archieven"
 
-#: templates/menu_contest.html:11 templates/menu_contest.html.py:12
-#: templates/menu_contest.html:13
+#: templates/menu_contest.html:13 templates/menu_contest.html.py:14
+#: templates/menu_contest.html:15 templates/menu_contest.html.py:16
+#: templates/menu_contest.html:17
 msgid "Edition"
 msgstr "Editie"
 
@@ -489,10 +486,14 @@ msgid "Press"
 msgstr "Pers"
 
 #: templates/menu_training.html:5
+msgid "Learn Programming"
+msgstr "Leren Programmeren"
+
+#: templates/menu_training.html:6
 msgid "Sample Questions"
 msgstr "Voorbeeldvragen"
 
-#: templates/menu_training.html:6
+#: templates/menu_training.html:7
 msgid "Programming"
 msgstr "Programmeren"
 
@@ -523,6 +524,9 @@ msgstr "Indien niet, dan voeg ik ze toe"
 #: templates/fr/registration.html:195 templates/nl/registration.html:194
 msgid "Register"
 msgstr "Inschrijven"
+
+#~ msgid "Final Results"
+#~ msgstr "Resultaten Finale"
 
 #~ msgid "Training"
 #~ msgstr "Training"
