@@ -54,7 +54,8 @@ def semifinal_started():
 	return settings.SEMIFINAL_STARTUP > datetime.now()
 
 def contest_year():
-	return settings.REGISTRATION_DEADLINE.year
+	if settings.REGISTRATION_DEADLINE.month < 6 : return settings.REGISTRATION_DEADLINE.year
+	else: return settings.REGISTRATION_DEADLINE.year + 1
 
 def contest_context(request):
 	return {

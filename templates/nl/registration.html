@@ -104,13 +104,13 @@ $("#side-menu-registration").addClass("active");
       </div>
     </div>
 
-    <div class="control-group {% if form.token.errors %}error{% endif %}">
+<!--     <div class="control-group {% if form.token.errors %}error{% endif %}">
       <label class="control-label" for="{{ form.token.html_name }}">{{ form.token.label }}</label>
       <div class="controls">
         <input type="text" id="{{ form.token.html_name }}" name="{{ form.token.html_name }}" value="{{ form.token.value|default_if_none:"" }}" class="input-small" >
         <span class="help-inline">{{ form.token.errors|join:" " }} {{ form.token.help_text}} (<a href="{% url referrals LANGUAGE_CODE %}">{% trans "More information on our sponsorship program" %}</a>.)</span> 
       </div>
-    </div>
+    </div> -->
 
     <hr/>
 

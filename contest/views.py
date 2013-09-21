@@ -88,8 +88,8 @@ def registration(request, template):
 				
 				return HttpResponseRedirect(reverse("registration-error", args=[request.LANGUAGE_CODE])) 
 				
-			if not cd["token"]: cd["token"] = ""
-			contestant.token = full_token(cd["token"], contestant.registering_time)
+			# if not cd["token"]: cd["token"] = ""
+			# contestant.token = full_token(cd["token"], contestant.registering_time)
 			contestant.save() 
 
 			# get the full url for mail data
@@ -100,16 +100,16 @@ def registration(request, template):
 			context = Context({
 						"NAME":cd["firstname"]+" "+cd["surname"], 
 						"CENTER_NAME": cd["semifinal_center"],
-						"GODCHILDTOKEN": contestant.token,
-						"URLTOSHARE":  add_domain(current_site.domain,"%s?t=%s" % (reverse("home", args=[request.LANGUAGE_CODE]),contestant.token)), 
-						"URLSTAT": add_domain(current_site.domain,"%s?token=%s" % (reverse("referrals", args=[request.LANGUAGE_CODE]),stat_token(cd["token"], contestant.registering_time)))
+						# "GODCHILDTOKEN": contestant.token,
+						# "URLTOSHARE":  add_domain(current_site.domain,"%s?t=%s" % (reverse("home", args=[request.LANGUAGE_CODE]),contestant.token)), 
+						# "URLSTAT": add_domain(current_site.domain,"%s?token=%s" % (reverse("referrals", args=[request.LANGUAGE_CODE]),stat_token(cd["token"], contestant.registering_time)))
 					 })
 			mail_template = get_template("emails/"+request.LANGUAGE_CODE+"/registration.txt")
 			context["CENTER_DETAILS"] = add_domain(current_site.domain,reverse("semifinal-places",args=[request.LANGUAGE_CODE]))  
 			send_mail(_("Registering to Belgian Olympiads in Informatics"), mail_template.render(context), "info@be-oi.be", [cd["email"]], fail_silently=True)
 		
 			# redirect to confirmation page
-			return HttpResponseRedirect("%s?token=%s" % (reverse("registration-confirm", args=[request.LANGUAGE_CODE, cd["semifinal_center"].id]),contestant.token) ) 
+			return HttpResponseRedirect(reverse("registration-confirm", args=[request.LANGUAGE_CODE, cd["semifinal_center"].id])) 
 			
  	else:
 		if request.LANGUAGE_CODE == "fr": 

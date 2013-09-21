@@ -17,7 +17,7 @@ $("#side-menu-registration").addClass("active");
 
 {% if not error %}
 <div class="alert alert-success">
-	<p>Félicitation, vous êtes inscrit aux Olympiades belges d'Informatique 2013! Rendez-vous le 23 janvier dans votre centre régional.</p>
+	<p>Félicitation, vous êtes inscrit aux Olympiades belges d'Informatique 2014! Rendez-vous le 27 novembre 2013 dans votre centre régional.</p>
 {% if object %}
 	<p>Vous avez choisi <i>{{object}}</i> comme centre pour votre demi-finale. Ce centre nous a donné les informations suivantes concernant le lieu exact de l'épreuve. Si nécessaire, vous recevrez davantage d'informations par e-mail.</p>
 	<div style="padding-left:50px;">{{object.details|safe}}</div>
@@ -33,7 +33,7 @@ $("#side-menu-registration").addClass("active");
 {% endif %}
 
 
-<h3>Invitez des amis à s'inscrire et gagnez un prix d'une valeur de 100&euro; !</h3>
+<!-- <h3>Invitez des amis à s'inscrire et gagnez un prix d'une valeur de 100&euro; !</h3>
 
 <p>Envie de gagner un prix d'une valeur de 100&euro; ? Pour cela, il vous suffit d'être le participant
 	ayant convaincu le plus grand nombre de personne à s'inscrire à l'Olympiade d'informatique. Invitez vos amis
@@ -41,7 +41,7 @@ $("#side-menu-registration").addClass("active");
 	votre parrainage, vous et le participant parrainé gagnez 1 point. Le participant
 	 qui aura récolté le plus grand nombre de points remportera un prix lors de la proclamation.
 	 <a href="{% url referrals LANGUAGE_CODE %}">Plus d'info ...</a>
-</p>
+</p> -->
 <!-- 
 <p>Utilisez les boutons ci-dessous afin de partager ce lien sur Twitter ou Facebook. Les inscriptions recueillies via ces partages seront automatiquement créditées sur votre compte. </p>
 
