@@ -50,7 +50,9 @@ multilang_patterns = patterns('',
 
 	url(r'^training$', direct_to_template,  {'template': 'training.html'}, "training"),
 	url(r'^preparing$', direct_to_template,  {'template': 'preparing.html'}, "preparing"),
-			
+	url(r'^learn-programming$', direct_to_template,  {'template': 'learn_programming.html'}, "learn-programming"),
+	
+	url(r'^archives/1992$', direct_to_template, {'template': '1992.html'}, "archives-1992"),		
 	url(r'^archives/2010$', direct_to_template, {'template': '2010.html'}, "archives-2010"),
 	url(r'^archives/2011$', direct_to_template, {'template': '2011.html'}, "archives-2011"),
 	url(r'^archives/2012$', direct_to_template, {'template': '2012.html'}, "archives-2012"),
