@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-1992").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Edition 1992{% endblock %}
+{% block subtitle %}Une participation isolée de la Belgique à l'Olympiade Internationale{% endblock %}
+
+{% block content%}
+
+<section style="padding-top:30px;">
+  <!-- <img src="/static/pictures/2010/oi2010-papier.jpg" class="pull-right img-polaroid" width="300"/> -->
+  <p class="lead">En 1992, une édition isolée de l'Olympiade d'Informatique a été organisée. L'équipe actuelle beOI n'y était pas impliquée, la plupart était même encore sur les bancs de l'école ! Nous savons très peu de choses sur l'épreuve et la sélection des participants pour l'Olympiade internationale, mais nous avons néanmoins récupérés les résultats obtenus à l'IOI'92.</p>
+</section>
+
+<section><a name="ioi"></a>
+
+  <p> <!-- <img src="/static/pictures/2010/ioi2010-delegation.jpg" width="250" height="166" class="img-polaroid pull-right" alt="Belgische delegatie op de International Olympiad in Informatics" title="Belgische delegatie op de International Olympiad in Informatics" /> -->
+  La 4e Olympiade internationale d'Informatique a eu lieu du 12 ou 21 juillet 1992 à Bonn, en Allemagne, 51 pays y étaient présents. Pour la plus part de ces pays, comme pour la Belgique, il s'agissait d'une première participation. Le jury était présidé par la professeur Peter Widmayer de l'EPF de Zurich, un nom encore très connu dans le monde de l'informatique.   </p>
+
+  <p>Le fonctionnement de la compétition était légèrement différent ce qu'il est maintenant. Basic et Logo étaient encore admis comme langage de programmation alors qu'actuellement seuls le Pascal, C et C++ le sont. Les ordinateurs utilisaient MS-DOS, l'impression et les backups fonctionnaient via des disquettes, et l'évaluation du code était manuelle. Le compétition était cependant déjà répartie sur deux journées de 5h comme aujourd'hui. Vous pouvez toujours <a href="/static/downloads/IOI1992-Questions.txt" target="_blank">consulter les questions de cette édition (en anglais)</a>. </p>
+
+  <p>L'équipe belge était composée de trois participants et était accompagnée par Yvan Rooseleer et Roland Van Dyck. Voici les résultats complets de la délégation belge, le meilleur des participants a échoué à 3 points de la médaille d'or (sur un maximum de 200 points et 170 participants (165 garçons et 5 filles)).</p>
+
+  <ul>
+    <li>14e - 195 pts - Frederik De Vusser (Adegem) - médaille d'argent </li>
+    <li>93e - 125 pts - Gilles Van Assche (Waterloo) - médaille de bronze</li>
+    <li>127e - ??? pts - Frank Vanden Berghen (Ath) </li>
+  </ul>
+
+  <p>Malgré cet excellent résultat, cette initiative n'a pas perduré. Il faudra attendre 2010 avant qu'une Olympiade belge d'Informatique soit organisée et qu'une délégation soit envoyée de nouveau à l'Olympiade Internationale. Il faudra 20 ans, en 2012, pour voir la délégation belge remporter un résultat similaire avec une médaille d'argent et une de bronze en Italie.</p>
+
+</section>
+
+{% endblock %}
+
+
