@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-18 01:38+0200\n"
+"POT-Creation-Date: 2013-09-24 23:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: settings_common.py:36 contest/models.py:13 faq/models.py:8
@@ -485,7 +485,7 @@ msgstr "Presse"
 
 #: templates/menu_training.html:5
 msgid "Learn Programming"
-msgstr ""
+msgstr "Apprendre à programmer"
 
 #: templates/menu_training.html:6
 msgid "Sample Questions"

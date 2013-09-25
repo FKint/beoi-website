@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-learn-programming").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Apprendre à programmer{% endblock %}
+{% block subtitle %}Et si vous étiez le fondateur du Facebook de demain ?{% endblock %}
+
+{% block content%}
+
+<section><a name="intro"/></a>
+	<!-- <p>Informatica komt in Belgische middelbare scholen weinig aan bod. Vaak staat het synoniem voor Word en Excel, maar echte informatica is veel meer dan dat. De informaticus of computerwetenschapper kan een computer zelf programmeren en instructies geven om grootschalige problemen efficiënt op te lossen. Enkele voorbeelden:</p>-->
+	<img src="/static/pictures/2011/finale2.jpg" class="pull-right img-polaroid" width="175"/>
+	<p class="lead">L'informatique est un domaine de défis permanents, que ce soit dans le développement d'un site web d'un festival ayant quelques milliers de visiteurs, de l'application qu'il vous manque pour smartphone ou de celle pour piloter votre nouvel robot-aspirateur. L'informatique couvre de très nombreux domaines de la vie courante et peut être l'occasion de mettre à l'épreuve votre créativité et réflexion. Et si vous étiez le fondateur du Facebook de demain ?</p> 
+
+	<p>Pour pouvoir créer à partir d'un ordinateur, tout commence par la programmation. Malheureusement, ça ne s'apprend pas à l'école ou que très superficiellement. Il est souvent nécessaire d'apprendre par vous même, et comme tout sport ou instrument du musique, il sera probablement nécessaire d'y passer un peu de temps et s'exercer régulièrement. </p>
+
+	<p>Pour ceux qui ne savent par où commencer le programmation, vous trouverez ici quelques conseils. La plupart de ressources extérieures sont en anglais, mais c'est très souvent de l'anglais simple et après tout, cela vous permettra d'améliorer votre anglais !</p>
+</section>
+
+
+
+<section><a name="beginners"/></a>
+  <h2>Pour débuter</h2>
+
+	<p>Le site <a href="https://www.khanacademy.org/cs/programming" target="_blank">Khan Academy</a> offre une bonne introduction à la programmation sans avoir besoin de connaitre au préalable un langage de programmation.</p>
+
+	<p><b>Python</b> est excellent langage de programmation pour commencer à programmer : il est relativement facile et permet de resoudre des problèmes déjà complexes avec très peu de code. Ce site web est écrit en Python, tout comme Dropbox, Google Maps, YouTube, Blender, Civilization IV, Battlefield II, Eve Online ...</p>
+	
+<ul>
+	<li><b><i>Recommandé :</i></b> Créer un compte sur le site Code Academy et suivre le <a href="http://www.codecademy.com/tracks/python" target="_blank">cours Python</a>.</li> 
+
+	<li><a href="https://www.khanacademy.org/science/computer-science" target="_blank">Khan Academy</a> propose d'apprendre le Python via des vidéos formatives.</li>
+
+	<li>Google utilise également le Python dans beaucoup de ses services. Vous pouvez consulter leur <a href="https://developers.google.com/edu/python/" target="_blank">mini-cours Python</a> en ligne !</li> 
+
+	<li>Le site web <a href="http://www.programmr.com" target="_blank">Programmr</a> propose également quelques exercices dans plusieurs langages, dont le Python.</li>
+
+	<li><strong>En français :</strong> <a href="http://www.openclassrooms.com/" target="_blank">OpenClassRooms</a> (ex Site du Zéro) propose de nombreux tutoriels pour commencer à programmer, y compris en Python. </li>
+</ul>
+
+</section>
+
+
+
+<section><a name="gevorderden"/></a>
+  <h2>Entraînement avancé</h2>
+
+	<p>A l'Olympiade Internationale d'Informatique, seuls le C, C++ et Pascal sont autorisés. Le <b>C++</b> est un langage de programmation très puissant mais dans lequel il n'est pas très facile de se lancer. Un programme C++ est souvent plus long qu'un programme Python mais peut être bien plus rapide et efficace. Le C++ est donc beaucoup utilisé dans les applications ayant des besoins temps réels tels que des jeux (Doom III, Starcraft, ...), navigateurs web,  logiciels professionnels de traitement d'images (Photoshop, Maya, ... ) et même dans les coulisses de Facebook et Amazon.</p>
+
+	<p>Il existe quelques bons sites sur lesquels vous pouvez apprendre le C++ et vous exercer.</p>
+
+<ul>
+	<li>Si vous avez déjà programmé, vous pouvez commencer le C++ via le tutoriel de <a href="http://www.cplusplus.com/doc/tutorial/" target="_blank">cplusplus.com</a>. <!--Vous pouvez tester  le C++ en ligne grâce à l'éditeur interactif de <a href="http://ideone.com/" target="_blank">ideone.com</a>.--></li>
+	
+	<li>Une présentation plus détaillée du C++ se trouve sur <a href="http://www.learncpp.com/" target="_blank">LearnCPP.com</a>. Le chapitre 0 vous aidera à installer les outils nécessaires sur votre propre ordinateur. Les sept premiers chapitres vous enseigneront les rudiments du langage, les suivants couvrent des sujets plus avancés.</li>
+
+	<li>Le site <a href="http://www.programmr.com" target="_blank"> Programmr </a> a également de nombreux exercices disponibles en C++.</li>
+	
+	<li><strong>En français :</strong> Le <a href="http://www.france-ioi.org">site d'entrainement de la délégation française</a> à l'Olympiade Internationale d'Informatique comporte de nombreux cours, petits problèmes et gros exercices allant d'un niveau débutant à (très) expérimenté. </li>
+	<!-- <li>Eens je vertrouwd bent met C++, raden we je aan om aan zoveel mogelijk <a href="http://be-ioi.wikia.com/wiki/Online_Training" target="_blank">online programmeerwedstrijden</a> deel te nemen. Die vormen een uitstekende oefening voor de finale van de Belgische Informatica-olympiade!</li> -->
+
+</ul>
+
+</section>
+
+
+<section><a name="wedstrijden"/></a>
+  <h2>Compétition de programmation</h2>
+	
+	<p>Une olympiade est plus que de la simple programmation : votre solution doit également être efficace et écrite rapidement. Une bonne connaissance en algorithmique est indispensable pour résoudre les problèmes les plus complexes. En effet, connaître des solutions aux problèmes courants vous permettra d'appliquer ces techniques à de nouveaux problèmes originaux. De nombreux sites web vous permettent de vous former à l'algorithmique, entre autres le site de l'<a href="http://www.usaco.org" target="_blank">USA Computing Olympiad</a> (nécessite de s'enregistrer). </p>
+
+	<p>Il n'y a qu'une seule façon d'améliorer dans les concours de programmation: s'entraîner ! Heureusement, il existe de nombreux concours internationaux auxquels vous pouvez participer gratuitement (<a href="http://be-ioi.wikia.com/wiki/Online_Training" target="_blank">notre liste de concours disponibles</a>). Nous vous recommandons particulièrement <a href="http://codeforces.com/" target="_blank">CodeForces</a> qui propose des concours de qualité très régulièrement.</p>
+
+</section>
+
+
+<!-- <section><a name="inbelgium"/></a>
+	<h2>En Belgique, en frnai</h2>
+
+	<p>Des sites d'apprentissage à la programmation en français sont plus rares que ceux en anglais et ne vous permettrons pas d'obtenir autant de coucours régliers. Cependant quelques sites vous permettent de bien progresser si vous n'êtes pas à l'aise avec l'anglais.</p>
+
+<ul>
+	<li>Le <a href="http://www.openclassrooms.com/" target="_blank">Site du Zéro</a> (ex Site du Zéro) propose de nombreux tutoriels </li>.
+	<li>De <a href="http://www.vlaamseprogrammeerwedstrijd.be" target="_blank">Vlaamse Programmeerwedstrijd</a> gaat elk jaar door in de lente. Dit is een wedstrijd waar je in teamverband aan de computer programmeeropdrachten oplost. Je kan er een ruime selectie aan programmeertalen gebruiken.</li>
+</ul>
+ -->
+</section>
+
+
+<!--
+<h3>Praktische details</h3>
+
+<p>Nederlandstalige deelnemers kunnen voor de training dit jaar terecht op de <a href="http://www.vub.ac.be/infoover/campussen/index.html#campus1">Vrije Universiteit Brussel, campus Etterbeek</a>. De cursus zal plaatsvinden op maandag 20 en dinsdag 21 Februari 2012 van 10u tot 16u. De exacte locatie wordt je meegedeeld na inschrijving.</p>
+
+<p>Op het programma staat:</p>
+
+<ul>
+ 	<li>Inleiding programmeren met Python</li>
+ 	<li>Inleiding algoritmiek</li>
+ 	<li>Oplossen van algoritmische problemen</li>
+ 	<li>Praktijk programmeren op de computer</li>
+</ul>
+
+<p>De deelnemers krijgen een gratis lunch in het studentenrestaurant.</p>
+<p>Inschrijven kan door een e-mail te sturen naar <a href="mailto:tvcutsem@vub.ac.be">Tom Van Cutsem</a>. Vermeld hierbij je naam en school.</p>
+-->
+
+
+{% endblock %}
+
