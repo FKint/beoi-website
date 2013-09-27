@@ -48,7 +48,7 @@
         <div id="side-menu" style="margin-left: 0px !important;" data-spy="affix" data-offset-top="247">
           {% if REGISTRATION_OPEN %}
           <a class="btn btn-primary btn-large" style="margin-bottom:20px;" href="{% url registration LANGUAGE_CODE %}">{% trans "Register now!"%}<br/><small>
-            {% blocktrans with REGISTRATION_DEADLINE|timeuntil as timeleft %}({{ timeleft }} left){% endblocktrans %}</small><a>
+            {% blocktrans with REGISTRATION_DEADLINE|timeuntil as timeleft %}({{ timeleft }} left){% endblocktrans %}</small></a>
           {% endif %}
           <!-- <a class="btn btn-primary btn-large" style="margin-bottom:20px; width:80%;" href="http://eepurl.com/p-{% if LANGUAGE_CODE = "fr" %}nXX{% else %}BTj{% endif %}">{% trans "Keep me informed of" %}<br/> beOI 2014<a> -->
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-18 01:38+0200\n"
+"POT-Creation-Date: 2013-09-27 16:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,6 +121,10 @@ msgid ""
 msgstr ""
 "Onthaal en assistentie zijn enkel verzekerd in de lokale taal van het "
 "centrum."
+
+#: contest/forms.py:34
+msgid "Semifinal center"
+msgstr "Centrum halve finale"
 
 #: contest/forms.py:41
 msgid "Wrong value for this field."
