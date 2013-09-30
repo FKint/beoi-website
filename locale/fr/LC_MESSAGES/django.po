@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 23:29+0200\n"
+"POT-Creation-Date: 2013-09-27 16:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: settings_common.py:36 contest/models.py:13 faq/models.py:8
@@ -121,6 +121,10 @@ msgid ""
 msgstr ""
 "L'accueil et l'assistance aux participants ne sont garantis que dans la "
 "langue du centre."
+
+#: contest/forms.py:34
+msgid "Semifinal center"
+msgstr "Centre pour la demi-finale"
 
 #: contest/forms.py:41
 msgid "Wrong value for this field."

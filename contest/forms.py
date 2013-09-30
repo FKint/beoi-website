@@ -31,7 +31,7 @@ class RegisteringForm(forms.Form):
 	
 	language 		= forms.ChoiceField(choices=LANG_CHOICES, label=_("Examination language"))
 	
-	semifinal_center= forms.ModelChoiceField(queryset=SemifinalCenter.objects.filter(active=True).order_by('city','name'), empty_label=_("Make a choice"), help_text=_("Welcome and assistance are only guaranteed in the center's main language."))
+	semifinal_center= forms.ModelChoiceField(queryset=SemifinalCenter.objects.filter(active=True).order_by('city','name'), empty_label=_("Make a choice"), help_text=_("Welcome and assistance are only guaranteed in the center's main language."), label=_("Semifinal center"))
 		
 	""" Force conversion to 'int' ... for comparison """
 	def __int_only(self, field):
