@@ -32,6 +32,7 @@ multilang_patterns = patterns('',
 		"queryset": SemifinalCenter.objects.filter(active=True) }, "registration-confirm"),
 
 	url(r'^sponsors$', direct_to_template, {'template': 'sponsors.html'}, "sponsors"),
+	url(r'^membership$', direct_to_template, {'template': 'membership.html'}, "membership"),
 	url(r'^press$', direct_to_template, {'template': 'press.html'}, "press"),
 	
 	url(r'^semifinal/places$', list_detail.object_list, {'template_name': 'semifinal_places.html',

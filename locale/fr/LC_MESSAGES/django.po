@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-09 22:43+0200\n"
+"POT-Creation-Date: 2013-10-10 20:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -457,7 +457,7 @@ msgstr ""
 msgid "Our members"
 msgstr "Nos membres"
 
-#: templates/base.html:101
+#: templates/base.html:91
 msgid "All rights reserved"
 msgstr "Tous droits réservés"
 
@@ -492,6 +492,10 @@ msgid "Edition"
 msgstr ""
 
 #: templates/menu_press-sponsors.html:5
+msgid "Membership"
+msgstr "Membres cotisants"
+
+#: templates/menu_press-sponsors.html:6
 msgid "Press"
 msgstr "Presse"
 
