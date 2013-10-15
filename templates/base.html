@@ -65,10 +65,13 @@
           <div id="members" class="cycle-slideshow" style="height:200px;" data-pause-on-hover=true data-log=false data-random=true data-slides='> a'> 
             {% include "members.html" %}
           </div>
-          <script>
-
-         </script>
-
+          <small>
+            {% if LANGUAGE_CODE == "fr" %}
+            Votre entreprise comme <a href="{% url sponsors LANGUAGE_CODE %}">sponsors</a> ou <a href="{% url membership LANGUAGE_CODE %}">membres</a> ?
+            {% else %}
+            Uw bedrijf als <a href="{% url membership LANGUAGE_CODE %}">lid</a> of <a href="{% url sponsors LANGUAGE_CODE %}">sponsor</a> ?
+            {% endif %}
+          </small>
         </div>
       </div><!--/span-->
       <div class="span9" style="padding-bottom:50px;">
