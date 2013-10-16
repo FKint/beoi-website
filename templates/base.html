@@ -67,7 +67,7 @@
           </div>
           <small>
             {% if LANGUAGE_CODE == "fr" %}
-            Votre entreprise comme <a href="{% url sponsors LANGUAGE_CODE %}">sponsors</a> ou <a href="{% url membership LANGUAGE_CODE %}">membres</a> ?
+            Votre entreprise comme <a href="{% url sponsors LANGUAGE_CODE %}">sponsor</a> ou <a href="{% url membership LANGUAGE_CODE %}">membre</a> ?
             {% else %}
             Uw bedrijf als <a href="{% url membership LANGUAGE_CODE %}">lid</a> of <a href="{% url sponsors LANGUAGE_CODE %}">sponsor</a> ?
             {% endif %}
