@@ -33,6 +33,12 @@ class RegisteringForm(forms.Form):
 	
 	semifinal_center= forms.ModelChoiceField(queryset=SemifinalCenter.objects.filter(active=True).order_by('city','name'), empty_label=_("Make a choice"), help_text=_("Welcome and assistance are only guaranteed in the center's main language."), label=_("Semifinal center"))
 		
+	how_did_you_hear_about_us = forms.CharField(label=_("How did you hear about us?"), required=False)
+	how_did_you_hear_about_us_teachername = forms.CharField(label=_("Teacher name"), required=False)
+	how_did_you_hear_about_us_teacheremail = forms.CharField(label=_("Teacher email"), required=False)
+	how_did_you_hear_about_us_website = forms.CharField(label=_("Website"), required=False)
+	how_did_you_hear_about_us_other = forms.CharField(label=_("Other description"), required=False)
+
 	""" Force conversion to 'int' ... for comparison """
 	def __int_only(self, field):
 		try:

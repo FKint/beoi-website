@@ -190,6 +190,23 @@ $("#side-menu-registration").addClass("active");
       <span class="help-inline">{{ form.semifinal_center.errors|join:" " }} {{ form.semifinal_center.help_text}}</span>
    </div>
   </div>
+
+  <hr />
+
+  <div class="control-group">
+    <label class="control-label" for="{{ form.how_did_you_hear_about_us.html_name }}">{{ form.how_did_you_hear_about_us.label }}</label>
+    <div class="controls">
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Facebook">Via Facebook</label>
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Twitter">Via Twitter</label> 
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Friend">Via une connaissance</label>
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Former">Vous avez participer dans le passé</label>
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Teacher">Via un professeur de votre école </label>
+      <input type="text" placeholder="Son nom" name="how_did_you_hear_about_us_teachername" value="{{ form.how_did_you_hear_about_us_teachername.value|default_if_none:"" }}" >
+      <input type="text" placeholder="E-mail (si vous la connaissez)" name="how_did_you_hear_about_us_teacheremail"><br/>
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Website">Via un site web </label><input type="text" placeholder="Précisez" name="how_did_you_hear_about_us_website">
+      <label class="checkbox"><input type="checkbox" name="how_did_you_hear_about_us" value="Car">Autre </label><input type="text" placeholder="Précisez" name="how_did_you_hear_about_us_other">
+   </div>
+  </div>
 	
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">{% trans "Register" %}</button>

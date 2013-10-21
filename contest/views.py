@@ -58,6 +58,14 @@ def registration(request, template):
 			else :  # if school selected in the list
 				school = cd["school"]
 
+			referral = {
+				"how": cd["how_did_you_hear_about_us"],
+				"teachername": cd["how_did_you_hear_about_us_teachername"],
+				"teacheremail": cd["how_did_you_hear_about_us_teacheremail"],
+				"website": cd["how_did_you_hear_about_us_website"],
+				"other": cd["how_did_you_hear_about_us_other"],
+			}
+
 			# create the contestant
 			contestant = Contestant(
 				surname 			= cd["surname"],
@@ -74,7 +82,8 @@ def registration(request, template):
 				language 			= cd["language"],
 				semifinal_center 	= cd["semifinal_center"],
 				token 				= "",
-				contest_year 		= contest_year()
+				contest_year 		= contest_year(),
+				referral 			= referral
 			)			
 			try :		
 				# if using postgres >=8.2, should use database-level autocommit instead

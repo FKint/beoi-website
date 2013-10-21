@@ -70,7 +70,8 @@ class Contestant(models.Model):
 	token 				= models.CharField(_('token'), max_length=255, editable=False)
 	contest_year 		= models.IntegerField(_("contest year"))
 	registering_time 	= models.DateTimeField(_("registering time"), auto_now_add=True)
-	
+	referral 			= models.TextField(_('referral'))
+
 	# Managers
 	objects = models.Manager()
 
