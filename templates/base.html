@@ -55,13 +55,12 @@
           {% block leftmenu %}{% endblock %}
 
           <!-- Supported by ... -->
-          <!-- <div class="sidemenu-header"><h3>{% trans "Sponsors" %}</h3></div> -->
-          <!-- <a href="http://www.ibm.com/be/fr/" target="_blank"><img src="/static/logos/ibm_logo-large.jpg" class="sponsor-logo" /></a> -->
-          <!-- <a href="http://www.lavenir.net/" target="_blank"><img src="/static/logos/lavenir-2012.jpg" class="sponsor-logo"></a> -->
-          <!-- <a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" class="sponsor-logo"></a> -->
+          <div class="sidemenu-header"><a href="{% url sponsors LANGUAGE_CODE %}"><h3>{% trans "Sponsors" %}</h3></a></div>
+          <a href="http://www.unamur.be/" target="_blank"><img src="/static/logos/unamur-logo.png" class="sponsor-logo" style="padding-right:10px;max-width:100px;"></a>
+          <a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" class="sponsor-logo" style="max-width:150px;"></a>
 
           <!-- Members -->
-          <div class="sidemenu-header"><h3>{% trans "Our members" %}</h3></div>
+          <div class="sidemenu-header"><a href="{% url membership LANGUAGE_CODE %}"><h3>{% trans "Our members" %}</h3></a></div>
           <div id="members" class="cycle-slideshow" style="height:200px;" data-pause-on-hover=true data-log=false data-random=true data-slides='> a'> 
             {% include "members.html" %}
           </div>
