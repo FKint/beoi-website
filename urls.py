@@ -77,6 +77,9 @@ urlpatterns = patterns('',
 	# meta
 	(r'^(?P<language>(fr|nl))/', include(multilang_patterns)),
 	
+	(r'^robots\.txt', direct_to_template, {'template': 'robots.txt'}),
+
+
 	# for transition/compatibity purpose with migration 2013/01
 	(r'^fr/final', redirect_to, {'url': '/fr/contest'}),
 	(r'^nl/final', redirect_to, {'url': '/nl/contest'}),
