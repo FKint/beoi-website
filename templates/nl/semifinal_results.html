@@ -16,17 +16,17 @@ $("#side-menu-semifinal-results").addClass("active");
 
 {% block content %}
 
-<!-- <h2>Enkele cijfers</h2>
+<h2>Enkele cijfers</h2>
 
 <ul>
 	<li><strong>165 leerlingen</strong> uit het middelbaar onderwijs hebben aan de halve finale deelgenomen.</li>
-	<li>De proef stond op <strong>108 punten</strong>.</li>
+	<li>De proef stond op een totaal van<strong>108 punten</strong>.</li>
 	<li>Je hebt minimaal <strong>72 punten</strong> nodig om naar de finale te gaan.</li>
-	<li>De <strong>40 beste deelnemers</strong> van de halve finale hebben zich geplaatst voor de finale.</li>
-	<li>3 deelnemers hebben 88 punten gehaald, 8 hebben 81 of meer behaald.</li> 
-	<li><strong>10 meisjes</strong> namen deel aan de halve finale, onder de 47 finalisten is er echter maar 1.</li>
-	<li>De jongste finalist is <strong>13 jaar</strong> oud. </li>
-</ul> -->
+	<li>De <strong>40 beste deelnemers</strong> van de halve finale mogen verder naar de finale.</li>
+	<li>2 deelnemers hebben meer dan 100 punten behaald, 10 hebben een score van 90 of meer.</li> 
+	<li><strong>8 meisjes</strong> namen deel aan de halve finale, 3 ervan zijn gekwalificeerd voor de finale.</li>
+	<li>De jongste deelnemer was <strong>13 jaar</strong> oud. </li>
+</ul>
 
 <h2>Top-3</h2>
 
@@ -38,7 +38,7 @@ De volgende drie deelnemers hebben 88 punten behaald, wat de maximumscore is inc
 <li><strong>Pablo Bustillo Vazquez</strong> - Athénée Robert Catteau, Brussel - 5e middelbaar - 98 ptn</li>
 </ul>	
 
-<h2>Finalisten</h2>
+<h2>De Finalisten</h2>
 
 <dl>
 {% for result in object_list %}
@@ -46,7 +46,6 @@ De volgende drie deelnemers hebben 88 punten behaald, wat de maximumscore is inc
 <dd><p>{{result.contestant.school.name}} &mdash; {{result.contestant.year_study}}e middelbaar &mdash; {{result.contestant.school.city}}</p></dd>
 {% endfor %}
 </dl>
-
 
 
 <!-- <h2>Statistieken</h2> -->
