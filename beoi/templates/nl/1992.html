@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-1992").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Editie 1992{% endblock %}
+{% block subtitle %}België tekent eenmalig present op de IOI{% endblock %}
+
+{% block content%}
+
+<section style="padding-top:30px;">
+  <!-- <img src="/static/pictures/2010/oi2010-papier.jpg" class="pull-right img-polaroid" width="300"/> -->
+  <p class="lead">In 1992 werd eenmalig een Informatica-olympiade georganiseerd in ons land. De huidige ploeg van beOI vzw was daar niet bij - de meesten onder ons zaten zelf nog op de schoolbanken! We weten vrij weinig over de wedstrijd en de selectie voor de Internationale Olympiade in dat jaar. Wel hebben we enkele gegevens over het Belgische team op de IOI'92.</p>
+</section>
+
+
+<section><a name="ioi"></a>
+  <h2>Internationale Olympiade (IOI)</h2>
+
+  <p> <!-- <img src="/static/pictures/2010/ioi2010-delegation.jpg" width="250" height="166" class="img-polaroid pull-right" alt="Belgische delegatie op de International Olympiad in Informatics" title="Belgische delegatie op de International Olympiad in Informatics" /> -->
+  De 4e International Olympiad in Informatics werd gehouden van 12 tot 21 juli 1992 in Bonn in Duitsland. 51 landen waren aanwezig. Voor de meesten van hen was het, net zoals voor België, de eerste deelname. De jury werd voorgezeten door prof. Peter Widmayer van het ETH Zürich, nog steeds een erg bekende naam in de wereld van de informatica.
+  </p>
+
+  <p>Het praktisch verloop van de wedstrijd was licht anders dan nu. Basic en Logo waren toen nog toegelaten als programmeertalen - op dit moment kan op de IOI enkel C, C++ of Pascal worden gebruikt. De computers werkten op MS-DOS, de print- en backupsystemen werkten met behulp van diskettes, en de evaluatie gebeurde manueel. De structuur was wel al dezelfde: er waren 6 vragen op te lossen in 2 sessies van 5 uur. Je kan die (Engelstalige) vragen trouwens <a href="/static/downloads/IOI1992-Questions.txt" target="_blank">hier nog eens bekijken</a>. </p>
+
+  <p>Met het oplossen van de vragen waren maximaal 200 punten te verdienen. Er namen 170 mensen deel aan de wedstrijd - 165 jongens en 5 meisjes. De Belgische ploeg van 3 personen werd begeleid door Yvan Rooseleer en Roland Van Dyck, verbonden aan het Projekt Informatica van het toenmalig Nederlandstalig Verbond van Katholieke Secundaire scholen (nu VSKO of nog "de Guimardstraat"). De topscorer van de Belgische ploeg kwam slechts drie puntjes tekort voor goud, en de Belgen keerden uiteindelijk huiswaarts met de volgende resultaten:</p>
+
+  <ul>
+    <li>14e - 195 pts - Frederik De Vusser (Adegem) - zilveren medaille </li>
+    <li>93e - 125 pts - Gilles Van Assche (Waterloo) - bronzen medaille </li>
+    <li>127e - ??? pts - Frank Vanden Berghen (Ath) </li>
+  </ul>
+
+  <p>Hoewel dit een uitstekend resultaat was, werd er in de jaren daarop niet verder gegaan op dit elan. We horen in de wandelgangen dat in de jaren nadien verschillende keren Belgen werden uitgenodigd om als "invited observer" de IOI bij te wonen. Het zou echter nog tot 2010 duren voordat de huidige Belgische Informatica-olympiade het licht zag, en opnieuw een Belgische ploeg naar de IOI stuurde. En met groeiend succes: het resultaat van 1992 werd op de <a href="{% url 'archives-2012' %}"> IOI 2012</a> in Italië geëvenaard.</p>
+
+
+</section>
+
+
+
+
+{% endblock %}
+
+

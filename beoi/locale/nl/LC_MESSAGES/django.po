@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-08 12:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: beoi/settings_common.py:44 beoi/contest/models.py:13 beoi/faq/models.py:8
+#: beoi/news/models.py:28
+msgid "French"
+msgstr "Frans"
+
+#: beoi/settings_common.py:45 beoi/contest/models.py:14 beoi/faq/models.py:9
+#: beoi/news/models.py:29
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: beoi/contest/admin.py:40
+msgid "Name"
+msgstr "Naam"
+
+#: beoi/contest/admin.py:46
+msgid "Mark selected contestants as manual checked"
+msgstr "Markeer de geselecteerde deelnemers als handmatig gecontroleerd"
+
+#: beoi/contest/admin.py:69 beoi/contest/admin.py:100
+msgid "Export as CSV"
+msgstr "Exporteer als CSV"
+
+#: beoi/contest/forms.py:12
+msgid "Firstname"
+msgstr "Voornaam"
+
+#: beoi/contest/forms.py:13
+msgid "Surname"
+msgstr "Familienaam"
+
+#: beoi/contest/forms.py:14
+msgid "Gender"
+msgstr "Geslacht"
+
+#: beoi/contest/forms.py:15
+msgid "Date of birth"
+msgstr "Geboortedatum"
+
+#: beoi/contest/forms.py:16
+msgid "Address"
+msgstr "Adres"
+
+#: beoi/contest/forms.py:17 beoi/contest/forms.py:26
+msgid "Postal code"
+msgstr "Postcode"
+
+#: beoi/contest/forms.py:18 beoi/contest/forms.py:27
+msgid "City"
+msgstr "Stad"
+
+#: beoi/contest/forms.py:19 beoi/oi_core/forms.py:7
+msgid "Email"
+msgstr "Email"
+
+#: beoi/contest/forms.py:19
+msgid "Only used for olympiads. Will never be given to a sponsor or a third."
+msgstr ""
+"Enkel gebruikt voor de olympiade. We geven dit nooit aan sponsors of derden."
+
+#: beoi/contest/forms.py:20
+msgid "Referral Token"
+msgstr "Referral Code"
+
+#: beoi/contest/forms.py:20
+msgid ""
+"Optional, the token you received if you are sponsored by another contestant."
+msgstr ""
+"Optioneel, de code die je kreeg als je werd uitgenodigd door een andere "
+"deelnemer."
+
+#: beoi/contest/forms.py:22
+msgid "is in the list"
+msgstr "staat op de lijst"
+
+#: beoi/contest/forms.py:22
+msgid "is not in the list"
+msgstr "staat niet op de lijst"
+
+#: beoi/contest/forms.py:22
+msgid "Is the school in the list"
+msgstr "Staat de school op de lijst"
+
+#: beoi/contest/forms.py:23 beoi/contest/forms.py:33
+msgid "Make a choice"
+msgstr "Maak een keus"
+
+#: beoi/contest/forms.py:25
+msgid "School name"
+msgstr "Naam van de school"
+
+#: beoi/contest/forms.py:29
+msgid "Year of study"
+msgstr "Studiejaar"
+
+#: beoi/contest/forms.py:31
+msgid "Examination language"
+msgstr "Taal van de wedstrijd"
+
+#: beoi/contest/forms.py:33
+msgid ""
+"Welcome and assistance are only guaranteed in the center's main language."
+msgstr ""
+"Onthaal en assistentie zijn enkel verzekerd in de lokale taal van het "
+"centrum."
+
+#: beoi/contest/forms.py:33
+msgid "Semifinal center"
+msgstr "Centrum halve finale"
+
+#: beoi/contest/forms.py:40
+msgid "Wrong value for this field."
+msgstr "Verkeerde waarde voor dit veld."
+
+#: beoi/contest/forms.py:51
+msgid "This token is not valid."
+msgstr "Deze code is niet geldig."
+
+#: beoi/contest/forms.py:56
+msgid "Please choose your school."
+msgstr "Kies uw school."
+
+#: beoi/contest/forms.py:62 beoi/contest/forms.py:65 beoi/contest/forms.py:68
+msgid "This field is mandatory."
+msgstr "Dit veld is verplicht."
+
+#: beoi/contest/models.py:20
+msgid "secondary-school students"
+msgstr "Secundair"
+
+#: beoi/contest/models.py:25
+msgid "Invalid postal code"
+msgstr "Ongeldige postcode"
+
+#: beoi/contest/models.py:33
+msgid "Male"
+msgstr "Man"
+
+#: beoi/contest/models.py:34
+msgid "Female"
+msgstr "Vrouw"
+
+#: beoi/contest/models.py:46
+msgid "1st year of secondary school"
+msgstr "1ste jaar secundair"
+
+#: beoi/contest/models.py:47
+msgid "2nd year of secondary school"
+msgstr "2de jaar secundair"
+
+#: beoi/contest/models.py:48
+msgid "3rd year of secondary school"
+msgstr "3de jaar secundair"
+
+#: beoi/contest/models.py:49
+msgid "4th year of secondary school"
+msgstr "4de jaar secundair"
+
+#: beoi/contest/models.py:50
+msgid "5th year of secondary school"
+msgstr "5de jaar secundair"
+
+#: beoi/contest/models.py:51
+msgid "6th year of secondary school"
+msgstr "6de jaar secundair"
+
+#: beoi/contest/models.py:52
+msgid "7th year of secondary school"
+msgstr "7de jaar secundair"
+
+#: beoi/contest/models.py:56
+msgid "surname"
+msgstr "familienaam"
+
+#: beoi/contest/models.py:57
+msgid "firstname"
+msgstr "voornaam"
+
+#: beoi/contest/models.py:58
+msgid "gender"
+msgstr "geslacht"
+
+#: beoi/contest/models.py:59 beoi/oi_core/models.py:7
+msgid "email"
+msgstr "email"
+
+#: beoi/contest/models.py:60
+msgid "address"
+msgstr "adres"
+
+#: beoi/contest/models.py:61 beoi/contest/models.py:91
+#: beoi/contest/models.py:107
+msgid "city"
+msgstr "stad"
+
+#: beoi/contest/models.py:62 beoi/contest/models.py:92
+msgid "postal code"
+msgstr "postcode"
+
+#: beoi/contest/models.py:63
+msgid "date of birth"
+msgstr "geboortedatum"
+
+#: beoi/contest/models.py:64
+msgid "contest category"
+msgstr "wedstrijdcategorie"
+
+#: beoi/contest/models.py:66
+msgid "year of study"
+msgstr "studiejaar"
+
+#: beoi/contest/models.py:67
+msgid "examination language"
+msgstr "taal van de wedstrijd"
+
+#: beoi/contest/models.py:69
+msgid "manual checked"
+msgstr "handmatig geverifieerd"
+
+#: beoi/contest/models.py:70
+msgid "token"
+msgstr ""
+
+#: beoi/contest/models.py:71
+msgid "contest year"
+msgstr "wedstrijdjaar"
+
+#: beoi/contest/models.py:72 beoi/oi_core/models.py:8
+msgid "registering time"
+msgstr "tijdstip van registratie"
+
+#: beoi/contest/models.py:79
+msgid "contestant"
+msgstr "deelnemer"
+
+#: beoi/contest/models.py:80
+msgid "contestants"
+msgstr "deelnemers"
+
+#: beoi/contest/models.py:90
+msgid "school name"
+msgstr "schoolnaam"
+
+#: beoi/contest/models.py:93
+msgid "school category"
+msgstr "schoolcategorie"
+
+#: beoi/contest/models.py:101
+msgid "school"
+msgstr "school"
+
+#: beoi/contest/models.py:102
+msgid "schools"
+msgstr "scholen"
+
+#: beoi/contest/models.py:106
+msgid "name"
+msgstr "naam"
+
+#: beoi/contest/models.py:108
+msgid "venue details"
+msgstr "details van de locatie"
+
+#: beoi/contest/models.py:108 beoi/news/models.py:41
+msgid ""
+"HTML tags are allowed. &lt;p&gt;...&lt;/p&gt; tags MUST be used for text!"
+msgstr ""
+"HTML tags zijn toegelaten. &lt;p&gt;...&lt;/p&gt; tags MOETEN gebruikt "
+"worden voor tekst!"
+
+#: beoi/contest/models.py:109
+msgid "in current proposal list"
+msgstr "in huidige lijst met voorstellen"
+
+#: beoi/contest/models.py:116
+msgid "semifinal center"
+msgstr "centrum voor halve finale"
+
+#: beoi/contest/models.py:117
+msgid "semifinal centers"
+msgstr "centra voor halve finale"
+
+#: beoi/contest/models.py:123
+msgid "score"
+msgstr "score"
+
+#: beoi/contest/models.py:124
+msgid "qualified"
+msgstr "gekwalificeerd"
+
+#: beoi/contest/models.py:128
+msgid "semifinal result"
+msgstr "resultaat halve finale"
+
+#: beoi/contest/models.py:129
+msgid "semifinal results"
+msgstr "resultaten halve finale"
+
+#: beoi/contest/models.py:135
+msgid "written part score"
+msgstr "score schriftelijk deel"
+
+#: beoi/contest/models.py:136
+msgid "computer part score"
+msgstr "score computergedeelte"
+
+#: beoi/contest/models.py:137
+msgid "rank"
+msgstr "plaats"
+
+#: beoi/contest/models.py:141
+msgid "final result"
+msgstr "eindresultaat"
+
+#: beoi/contest/models.py:142
+msgid "final results"
+msgstr "eindresultaten"
+
+#: beoi/contest/views.py:96
+msgid "Registering to Belgian Olympiads in Informatics"
+msgstr "Inschrijven voor de Belgische Informatica-olympiade"
+
+#: beoi/contest/management/commands/mailing-semifinalscore.py:38
+msgid "beOI - Semifinal results"
+msgstr "beOI - Resultaten halve finale"
+
+#: beoi/faq/models.py:21 beoi/faq/models.py:22
+msgid "Text only. No html tags!"
+msgstr "Alleen tekst. Geen html tags!"
+
+#: beoi/faq/models.py:23 beoi/news/models.py:40
+msgid "language"
+msgstr "taal"
+
+#: beoi/news/admin.py:18
+msgid "Headline"
+msgstr "Titel"
+
+#: beoi/news/admin.py:19
+msgid "Publication"
+msgstr "Publicatie"
+
+#: beoi/news/admin.py:20
+msgid "Body"
+msgstr "Tekst"
+
+#: beoi/news/feed.py:26
+msgid "be-OI News"
+msgstr "be-OI Nieuws"
+
+#: beoi/news/feed.py:27 beoi/templates/base-empty.html:6
+msgid "Belgian Olympiads in Informatics"
+msgstr "Belgische Informatica-olympiade"
+
+#: beoi/news/models.py:20
+msgid "Offline"
+msgstr "Offline"
+
+#: beoi/news/models.py:21
+msgid "Online"
+msgstr "Online"
+
+#: beoi/news/models.py:33
+msgid "title"
+msgstr "titel"
+
+#: beoi/news/models.py:34
+msgid "author"
+msgstr "auteur"
+
+#: beoi/news/models.py:35
+msgid "creation date"
+msgstr "datum van creatie"
+
+#: beoi/news/models.py:36
+msgid "modification date"
+msgstr "datum van laatste aanpassing"
+
+#: beoi/news/models.py:37
+msgid "publication date"
+msgstr "datum van publicatie"
+
+#: beoi/news/models.py:38
+msgid "If in the future, the news will be visible from this time"
+msgstr ""
+"Indien in de toekomst, zal het nieuws zichtbaar zijn vanaf dit tijdstip"
+
+#: beoi/news/models.py:39
+msgid "status"
+msgstr "status"
+
+#: beoi/news/models.py:41
+msgid "body"
+msgstr "tekst"
+
+#: beoi/news/models.py:48
+msgid "news entry"
+msgstr "nieuwsbericht"
+
+#: beoi/news/models.py:49
+msgid "news entries"
+msgstr "nieuwsberichten"
+
+#: beoi/templates/base.html:20
+msgid "News"
+msgstr "Nieuws"
+
+#: beoi/templates/base.html:21 beoi/templates/menu_contest.html:4
+msgid "Contest"
+msgstr "Wedstrijd"
+
+#: beoi/templates/base.html:22 beoi/templates/menu_training.html:4
+msgid "Preparing"
+msgstr "Voorbereiding"
+
+#: beoi/templates/base.html:23
+msgid "Press-Sponsors"
+msgstr "Pers-Sponsors"
+
+#: beoi/templates/base.html:24
+msgid "About beOI"
+msgstr "Over beOI"
+
+#: beoi/templates/base.html:50
+msgid "Register now!"
+msgstr "Schrijf je nu in!"
+
+#: beoi/templates/base.html:51
+#, python-format
+msgid "(%(timeleft)s left)"
+msgstr "(nog %(timeleft)s)"
+
+#: beoi/templates/base.html:53
+msgid "Keep me informed of"
+msgstr "Hou me op de hoogte van"
+
+#: beoi/templates/base.html:58 beoi/templates/menu_press-sponsors.html:4
+msgid "Sponsors"
+msgstr "Sponsors"
+
+#: beoi/templates/base.html:63
+msgid "Our members"
+msgstr "Onze leden"
+
+#: beoi/templates/base.html:93
+msgid "All rights reserved"
+msgstr "Alle rechten voorbehouden"
+
+#: beoi/templates/menu_contest.html:6
+msgid "Registering"
+msgstr "Inschrijven"
+
+#: beoi/templates/menu_contest.html:7
+msgid "Semifinal centers"
+msgstr "Centra voor halve finale"
+
+#: beoi/templates/menu_contest.html:11
+msgid "Semifinal Results"
+msgstr "Resultaten Halve Finale"
+
+#: beoi/templates/menu_contest.html:12
+msgid "Rules"
+msgstr "Reglement"
+
+#: beoi/templates/menu_contest.html:13
+msgid "FAQ"
+msgstr ""
+
+#: beoi/templates/menu_contest.html:14
+msgid "Archives"
+msgstr "Archieven"
+
+#: beoi/templates/menu_contest.html:15 beoi/templates/menu_contest.html:16
+#: beoi/templates/menu_contest.html:17 beoi/templates/menu_contest.html:18
+#: beoi/templates/menu_contest.html:19
+msgid "Edition"
+msgstr "Editie"
+
+#: beoi/templates/menu_press-sponsors.html:5
+msgid "Membership"
+msgstr "Lidmaatschap"
+
+#: beoi/templates/menu_press-sponsors.html:6
+msgid "Press"
+msgstr "Pers"
+
+#: beoi/templates/menu_training.html:5
+msgid "Learn Programming"
+msgstr "Leren Programmeren"
+
+#: beoi/templates/menu_training.html:6
+msgid "Sample Questions"
+msgstr "Voorbeeldvragen"
+
+#: beoi/templates/menu_training.html:7
+msgid "Programming"
+msgstr "Programmeren"
+
+#: beoi/templates/fr/registration.html:112
+#: beoi/templates/nl/registration.html:111
+msgid "More information on our sponsorship program"
+msgstr "Meer info over onze uitnodigingscampagne"
+
+#: beoi/templates/fr/registration.html:119
+#: beoi/templates/nl/registration.html:118
+msgid "Current school"
+msgstr "school"
+
+#: beoi/templates/fr/registration.html:121
+#: beoi/templates/nl/registration.html:120
+msgid "Selecting one option is mandatory."
+msgstr "Je moet een van de opties kiezen."
+
+#: beoi/templates/fr/registration.html:124
+#: beoi/templates/nl/registration.html:123
+msgid "My school is in this list"
+msgstr "Mijn school staat op deze lijst"
+
+#: beoi/templates/fr/registration.html:124
+#: beoi/templates/nl/registration.html:123
+msgid "ordered by post code"
+msgstr "geordend op postcode"
+
+#: beoi/templates/fr/registration.html:132
+#: beoi/templates/nl/registration.html:131
+msgid "Otherwise, I add it"
+msgstr "Indien niet, dan voeg ik ze toe"
+
+#: beoi/templates/fr/registration.html:195
+#: beoi/templates/nl/registration.html:194
+msgid "Register"
+msgstr "Inschrijven"
+
+#~ msgid "Final Results"
+#~ msgstr "Resultaten Finale"
+
+#~ msgid "Training"
+#~ msgstr "Training"
+
+#~ msgid "Semifinal"
+#~ msgstr "Halve finale"
+
+#~ msgid "Final"
+#~ msgstr "Finale"
+
+#~ msgid "International Olympiad"
+#~ msgstr "Internationale Olympiade"
+
+#~ msgid "Programming, algorithmic and logic"
+#~ msgstr "Programmeren, algoritmiek en logica"
+
+#~ msgid ""
+#~ "Enter your e-mail to receive a message when the beOI 2013 registrations "
+#~ "are open."
+#~ msgstr ""
+#~ "Geef je emailadres op als je verwittigd wil worden zodra de "
+#~ "inschrijvingen voor beOI 2013 starten"
+
+#~ msgid "Register (to mailing list)"
+#~ msgstr "Inschrijven"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Organisation"
+#~ msgstr "Organisatie"
+
+#~ msgid "be-OI Team"
+#~ msgstr "be-OI Team"
+
+#~ msgid "Updates"
+#~ msgstr "Updates"
+
+#~ msgid "Stay up to date. Subscribe via"
+#~ msgstr "Blijf op de hoogte. Volg ons via"
+
+#~ msgid "or"
+#~ msgstr "of"
+
+#~ msgid "With support from"
+#~ msgstr "Met de steun van"
+
+#~ msgid "Prizes offered by"
+#~ msgstr "Sponsors van Prijzen"
+
+#~ msgid "Contest category"
+#~ msgstr "Wedstrijdcategorie"
+
+#~ msgid ""
+#~ "You cannot register to the secondary school contest if you are in the "
+#~ "first year of baccalaureate"
+#~ msgstr ""
+#~ "Je kunt je niet inschrijven voor de competitie voor het secundair als je "
+#~ "in het eerste jaar van het hoger onderwijs zit"
+
+#~ msgid ""
+#~ "You have selected a high school but have registered to the secondary "
+#~ "school contest"
+#~ msgstr ""
+#~ "Je hebt een hogeschool/universiteit gekozen, maar je bent ingeschreven "
+#~ "voor het secundair"
+
+#~ msgid ""
+#~ "You cannot register to the high school contest if you are at the "
+#~ "secondary school"
+#~ msgstr ""
+#~ "Je kunt je niet inschrijven voor de competitie voor het hoger onderwijs "
+#~ "als je in het secundair zit"
+
+#~ msgid ""
+#~ "You have selected a secondary school but have registered to the high "
+#~ "school contest"
+#~ msgstr ""
+#~ "Je hebt een secundaire school gekozen, maar je bent ingeschreven voor het "
+#~ "hoger onderwijs"
+
+#~ msgid "post-secondary-school students"
+#~ msgstr "Hoger onderwijs"
+
+#~ msgid "1st year of Bachelor in Computer Sciences"
+#~ msgstr "1e bachelor Informatica"
+
+#~ msgid "1st year of Bachelor in Management Computing"
+#~ msgstr "1e bachelor Handelsingenieur / Beleidsinformatica"
+
+#~ msgid "1st year of Bachelor in Computing and Systems"
+#~ msgstr "1e bachelor Toegepaste Informatica"
+
+#~ msgid "1st year of Bachelor in Engineering"
+#~ msgstr "1e bachelor Burgerlijk Ingenieur"
+
+#~ msgid "1st year of Bachelor in Industrial Sciences"
+#~ msgstr "1e bachelor Industrieel Ingenieur"
+
+#~ msgid "1st year of Bachelor (other)"
+#~ msgstr "1e bachelor (andere)"
+
+#~ msgid "Flickr Photos"
+#~ msgstr "Flickr Foto's"
+
+#~ msgid "question"
+#~ msgstr "vraag"
+
+#~ msgid "No HTML needed (but can be used)"
+#~ msgstr "HTML niet nodig (maar kan gebruikt worden)"
+
+#~ msgid "answer"
+#~ msgstr "antwoord"
+
+#~ msgid "category name"
+#~ msgstr "categorie"
+
+#~ msgid "Incorrect year"
+#~ msgstr "Ongeldig jaar"
+
+#~ msgid "Make your choice"
+#~ msgstr "Maak uw keuze"
+
+#~ msgid "Belgian Olympiads in Informatics: RSS Entires"
+#~ msgstr "Belgische Informatica-olympiade: RSS Entries"
+
+#~ msgid "RSS feed of recent news from Belgian Olympiads in Informatics"
+#~ msgstr "RSS feed van recent nieuws van de Belgische Informatica-olympiade"

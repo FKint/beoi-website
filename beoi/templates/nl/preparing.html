@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-training").addClass("active");
+$("#side-menu-preparing").addClass("active");
+</script>
+{% endblock js %}
+
+{% block leftmenu %}{% include "menu_training.html" %}{% endblock %}
+
+{% block title %}Jezelf voorbereiden{% endblock %}
+{% block subtitle %}Hoe begin je het best aan deze olympiade?{% endblock %}
+
+{% block content%}
+
+<img src="/static/pictures/2010/final-comhelp.jpg" class="pull-right img-polaroid" />
+
+<p class="lead">Uit vorige jaren leerden we dat veel mensen wel willen meedoen met de Informatica-olympiade, maar niet goed weten wat ze kunnen verwachten. Een van de meest gehoorde vragen die wij krijgen is: &laquo;Wat moet ik allemaal kennen om te kunnen meedoen?&raquo; Het antwoord is: de Belgische Informatica-olympiade wil zo laagdrempelig mogelijk zijn. Het is voor ons belangrijk dat iedereen een goede score kan halen met een minimale voorbereiding.</p>
+
+<h2>Vereiste voorkennis</h2>
+
+<ul class="spaced">
+	<li>Voor de <strong>halve finale</strong>, de eerste ronde van de wedstrijd, is <strong>geen specifieke voorkennis</strong> vereist. De test is volledig schriftelijk en het is niet nodig om te kunnen programmeren. Het is echter wel handig om te weten wat een algoritme is, en hoe je er een kan begrijpen en misschien zelf schrijven. Als deze wedstrijd nieuw voor je is, werp dan even een blik op de <a href="{% url 'sample-questions' %}">vragen van vorige jaren</a> om vertrouwd te raken met het soort vragen dat gesteld wordt.</li>
+
+	<li>De <strong>finale</strong> bevat een programmeeropdracht aan de computer. Om goede resultaten te halen op de finale, moet je dus een beetje overweg kunnen met een van de programmeertalen die we toelaten: <em>Java, C, C++, Pascal, PHP, Python</em>.</li>
+
+	<li>Wie geselecteerd wordt voor de <strong>trainingspool voor de Internationale Olympiade in Informatica</strong> (IOI) moet willen oefenen om ruime programmeerervaring op te doen, om kans te maken op internationale deelname met de Belgische delegatie. Deze trainingsfase zal voornamelijk C++ omvatten en gaat gepaard met meerdere oefenmomenten, online en offline. </li>
+</ul>
+
+Waarop wacht je nog om je <a href="{% url 'registration' %}">in te schrijven</a>? 
+
+
+<h2>Om je op weg te helpen ... </h2>
+
+<p>Op de pagina met <a href="{% url 'sample-questions' %}">vragen van de voorbije jaren</a> kan je terugvinden wat voor soort vragen er zo al gesteld worden op de beOI. Dezelfde pagina bevat ook het document <a href="/static/downloads/OI-2010-NL-intro-algo.pdf">Introductie tot de algoritmiek</a>, dat je laat kennismaken met algoritmes en hoe ze in pseudo-code genoteerd kunnen worden. Als je weinig ervaring hebt met algoritmes, is het erg aan te raden om dit grondig door te lezen!</p>
+
+<p>Tussen de halve finale en de finale krijgen de finalisten normaalgezien ook de kans om een mini-cursus <em>introductie tot algoritmiek en programmeren</em> te volgen. Deze cursus is gericht op beginners maar leert je wel enkele concepten aan die nuttig zijn voor de finale. Als je daarbovenop ook thuis kan oefenen, kan je met vertrouwen naar de finale uitkijken.</p>
+
+
+<!--
+
+<p>De belangrijkste bron van informatie is je <em>leerkracht informatica</em>. Als je vragen hebt over iets dat je tegenkomt, of je wil extra studiemateriaal, kan je bij hem/haar het best terecht. Vraag bijvoorbeeld om enkele van de <a href="{% url 'sample-questions' %}">voorbeeldvragen</a> eens samen te bespreken!</p>
+
+
+<h4>Computerinfrastructuur</h4>
+
+<p>De finaleronde verloopt deels aan de computer. De software voor het indienen en testen van je code is erg overzichtelijk en eenvoudig in gebruik, je moet niet kunnen dan typen. Je krijgt ook ruim de tijd om kennis te maken met de computer die je toegewezen krijgt. De exacte specificatie van de softwareomgeving kunnen we op dit moment nog niet geven.</p>
+
+<p>Wie toch een voorproefje wil kunnen we de volgende richtlijnen geven: we gebruiken <a href="http://www.ubuntu.com/" target="_blank">Ubuntu Linux</a>. Je mag je favoriete tekst-editor gebruiken, standaard zal <a href="http://projects.gnome.org/gedit/" target="_blank">gEdit</a> geïnstalleerd zijn. Wie dit zonder risico eens wilt uittesten kan proberen deze omgeving te installeren in een virtual machine zoals <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>.
+</p>
+
+-->
+
+
+
+{% endblock %}
