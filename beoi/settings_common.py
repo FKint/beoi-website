@@ -33,6 +33,17 @@ TEMPLATE_DIRS = (
 
 ALLOWED_HOSTS = ['.be-oi.be']
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # email to console for dev
+SEND_BROKEN_LINK_EMAILS = True # sent mail warning for 404 errors
+EMAIL_SUBJECT_PREFIX = '[beOI Django] '
+
+IGNORABLE_404_URLS = (
+    re.compile(r'^/cgi-bin/'),
+    re.compile(r'\.php$'),
+    re.compile(r'\.cgi$'),
+    re.compile(r'\.pl$'),
+    '/favicon.ico',
+)
 
 # Application definition
 
