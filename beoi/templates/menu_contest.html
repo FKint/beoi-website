@@ -1,0 +1,19 @@
+{% load i18n %}
+
+<ul class="nav nav-list">
+	<li id="side-menu-contest" class="nav-header"><a href="{% url 'contest' %}">{% trans "Contest" %}</a></li>
+	{% if REGISTRATION_OPEN %}
+	<li id="side-menu-registration" ><a href="{% url 'registration' %}">{% trans "Registering" %} </a></li>
+	<li id="side-menu-semifinalcenters" ><a href="{% url 'semifinal-places' %}">{% trans "Semifinal centers" %} </a></li>
+	{% endif %}
+	{% comment %}<li id="side-menu-final-results" ><a href=" {% url final-results LANGUAGE_CODE % } ">{% trans "Final Results" %} 2014</a></li> {% endcomment %}
+	<li id="side-menu-semifinal-results" ><a href="{% url 'semifinal-results' %}">{% trans "Semifinal Results" %} 2014</a></li>
+	<li id="side-menu-rules" ><a href="{% url 'rules' %}">{% trans "Rules" %}</a></li>
+	<li id="side-menu-faq" ><a href="{% url 'faq' %}">{% trans "FAQ" %}</a></li>
+	<li id="side-menu-archives" class="nav-header">{% trans "Archives" %}</li>
+	<li id="side-menu-2013" ><a href="{% url 'archives-2013' %}">{% trans "Edition" %} 2013</a></li>
+	<li id="side-menu-2012" ><a href="{% url 'archives-2012' %}">{% trans "Edition" %} 2012</a></li>
+	<li id="side-menu-2011" ><a href="{% url 'archives-2011' %}">{% trans "Edition" %} 2011</a></li>
+	<li id="side-menu-2010" ><a href="{% url 'archives-2010' %}">{% trans "Edition" %} 2010</a></li>
+	<li id="side-menu-1992" ><a href="{% url 'archives-1992' %}">{% trans "Edition" %} 1992</a></li>
+</ul>

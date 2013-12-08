@@ -1,0 +1,105 @@
+{% extends "base-empty.html" %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block body %}
+
+<div id="wrap">
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <!-- the three lines of the icon when narrow screen -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="{% url 'root' %}">beOI</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li id="menu-home"><a href="{% url 'home' %}">{% trans "News" %}</a></li>
+            <li id="menu-contest"><a href="{% url 'contest' %}">{% trans "Contest" %}</a></li>
+            <li id="menu-training"><a href="{% url 'preparing' %}">{% trans "Preparing" %}</a></li>
+            <li id="menu-sponsors"><a href="{% url 'sponsors' %}">{% trans "Press-Sponsors" %}</a></li>
+            <li id="menu-about"><a href="{% url 'about' %}">{% trans "About beOI" %}</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <div class="lang-switch">
+        {% get_available_languages as languages %}
+        {% for lang_code, lang_name in languages %}
+          {% language lang_code %}
+          <a href="{% url 'home' %}">{{ lang_code }}</a>
+          {% endlanguage %}
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <a href="{% url 'home' %}"><img src="/static/img/beoi-logo-dark.png" class="logo" /></a>
+      {% block header %}
+        <h1>{% block title %}{% endblock %}</h1>
+        <p>{% block subtitle %}{% endblock %}</p>
+      {% endblock header %}
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="span3">
+        <div id="side-menu" style="margin-left: 0px !important;" data-spy="affix" data-offset-top="247">
+          {% if REGISTRATION_OPEN %}
+          <a class="btn btn-primary btn-large" style="margin-bottom:20px;" href="{% url 'registration' %}">{% trans "Register now!"%}<br/><small>
+            {% blocktrans with REGISTRATION_DEADLINE|timeuntil as timeleft %}({{ timeleft }} left){% endblocktrans %}</small></a>
+          {% endif %}
+          <!-- <a class="btn btn-primary btn-large" style="margin-bottom:20px; width:80%;" href="http://eepurl.com/p-{% if LANGUAGE_CODE = "fr" %}nXX{% else %}BTj{% endif %}">{% trans "Keep me informed of" %}<br/> beOI 2014<a> -->
+
+          {% block leftmenu %}{% endblock %}
+
+          <!-- Supported by ... -->
+          <div class="sidemenu-header"><a href="{% url 'sponsors' %}"><h3>{% trans "Sponsors" %}</h3></a></div>
+          <a href="http://www.unamur.be/" target="_blank"><img src="/static/logos/unamur-logo.png" class="sponsor-logo" style="padding-right:10px;max-width:100px;"></a>
+          <a href="http://www.iminds.be" target="_blank"><img src="/static/logos/iMinds-logo.png" class="sponsor-logo" style="max-width:150px;"></a>
+
+          <!-- Members -->
+          <div class="sidemenu-header"><a href="{% url 'membership' %}"><h3>{% trans "Our members" %}</h3></a></div>
+          <div id="members" class="cycle-slideshow" style="height:200px;" data-pause-on-hover=true data-log=false data-random=true data-slides='> a'> 
+            {% include "members.html" %}
+          </div>
+          <small>
+            {% if LANGUAGE_CODE == "fr" %}
+            Votre entreprise comme <a href="{% url 'sponsors' %}">sponsor</a> ou <a href="{% url 'membership' %}">membre</a> ?
+            {% else %}
+            Uw bedrijf als <a href="{% url 'membership' %}">lid</a> of <a href="{% url 'sponsors' %}">sponsor</a> ?
+            {% endif %}
+          </small>
+        </div>
+      </div><!--/span-->
+      <div class="span9" style="padding-bottom:50px;">
+        {% block content %}
+        {% endblock content %}
+      </div><!--/span-->
+    </div><!--/row-->
+  </div> <!--/container-->
+
+  <div id="push"></div>
+</div> <!-- /wrap -->
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <a href="http://www.be-oi.be/"><img src="/static/img/beoi-logo-dark-tiny.png" class="logo"/></a>
+        <p>beOI ASBL/VZW</p>
+        <p class="hidden-phone">Belgische Informatica-olympiade - Olympiade belge d’Informatique</p>
+        <p>&copy; 2011-2013. {% trans "All rights reserved" %}.</p>
+      </div>
+    </div>
+  </div>
+</footer> 
+
+{% endblock body %}
+

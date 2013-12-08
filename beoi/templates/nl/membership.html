@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-sponsors").addClass("active");
+$("#side-menu-membership").addClass("active");
+</script>
+{% endblock js %}
+
+{% block leftmenu %}{% include "menu_press-sponsors.html" %}{% endblock %}
+
+{% block title %}Steunend lidmaatschap{% endblock %}
+{% block subtitle %}{% endblock %}
+
+{% block content %}
+
+<p class="lead">De Belgische Informatica-olympiade is een VZW waarvan een deel van de leden het <a href="{% url 'about' %}">uitvoerend comité</a> vormt. Anderzijds kunnen ook publieke instellingen en private ondernemingen de VZW actief ondersteunen door lid te worden van de vereniging. In ruil voor een jaarlijks lidgeld, worden deze geassocieerde leden vermeld op onze website en mogen zij de algemene vergadering bijwonen.</p>
+
+<section>
+  <h2>Huidige geassocieerde leden</h2>
+  <div style="img">{% include "members.html" %}</div>
+</section>
+
+
+<section>
+  <h2>Lid worden</h2>
+
+  <p>Wij zoeken op dit moment naar publieke en semi-publieke instellingen die actief zijn in het brede domein van de informatica (onderwijs, onderzoek, ...), die ons project een warm hart toedragen en het willen ondersteunen. </p>
+
+  <p>Als uw instelling of onderneming lid wilt worden van beOI VZW, neem dan contact op via e-mail naar <a href="mailto:info@be-oi.be">info@be-oi.be</a>. Het lidgeld voor een geassocieerd lidmaatschap bedraagt momenteel 250 euro. De vereniging (vertegenwoordigd door haar bestuurders) behoudt zich het recht voor een lid te weigeren voor redenen die zij in het belang van de vereniging acht.</p>
+  
+</section>
+
+{% endblock content %}
