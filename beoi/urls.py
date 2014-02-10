@@ -48,11 +48,11 @@ urlpatterns += i18n_patterns('',
 	url(r'^semifinal/places$', ListView.as_view(template_name='semifinal_places.html',
 		queryset=SemifinalCenter.objects.filter(active=True)), name="semifinal-places"),
 
-	# url(r'^final/results$', list_detail.object_list, { 'template_name': 'final_results.html',
-	# 	"queryset": ResultFinal.objects.select_related('contestant', 'contestant__school')
-	# 	.extra(select={"total":"score_written+score_computer/2"})
-	# 	.filter(contestant__contest_year=contest_year())
-	# 	.order_by("rank")}, "final-results"),
+	url(r'^final/results$', ListView.as_view(template_name='final_results.html',
+		queryset=ResultFinal.objects.select_related('contestant', 'contestant__school')
+		.extra(select={"total":"score_written+score_computer"})
+		.filter(contestant__contest_year=contest_year())
+		.order_by("rank")), name="final-results"),
 
 	url(r'^semifinal/results$', ListView.as_view(template_name='semifinal_results.html',
 		queryset=ResultSemifinal.objects.select_related('contestant', 'contestant__school')

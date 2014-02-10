@@ -8,6 +8,7 @@
 	{% endif %}
 	{% comment %}<li id="side-menu-final-results" ><a href=" {% url final-results LANGUAGE_CODE % } ">{% trans "Final Results" %} 2014</a></li> {% endcomment %}
 	<li id="side-menu-semifinal-results" ><a href="{% url 'semifinal-results' %}">{% trans "Semifinal Results" %} 2014</a></li>
+	<li id="side-menu-final-results" ><a href="{% url 'final-results' %}">{% trans "Final Results" %} 2014</a></li>
 	<li id="side-menu-rules" ><a href="{% url 'rules' %}">{% trans "Rules" %}</a></li>
 	<li id="side-menu-faq" ><a href="{% url 'faq' %}">{% trans "FAQ" %}</a></li>
 	<li id="side-menu-archives" class="nav-header">{% trans "Archives" %}</li>

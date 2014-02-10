@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-08 12:35+0100\n"
+"POT-Creation-Date: 2014-02-10 22:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,538 +17,535 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: beoi/settings_common.py:44 beoi/contest/models.py:13 beoi/faq/models.py:8
-#: beoi/news/models.py:28
+#: settings_common.py:87 contest/models.py:13 faq/models.py:8
+#: news/models.py:28
 msgid "French"
 msgstr "Français"
 
-#: beoi/settings_common.py:45 beoi/contest/models.py:14 beoi/faq/models.py:9
-#: beoi/news/models.py:29
+#: settings_common.py:88 contest/models.py:14 faq/models.py:9
+#: news/models.py:29
 msgid "Dutch"
 msgstr "Néerlandais"
 
-#: beoi/contest/admin.py:40
+#: contest/admin.py:40
 msgid "Name"
 msgstr "Nom"
 
-#: beoi/contest/admin.py:46
+#: contest/admin.py:46
 msgid "Mark selected contestants as manual checked"
 msgstr "Marquer les participants sélectionnés comme vérifiés manuellement"
 
-#: beoi/contest/admin.py:69 beoi/contest/admin.py:100
+#: contest/admin.py:69 contest/admin.py:100
 msgid "Export as CSV"
 msgstr ""
 
-#: beoi/contest/forms.py:12
+#: contest/forms.py:11
 msgid "Firstname"
 msgstr "Prénom"
 
-#: beoi/contest/forms.py:13
+#: contest/forms.py:12
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: beoi/contest/forms.py:14
+#: contest/forms.py:13
 msgid "Gender"
 msgstr "Sexe"
 
-#: beoi/contest/forms.py:15
+#: contest/forms.py:14
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: beoi/contest/forms.py:16
+#: contest/forms.py:15
 msgid "Address"
 msgstr "Adresse"
 
-#: beoi/contest/forms.py:17 beoi/contest/forms.py:26
+#: contest/forms.py:16 contest/forms.py:25
 msgid "Postal code"
 msgstr "Code postal"
 
-#: beoi/contest/forms.py:18 beoi/contest/forms.py:27
+#: contest/forms.py:17 contest/forms.py:26
 msgid "City"
 msgstr "Ville"
 
-#: beoi/contest/forms.py:19 beoi/oi_core/forms.py:7
+#: contest/forms.py:18
 msgid "Email"
 msgstr "E-mail"
 
-#: beoi/contest/forms.py:19
+#: contest/forms.py:18
 msgid "Only used for olympiads. Will never be given to a sponsor or a third."
 msgstr ""
 "Uniquement utilisée dans le cadre de l'Olympiade, jamais communiquée à un "
 "sponsor ou à un tiers."
 
-#: beoi/contest/forms.py:20
+#: contest/forms.py:19
 msgid "Referral Token"
 msgstr "Code de parrainage"
 
-#: beoi/contest/forms.py:20
+#: contest/forms.py:19
 msgid ""
 "Optional, the token you received if you are sponsored by another contestant."
 msgstr ""
 "Optionnel, le code reçu si vous êtes parrainé par un autre participant."
 
-#: beoi/contest/forms.py:22
+#: contest/forms.py:21
 msgid "is in the list"
 msgstr "est dans la liste"
 
-#: beoi/contest/forms.py:22
+#: contest/forms.py:21
 msgid "is not in the list"
 msgstr "n'est pas dans la liste"
 
-#: beoi/contest/forms.py:22
+#: contest/forms.py:21
 msgid "Is the school in the list"
 msgstr "L'école se trouve-t-elle dans la liste"
 
-#: beoi/contest/forms.py:23 beoi/contest/forms.py:33
+#: contest/forms.py:22 contest/forms.py:32
 msgid "Make a choice"
 msgstr "Faites votre choix"
 
-#: beoi/contest/forms.py:25
+#: contest/forms.py:24
 msgid "School name"
 msgstr "Nom de l'établissement"
 
-#: beoi/contest/forms.py:29
+#: contest/forms.py:28
 msgid "Year of study"
 msgstr "Année d'étude"
 
-#: beoi/contest/forms.py:31
+#: contest/forms.py:30
 msgid "Examination language"
 msgstr "Langue de l'épreuve"
 
-#: beoi/contest/forms.py:33
+#: contest/forms.py:32
 msgid ""
 "Welcome and assistance are only guaranteed in the center's main language."
 msgstr ""
 "L'accueil et l'assistance aux participants ne sont garantis que dans la "
 "langue du centre."
 
-#: beoi/contest/forms.py:33
+#: contest/forms.py:32
 msgid "Semifinal center"
 msgstr "Centre pour la demi-finale"
 
-#: beoi/contest/forms.py:40
+#: contest/forms.py:39
 msgid "Wrong value for this field."
 msgstr "Value erronée dans ce champ."
 
-#: beoi/contest/forms.py:51
+#: contest/forms.py:50
 msgid "This token is not valid."
 msgstr "Ce code n'est pas valide."
 
-#: beoi/contest/forms.py:56
+#: contest/forms.py:55
 msgid "Please choose your school."
 msgstr "Choisissez votre école."
 
-#: beoi/contest/forms.py:62 beoi/contest/forms.py:65 beoi/contest/forms.py:68
+#: contest/forms.py:61 contest/forms.py:64 contest/forms.py:67
 msgid "This field is mandatory."
 msgstr "Ce champ est obligatoire."
 
-#: beoi/contest/models.py:20
+#: contest/models.py:20
 msgid "secondary-school students"
 msgstr "Secondaire"
 
-#: beoi/contest/models.py:25
+#: contest/models.py:25
 msgid "Invalid postal code"
 msgstr "Code postal invalide"
 
-#: beoi/contest/models.py:33
+#: contest/models.py:33
 msgid "Male"
 msgstr "Homme"
 
-#: beoi/contest/models.py:34
+#: contest/models.py:34
 msgid "Female"
 msgstr "Femme"
 
-#: beoi/contest/models.py:46
+#: contest/models.py:46
 msgid "1st year of secondary school"
 msgstr "1e secondaire"
 
-#: beoi/contest/models.py:47
+#: contest/models.py:47
 msgid "2nd year of secondary school"
 msgstr "2e secondaire"
 
-#: beoi/contest/models.py:48
+#: contest/models.py:48
 msgid "3rd year of secondary school"
 msgstr "3e secondaire"
 
-#: beoi/contest/models.py:49
+#: contest/models.py:49
 msgid "4th year of secondary school"
 msgstr "4e secondaire"
 
-#: beoi/contest/models.py:50
+#: contest/models.py:50
 msgid "5th year of secondary school"
 msgstr "5e secondaire"
 
-#: beoi/contest/models.py:51
+#: contest/models.py:51
 msgid "6th year of secondary school"
 msgstr "6e secondaire"
 
-#: beoi/contest/models.py:52
+#: contest/models.py:52
 msgid "7th year of secondary school"
 msgstr "7e secondaire"
 
-#: beoi/contest/models.py:56
+#: contest/models.py:56
 msgid "surname"
 msgstr "nom de famille"
 
-#: beoi/contest/models.py:57
+#: contest/models.py:57
 msgid "firstname"
 msgstr "prénom"
 
-#: beoi/contest/models.py:58
+#: contest/models.py:58
 msgid "gender"
 msgstr "sexe"
 
-#: beoi/contest/models.py:59 beoi/oi_core/models.py:7
+#: contest/models.py:59
 msgid "email"
 msgstr "e-mail"
 
-#: beoi/contest/models.py:60
+#: contest/models.py:60
 msgid "address"
 msgstr "adresse"
 
-#: beoi/contest/models.py:61 beoi/contest/models.py:91
-#: beoi/contest/models.py:107
+#: contest/models.py:61 contest/models.py:91 contest/models.py:107
 msgid "city"
 msgstr "ville"
 
-#: beoi/contest/models.py:62 beoi/contest/models.py:92
+#: contest/models.py:62 contest/models.py:92
 msgid "postal code"
 msgstr "code postal"
 
-#: beoi/contest/models.py:63
+#: contest/models.py:63
 msgid "date of birth"
 msgstr "date de naissance"
 
-#: beoi/contest/models.py:64
+#: contest/models.py:64
 msgid "contest category"
 msgstr "catégorie"
 
-#: beoi/contest/models.py:66
+#: contest/models.py:66
 msgid "year of study"
 msgstr "année d'étude"
 
-#: beoi/contest/models.py:67
+#: contest/models.py:67
 msgid "examination language"
 msgstr "langue de l'épreuve"
 
-#: beoi/contest/models.py:69
+#: contest/models.py:69
 msgid "manual checked"
 msgstr "vérifié (manuel)"
 
-#: beoi/contest/models.py:70
+#: contest/models.py:70
 msgid "token"
 msgstr ""
 
-#: beoi/contest/models.py:71
+#: contest/models.py:71
 msgid "contest year"
 msgstr "année OI"
 
-#: beoi/contest/models.py:72 beoi/oi_core/models.py:8
+#: contest/models.py:72
 msgid "registering time"
 msgstr "heure d'enregistement"
 
-#: beoi/contest/models.py:79
+#: contest/models.py:79
 msgid "contestant"
 msgstr "participant"
 
-#: beoi/contest/models.py:80
+#: contest/models.py:80
 msgid "contestants"
 msgstr "participants"
 
-#: beoi/contest/models.py:90
+#: contest/models.py:90
 msgid "school name"
 msgstr "nom de l'établissement"
 
-#: beoi/contest/models.py:93
+#: contest/models.py:93
 msgid "school category"
 msgstr "catégorie"
 
-#: beoi/contest/models.py:101
+#: contest/models.py:101
 msgid "school"
 msgstr "école"
 
-#: beoi/contest/models.py:102
+#: contest/models.py:102
 msgid "schools"
 msgstr "écoles"
 
-#: beoi/contest/models.py:106
+#: contest/models.py:106
 msgid "name"
 msgstr "nom"
 
-#: beoi/contest/models.py:108
+#: contest/models.py:108
 msgid "venue details"
 msgstr ""
 
-#: beoi/contest/models.py:108 beoi/news/models.py:41
+#: contest/models.py:108 news/models.py:41
 msgid ""
 "HTML tags are allowed. &lt;p&gt;...&lt;/p&gt; tags MUST be used for text!"
 msgstr ""
 
-#: beoi/contest/models.py:109
+#: contest/models.py:109
 msgid "in current proposal list"
 msgstr ""
 
-#: beoi/contest/models.py:116
+#: contest/models.py:116
 msgid "semifinal center"
 msgstr "Centre pour la demi-finale"
 
-#: beoi/contest/models.py:117
+#: contest/models.py:117
 msgid "semifinal centers"
 msgstr "Centres pour la demi-finale"
 
-#: beoi/contest/models.py:123
+#: contest/models.py:123
 msgid "score"
 msgstr "score"
 
-#: beoi/contest/models.py:124
+#: contest/models.py:124
 msgid "qualified"
 msgstr "qualifié"
 
-#: beoi/contest/models.py:128
+#: contest/models.py:128
 msgid "semifinal result"
 msgstr "résultat de la demi-finale"
 
-#: beoi/contest/models.py:129
+#: contest/models.py:129
 msgid "semifinal results"
 msgstr "résultats de la demi-finale"
 
-#: beoi/contest/models.py:135
+#: contest/models.py:135
 msgid "written part score"
 msgstr "points de la partie papier"
 
-#: beoi/contest/models.py:136
+#: contest/models.py:136
 msgid "computer part score"
 msgstr "points de la partie machine"
 
-#: beoi/contest/models.py:137
+#: contest/models.py:137
 msgid "rank"
 msgstr ""
 
-#: beoi/contest/models.py:141
+#: contest/models.py:141
 msgid "final result"
 msgstr "résultat de la finale"
 
-#: beoi/contest/models.py:142
+#: contest/models.py:142
 msgid "final results"
 msgstr "résultats de la finale"
 
-#: beoi/contest/views.py:96
+#: contest/views.py:94
 msgid "Registering to Belgian Olympiads in Informatics"
 msgstr "Inscription à l'Olympiade belge d'Informatique"
 
-#: beoi/contest/management/commands/mailing-semifinalscore.py:38
+#: contest/management/commands/mailing-semifinalscore.py:38
 msgid "beOI - Semifinal results"
 msgstr "beOI - Résultats de la demi-finale"
 
-#: beoi/faq/models.py:21 beoi/faq/models.py:22
+#: faq/models.py:21 faq/models.py:22
 msgid "Text only. No html tags!"
 msgstr ""
 
-#: beoi/faq/models.py:23 beoi/news/models.py:40
+#: faq/models.py:23 news/models.py:40
 msgid "language"
 msgstr ""
 
-#: beoi/news/admin.py:18
+#: faq/views.py:11 templates/base.html:21
+msgid "News"
+msgstr ""
+
+#: faq/views.py:12
+msgid "welcome"
+msgstr ""
+
+#: news/admin.py:18
 msgid "Headline"
 msgstr ""
 
-#: beoi/news/admin.py:19
+#: news/admin.py:19
 msgid "Publication"
 msgstr ""
 
-#: beoi/news/admin.py:20
+#: news/admin.py:20
 msgid "Body"
 msgstr ""
 
-#: beoi/news/feed.py:26
+#: news/feed.py:28
 #, fuzzy
 msgid "be-OI News"
 msgstr "Equipe be-OI"
 
-#: beoi/news/feed.py:27 beoi/templates/base-empty.html:6
+#: news/feed.py:29 templates/base-empty.html:6
 msgid "Belgian Olympiads in Informatics"
 msgstr "Olympiade belge d'Informatique"
 
-#: beoi/news/models.py:20
+#: news/models.py:20
 msgid "Offline"
 msgstr ""
 
-#: beoi/news/models.py:21
+#: news/models.py:21
 msgid "Online"
 msgstr ""
 
-#: beoi/news/models.py:33
+#: news/models.py:33
 msgid "title"
 msgstr ""
 
-#: beoi/news/models.py:34
+#: news/models.py:34
 msgid "author"
 msgstr ""
 
-#: beoi/news/models.py:35
+#: news/models.py:35
 msgid "creation date"
 msgstr ""
 
-#: beoi/news/models.py:36
+#: news/models.py:36
 msgid "modification date"
 msgstr ""
 
-#: beoi/news/models.py:37
+#: news/models.py:37
 msgid "publication date"
 msgstr ""
 
-#: beoi/news/models.py:38
+#: news/models.py:38
 msgid "If in the future, the news will be visible from this time"
 msgstr ""
 
-#: beoi/news/models.py:39
+#: news/models.py:39
 msgid "status"
 msgstr ""
 
-#: beoi/news/models.py:41
+#: news/models.py:41
 msgid "body"
 msgstr ""
 
-#: beoi/news/models.py:48
+#: news/models.py:48
 msgid "news entry"
 msgstr ""
 
-#: beoi/news/models.py:49
+#: news/models.py:49
 msgid "news entries"
 msgstr ""
 
-#: beoi/templates/base.html:20
-msgid "News"
-msgstr ""
-
-#: beoi/templates/base.html:21 beoi/templates/menu_contest.html:4
+#: templates/base.html:22 templates/menu_contest.html:4
 msgid "Contest"
 msgstr "Épreuve"
 
-#: beoi/templates/base.html:22 beoi/templates/menu_training.html:4
+#: templates/base.html:23 templates/menu_training.html:4
 msgid "Preparing"
 msgstr "Se préparer"
 
-#: beoi/templates/base.html:23
+#: templates/base.html:24
 msgid "Press-Sponsors"
 msgstr "Presse-Sponsors"
 
-#: beoi/templates/base.html:24
+#: templates/base.html:25
 msgid "About beOI"
 msgstr "À propos de beOI"
 
-#: beoi/templates/base.html:50
+#: templates/base.html:55
 msgid "Register now!"
 msgstr "Inscrivez-vous dès maintenant!"
 
-#: beoi/templates/base.html:51
+#: templates/base.html:56
 #, python-format
 msgid "(%(timeleft)s left)"
 msgstr "(il reste %(timeleft)s)"
 
-#: beoi/templates/base.html:53
+#: templates/base.html:58
 msgid "Keep me informed of"
 msgstr "Tenez moi au courant de la"
 
-#: beoi/templates/base.html:58 beoi/templates/menu_press-sponsors.html:4
+#: templates/base.html:63 templates/menu_press-sponsors.html:4
 msgid "Sponsors"
 msgstr ""
 
-#: beoi/templates/base.html:63
+#: templates/base.html:69
 msgid "Our members"
 msgstr "Nos membres"
 
-#: beoi/templates/base.html:93
+#: templates/base.html:99
 msgid "All rights reserved"
 msgstr "Tous droits réservés"
 
-#: beoi/templates/menu_contest.html:6
+#: templates/menu_contest.html:6
 msgid "Registering"
 msgstr "Inscription"
 
-#: beoi/templates/menu_contest.html:7
+#: templates/menu_contest.html:7
 msgid "Semifinal centers"
 msgstr "Centres pour la demi-finale"
 
-#: beoi/templates/menu_contest.html:11
+#: templates/menu_contest.html:11
 msgid "Semifinal Results"
 msgstr "Résultats Demi-finale"
 
-#: beoi/templates/menu_contest.html:12
+#: templates/menu_contest.html:12
+msgid "Final Results"
+msgstr "Résultats Finale"
+
+#: templates/menu_contest.html:13
 msgid "Rules"
 msgstr "Réglement"
 
-#: beoi/templates/menu_contest.html:13
+#: templates/menu_contest.html:14
 msgid "FAQ"
 msgstr "Foire aux Questions"
 
-#: beoi/templates/menu_contest.html:14
+#: templates/menu_contest.html:15
 msgid "Archives"
 msgstr "Archives"
 
-#: beoi/templates/menu_contest.html:15 beoi/templates/menu_contest.html:16
-#: beoi/templates/menu_contest.html:17 beoi/templates/menu_contest.html:18
-#: beoi/templates/menu_contest.html:19
+#: templates/menu_contest.html:16 templates/menu_contest.html.py:17
+#: templates/menu_contest.html:18 templates/menu_contest.html.py:19
+#: templates/menu_contest.html:20
 msgid "Edition"
 msgstr ""
 
-#: beoi/templates/menu_press-sponsors.html:5
+#: templates/menu_press-sponsors.html:5
 msgid "Membership"
 msgstr "Membres cotisants"
 
-#: beoi/templates/menu_press-sponsors.html:6
+#: templates/menu_press-sponsors.html:6
 msgid "Press"
 msgstr "Presse"
 
-#: beoi/templates/menu_training.html:5
+#: templates/menu_training.html:5
 msgid "Learn Programming"
 msgstr "Apprendre à programmer"
 
-#: beoi/templates/menu_training.html:6
+#: templates/menu_training.html:6
 msgid "Sample Questions"
 msgstr "Exemples de Questions"
 
-#: beoi/templates/menu_training.html:7
+#: templates/menu_training.html:7
 msgid "Programming"
 msgstr ""
 
-#: beoi/templates/fr/registration.html:112
-#: beoi/templates/nl/registration.html:111
+#: templates/fr/registration.html:112 templates/nl/registration.html:111
 msgid "More information on our sponsorship program"
 msgstr "Plus d'info sur notre programme de parrainage"
 
-#: beoi/templates/fr/registration.html:119
-#: beoi/templates/nl/registration.html:118
+#: templates/fr/registration.html:119 templates/nl/registration.html:118
 msgid "Current school"
 msgstr "Etablissement scolaire"
 
-#: beoi/templates/fr/registration.html:121
-#: beoi/templates/nl/registration.html:120
+#: templates/fr/registration.html:121 templates/nl/registration.html:120
 msgid "Selecting one option is mandatory."
 msgstr "Un choix parmi les deux options est obligatoire."
 
-#: beoi/templates/fr/registration.html:124
-#: beoi/templates/nl/registration.html:123
+#: templates/fr/registration.html:124 templates/nl/registration.html:123
 msgid "My school is in this list"
 msgstr "Mon école est dans cette liste"
 
-#: beoi/templates/fr/registration.html:124
-#: beoi/templates/nl/registration.html:123
+#: templates/fr/registration.html:124 templates/nl/registration.html:123
 msgid "ordered by post code"
 msgstr "ordonnées par code postal"
 
-#: beoi/templates/fr/registration.html:132
-#: beoi/templates/nl/registration.html:131
+#: templates/fr/registration.html:132 templates/nl/registration.html:131
 msgid "Otherwise, I add it"
 msgstr "Dans le cas contraire, je l'ajoute"
 
-#: beoi/templates/fr/registration.html:195
-#: beoi/templates/nl/registration.html:194
+#: templates/fr/registration.html:195 templates/nl/registration.html:194
 msgid "Register"
 msgstr "M'inscrire"
-
-#~ msgid "Final Results"
-#~ msgstr "Résultats Finale"
 
 #~ msgid "Training"
 #~ msgstr "Formation"

@@ -17,13 +17,13 @@ $("#side-menu-final-results").addClass("active");
 {% block content %}
 
 <div class="alert alert-info">
-Les parties papier, machine et le total sont respectivement sur un maximum de 50, 150 et 125 points. Suite au divers problèmes rencontrés lors de l'épreuve machine, les scores de cette partie ont été divisés par deux. Les seize premiers du classement sont sélectionnés pour faire partie du pool d'entraînement pour l'Olympiade internationale d'informatique.
+Les parties papier et machine sont respectivement sur un maximum de 75 et 150.  Les quinze premiers du classement sont sélectionnés pour faire partie du pool d'entraînement pour l'Olympiade internationale d'informatique.
 </div>
 
 <table class="table table-striped">
   <tr><th>#</th><th>Nom</th><th>Etablissement</th><th>Papier</th><th>Machine</th><th>Total</th></tr>
 {% for result in object_list %}
-  <tr {% if result.rank <= 16 %} class="success" {% endif %}>
+  <tr {% if result.rank <= 15 %} class="success" {% endif %}>
     <td>{{result.rank}}</td>
     <td nowrap="nowrap">{{result.contestant.surname}} {{result.contestant.firstname}}</td>
     <td>{{result.contestant.school.name}}, {{result.contestant.school.city}} — {{result.contestant.year_study}}e</td>
