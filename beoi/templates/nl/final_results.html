@@ -24,7 +24,7 @@ De gedeeltes op papier en aan de computer staan op respectievelijk 75 en 150 pun
 <table class="table table-striped">
   <tr><th>#</th><th>Naam</th><th>School</th><th>Papier</th><th>Computer</th><th>Totaal</th></tr>
 {% for result in object_list %}
-  <tr {% if result.rank <= 16 %} class="success" {% endif %}>
+  <tr {% if result.rank <= 15 %} class="success" {% endif %}>
     <td>{{result.rank}}</td>
     <td nowrap="nowrap">{{result.contestant.surname}} {{result.contestant.firstname}}</td>
     <td>{{result.contestant.school.name}}, {{result.contestant.school.city}} — {{result.contestant.year_study}}e</td>
