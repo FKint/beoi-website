@@ -68,6 +68,7 @@ urlpatterns += i18n_patterns('',
 	url(r'^archives/2011$', TemplateView.as_view(template_name='2011.html'), name="archives-2011"),
 	url(r'^archives/2012$', TemplateView.as_view(template_name='2012.html'), name="archives-2012"),
 	url(r'^archives/2013$', TemplateView.as_view(template_name='2013.html'), name="archives-2013"),
+	url(r'^archives/2014$', TemplateView.as_view(template_name='2014.html'), name="archives-2014"),
 	
 	# unlinked pages
 	# url(r'^registration/stats$', "beoi.contest.views.stats", {'template': '../common/stats.html'}, name="stats"),
