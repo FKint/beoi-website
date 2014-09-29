@@ -13,35 +13,17 @@ $("#side-menu-registration").addClass("active");
 {% block title %}Inschrijven{% endblock %}
 {% block subtitle %}Gratis, gemakkelijk, snel, en toch zoveel te winnen.{% endblock %}
 
-
 {% block content %}
 
-{% if not error %}
 <div class="alert alert-success">
-	<p>Gefeliciteerd, je bent nu ingeschreven voor de Belgische Informatica-olympiade 2014! Ga op woensdag 29 november 2014 naar het regionale centrum dat je hebt gekozen.</p>
+	<p>Gefeliciteerd, je bent nu ingeschreven voor de Belgische Informatica-olympiade 2014! Ga op woensdag 19 november 2014 naar het regionale centrum dat je hebt gekozen.</p>
 	{% if object %}
 	<p>Je hebt <i>{{object}}</i> als centrum gekozen voor de halve finale. Dat centrum heeft ons de volgende informatie gegeven over de precieze plaats van de halve finale. Als het nodig is, zal je meer informatie per email ontvangen.</p>
 	<div style="padding-left:50px;">{{object.details|safe}}</div>
 	{% endif %}
+
 	<p>Als je je inschrijving wil veranderen, stuur een email naar <a href="mailto:inschrijving@be-oi.be">inschrijving@be-oi.be</a>.</p>
 </div>
-{% else %}
-<div class="alert alert-error">
-<p>Er was een probleem tijdens het inschrijven. Misschien was je al ingeschreven!</p>
-</div>
-{% endif %} 
-
-
-<!-- <h3>Nodig je vrienden uit en win 100&euro; !</h3>
-
-<p>We geven onze speciale prijs ter waarde van 100 euro aan diegene die de meeste vriend(inn)en kan overtuigen om ook deel te nemen aan de Informatica-olympiade. Nodig je vrienden uit door hen deze link <strong id="linktoshare"></strong> te geven, of vraag hen om de code <strong id="sharetoken"></strong> op te geven bij hun inschrijving. Voor elke deelnemer die zich inschrijft met jouw code, krijgen zowel jij als die deelnemer 1 punt. De deelnemer met de meeste punten krijgt onze prijs in ontvangst op de proclamatie. <a href="{% url 'referrals' %}">Lees er hier meer over.</a>
-</p>
- -->
-<!-- <p>Met de knoppen hieronder kan je de link alvast delen via Facebook en Twitter! Als je hierlangs deelnemers aanbrengt, wordt dit ook automatisch bij je score opgeteld.</p>
-
-
-<p style="margin-top:20px;"><div style="padding:0 25px; 0 25px" class="fb-like" data-send="false" data-width="100" data-show-faces="false" data-action="recommend"></div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="nl" data-size="large" data-count="none">Tweeter</a>
-</p> -->
 
 <script type="text/javascript">
 function getURLParameter(name) {
