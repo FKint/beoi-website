@@ -34,8 +34,7 @@ urlpatterns += i18n_patterns('',
 
 	url(r'^contest$', TemplateView.as_view(template_name='contest.html'), name="contest"),
 	url(r'^registration$', "beoi.contest.views.registration",  {'template': 'registration.html'}, name="registration"),
-	# #fixit for registration:
-	# # url(r'^registration/error$', TemplateView.as_view(template_name='registration_confirm.html', "extra_context":{"error":1}}, "registration-error"),
+	url(r'^registration/error$', TemplateView.as_view(template_name='registration_error.html'), name="registration-error"),
 	url(r'^registration/confirm/(?P<object_id>\d+)$', ListView.as_view(
 		template_name='registration_confirm.html',
 		queryset=SemifinalCenter.objects.filter(active=True)
@@ -71,5 +70,5 @@ urlpatterns += i18n_patterns('',
 	url(r'^archives/2014$', TemplateView.as_view(template_name='2014.html'), name="archives-2014"),
 	
 	# unlinked pages
-	# url(r'^registration/stats$', "beoi.contest.views.stats", {'template': '../common/stats.html'}, name="stats"),
+	url(r'^registration/stats$', "beoi.contest.views.stats", {'template': 'common/stats.html'}, name="stats"),
 )
