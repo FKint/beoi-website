@@ -15,18 +15,18 @@ $("#side-menu-contest").addClass("active");
 
 {% block content %}
 <section style="padding-top:30px;">
-  <img src="/static/pictures/2011/finale1.jpg" class="pull-right img-polaroid" width="175"/><p class="lead">De Informatica-olympiade is een wedstrijd die een in logica, algoritmiek en programmeren. Ze staat open voor <strong>leerlingen uit het secundair onderwijs</strong> (alle jaren, alle richtingen). De nationale wedstrijd bestaat uit een halve finale die plaatsvindt in regionale centra verspreid over het land, en een finale. Na een intensieve training worden de beste kandidaten weerhouden om deel te nemen aan de International Olympiad in Informatics.</p>
+  <img src="/static/pictures/2011/finale1.jpg" class="pull-right img-polaroid" width="175"/><p class="lead">De Informatica-olympiade is een wedstrijd die een in logica, algoritmiek en programmeren. Ze staat open voor <strong>leerlingen uit het secundair onderwijs</strong> (alle jaren, alle richtingen). De nationale wedstrijd bestaat uit een halve finale die plaatsvindt in regionale centra verspreid over het land, een intensieve trainingsperiode voor zij die weerhouden worden voor de finale, en de finale waarna de beste 4 finalisten worden weerhouden om deel te nemen aan de International Olympiad in Informatics.</p>
 </section>
 
 <div class="row">
 <section class="span9">
-  <h2>Have finale <small>op papier, <br/> 27 november 2013</small></h2> 
+  <h2>Have finale <small>op papier, <br/> 19 november 2014</small></h2> 
   <img src="/static/img/semifinal.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
   <p>De halve finale is de eerste stap van de wedstrijd. Ze vindt tegelijkertijd plaats op <a href="{% url 'semifinal-places' %}">10 locaties</a> verspreid over het land.</p>
 
-   <p>Deze ronde is volledig <strong>op papier</strong>. Je kan je verwachten aan <strong> vragen over logica, algoritmiek en eenvoudige programmeerproblemen</strong>. Kijk als voorbeeld zeker eens naar de <a href="{% url 'sample-questions' %}">vragen van de voorgaande jaren</a>. Je mag op de vragen antwoorden in het Nederlands, Frans, Engels, in pseudo-code of in een van de toegelaten programmeertalen: C, C++, Pascal, Java, Python en PHP. De beste deelnemers, maximum 60, stoten door naar de finale.</p>
+   <p>Deze ronde is volledig <strong>op papier</strong>. Je kan je verwachten aan <strong> vragen over logica, algoritmiek en eenvoudige programmeerproblemen</strong>. Kijk als voorbeeld zeker eens naar de <a href="{% url 'sample-questions' %}">vragen van de voorgaande jaren</a>. Je mag op de vragen antwoorden in het Nederlands, Frans, Engels, in pseudo-code of in een van de toegelaten programmeertalen: C, C++, Pascal, Java, Python, PHP, (Visual) Basic of JavaScript. De beste deelnemers, 20 tot 30, stoten door naar de finale.</p>
 
-  <p><i class="icon-calendar"></i>&nbsp;<strong>Woensdag 27 november 2013, van 14h30 tot 17h30</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Woensdag 19 november 2014, van 14h30 tot 17h30</strong></p>
 
   {% if REGISTRATION_OPEN %}<p><a class="btn btn-success btn-large" href="{% url 'registration' %}">Schrijf je in vòòr {{REGISTRATION_DEADLINE|date:"DATE_FORMAT"}}!</a></p>{% endif %}
 </section>
@@ -36,32 +36,31 @@ $("#side-menu-contest").addClass("active");
 Een (optionele) tweedaagse cursus "introductie tot algoritmiek en programmeren" wordt normaalgezien tijdens de krokusvakantie aangeboden aan iedereen die de finale haalt. Meer informatie wordt later nog bezorgd aan iedereen die in aanmerking komt. </div>
 -->
  
+  <h3>Training voor finalisten</h3>
+  <p>De geselecteerden voor de finale krijgen een trainingsprogramma aangeboden, dat deels online en deels klassikaal verloopt. Het doel hiervan is om hen de basis van programmeren en geavanceerde concepten van algoritmiek aan te leren. Zij die het meest gemotiveerd zijn en het meest oefenen, kunnen op deze manier een niveau halen dat dicht bij dat van de internationale olympiade ligt.</p> 
+
+
 <div class="row">
 <section class="span9">
-  <h2>Finale <small>proef op papier en aan de computer <br/> 8 februari 2014, Leuven</small></h2> 
+  <h2>Finale <small>proef aan de computer <br/> (datum te bepalen, Brussel?)</small></h2> 
   <img src="/static/img/final.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
-  <p>De finale 2014 vindt plaats op zaterdag 8 februari in <strong>Leuven</strong>. Ze bestaat uit <strong>een deel op papier en een deel aan de computer</strong>. Het papieren gedeelte zal in de voormiddag doorgaan, en in de namiddag volgt dan het deel aan de computer. Onmiddellijk nadien zal de proclamatie plaatsvinden.</p>
+  <p>De finale 2015 vindt plaats op een zaterdag, eind april of begin mei. Ze bestaat volledig uit <strong>proeven aan de computer</strong>, gedurende een hele dag, en wordt onmiddellijk gevolgd door de proclamatie. De twee beste Nederlandstaligen en de twee beste Franstaligen worden uitgenodigd om deel uit te maken van de Belgische delegatie op de Internationale Olympiade.</p>  
 
-  <p>Het papieren gedeelte is van hetzelfde type als de halve finale, alleen korter en van een iets moeilijker niveau. Het deel aan de computer bestaat uit verschillende problemen die de deelnemers moeten oplossen door een algoritme te programmeren in een van de toegestane programmeertalen. Deze programma's moeten vaak zo optimaal mogelijk geprogrammeerd zijn om het probleem binnen de gegeven tijdslimiet en geheugenlimiet op te kunnen lossen.</p>
-
-  <p><i class="icon-calendar"></i>&nbsp;<strong>Zaterdag 8 februari 2014 (hele dag)</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Datum te bepalen (zaterdag, hele dag)</strong></p>
 </section>
 </div>
 
-<h3>Training en selectie voor de Internationale Olympiade</h3>
-<p>Een twaalftal laureaten van de nationale finale zal uitgenodigd worden om deel uit te maken van de trainingspool voor de Internationale Olympiade. De training bestaat uit verschillende dagen gezamenlijke lessen, maar vooral uit het deelnemen aan andere online wedstrijden op verschillende internationale websites. Na deze training wordt een laatste selectieproef georganiseerd voor de actiefste leden van de trainingspool. De twee beste Franstaligen en de twee beste Nederlandstaligen worden zo geselecteerd om de Belgische delegatie op de Internationale Olympiade te vormen.</p> 
-
 
 <div class="row">
 <section class="span9">
-  <h2>International Olympiad in Informatics <br/><small>13-20 juli 2014, Taipei (Taiwan)</small></h2> 
+  <h2>International Olympiad in Informatics <br/><small>26 juli - 2 augustus 2015, Almaty (Kazachstan)</small></h2> 
   <img src="/static/img/ioi.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
 
-  <p>De<strong> International Olympiad in Informatics</strong> (IOI) is een internationale programmeerwedstrijd voor leerlingen van het secundair onderwijs, en vindt elk jaar plaats in een ander land. In 2014 mag een Belgische ploeg naar <strong>Taiwan</strong> afreizen om deel te nemen aan de 26e editie. Ongeveer 300 deelnemers uit meer dan 80 landen zijn aanwezig voor een week van competitie maar ook van nieuwe ontmoetingen en vrienschappelijke uitwisseling.</p>
+  <p>De<strong> International Olympiad in Informatics</strong> (IOI) is een internationale programmeerwedstrijd voor leerlingen van het secundair onderwijs, en vindt elk jaar plaats in een ander land. In 2015 mag een Belgische ploeg naar <strong>Kazachstan</strong> afreizen om deel te nemen aan de 27e editie. Ongeveer 300 deelnemers uit meer dan 80 landen zijn aanwezig voor een week van competitie maar ook van nieuwe ontmoetingen en vrienschappelijke uitwisseling.</p>
 
-  <p>Informatica is een van de 8 wetenschapsdisciplines waarin internationaal erkende olympiades worden georganiseerd, naast wiskunde, biologie, chemie, fysica, aardrijkskunde, astronomie en taalkunde. België nam eenmalig deel in <a href="{% url 'archives-1992' %}#IOI">1992</a>, en nadien in <a href="{% url 'archives-2010' %}#IOI">2010</a>, <a href="{% url 'archives-2011' %}#IOI">2011</a>, <a href="{% url 'archives-2012' %}#IOI">2012</a> en <a href="{% url 'archives-2013' %}#IOI">2013</a>. Er werden vijf medailles, <strong>één zilveren en vier bronzen</strong>, naar huis gebracht van de laatste drie edities.</p>
+  <p>Informatica is een van de 8 wetenschapsdisciplines waarin internationaal erkende olympiades worden georganiseerd, naast wiskunde, biologie, chemie, fysica, aardrijkskunde, astronomie en taalkunde. België nam eenmalig deel in <a href="{% url 'archives-1992' %}#IOI">1992</a>, en nadien in <a href="{% url 'archives-2010' %}#IOI">2010</a>, <a href="{% url 'archives-2011' %}#IOI">2011</a>, <a href="{% url 'archives-2012' %}#IOI">2012</a>, <a href="{% url 'archives-2013' %}#IOI">2013</a> en <a href="{% url 'archives-2014' %}#IOI">2014</a>. Er werden vijf medailles, <strong>één zilveren en vier bronzen</strong>, naar huis gebracht van de laatste vier edities.</p>
 
-  <p><i class="icon-calendar"></i>&nbsp;<strong>13 tot 20 juli 2014</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>26 juli tot 2 augustus 2014</strong></p>
 </section>
 </div>
 
