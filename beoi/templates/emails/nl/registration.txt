@@ -1,7 +1,7 @@
 {{ NAME }},
 
 We bevestigen jouw inschrijving voor de halve finale van de Belgische Informatica-Olympiade. 
-Je hebt gekozen om op 27 november 2013 deel te nemen in het regionaal centrum "{{ CENTER_NAME }}" . 
+Je hebt gekozen om op 19 november 2014 deel te nemen in het regionaal centrum "{{ CENTER_NAME }}" . 
 Meer informatie over hoe daarheen te gaan vindt je op de volgende pagina: {{ CENTER_DETAILS }}.
 
 Je moet niets speciaals meebrengen, behalve iets om te schrijven. Probeer om 14u15 ter plaatse te zijn. De wedstrijd begint om 14u30.

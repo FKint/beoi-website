@@ -12,8 +12,8 @@ from datetime import datetime
 from django.utils.translation import ugettext_lazy as _
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-REGISTRATION_DEADLINE = datetime(2013,11,25,23,59,59)
-SEMIFINAL_START = datetime(2013,11,27,14,30,00)
+REGISTRATION_DEADLINE = datetime(2014,11,17,23,59,59)
+SEMIFINAL_START = datetime(2014,11,19,14,30,00)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -73,6 +73,17 @@ TEMPLATE_LOADERS = (
     'beoi.core.TranslatedTemplateLoader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader'
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    'beoi.core.contest_context'
 )
 
 ROOT_URLCONF = 'beoi.urls'

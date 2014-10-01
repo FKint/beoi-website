@@ -18,8 +18,8 @@ $("#side-menu-registration").addClass("active");
 
 {% if not REGISTRATION_OPEN %}
 <div class="alert alert-error">
- <p><strong>Important: Les inscriptions en ligne sont officiellement clôturées depuis le lundi 25 novembre 23h59. 
- 	Néanmoins, ce formulaire restera ouvert jusqu'à l'épreuve (mercredi 27 novembre) pour les retardataires.  
+ <p><strong>Important: Les inscriptions en ligne sont officiellement clôturées depuis le lundi 17 novembre 23h59. 
+ 	Néanmoins, ce formulaire restera ouvert jusqu'à l'épreuve (mercredi 19 novembre) pour les retardataires.  
  	Les centres régionaux accepteront (dans la limite des places et des énoncés disponibles) tous les 
   participants le jour de l'épreuve, que vous soyez inscrit via ce formulaire ou pas. 
   Si vous n'êtes pas sur leurs listes, ils vous demanderont  
@@ -105,14 +105,6 @@ $("#side-menu-registration").addClass("active");
       </div>
     </div>
 
-<!--     <div class="control-group {% if form.token.errors %}error{% endif %}">
-      <label class="control-label" for="{{ form.token.html_name }}">{{ form.token.label }}</label>
-      <div class="controls">
-        <input type="text" id="{{ form.token.html_name }}" name="{{ form.token.html_name }}" value="{{ form.token.value|default_if_none:"" }}" class="input-small" >
-        <span class="help-inline">{{ form.token.errors|join:" " }} {{ form.token.help_text}} (<a href="{% url 'referrals' %}">{% trans "More information on our sponsorship program" %}</a>.)</span> 
-      </div>
-    </div>
- -->
     <hr/>
 
     <div class="control-group {% if form.school_exists.error or form.school.errors %}error{% endif %}">
@@ -163,7 +155,10 @@ $("#side-menu-registration").addClass("active");
        <option value="{{ choice.0|add:0 }}" {% if form.year_study.value|add:0 == choice.0|add:0 %}selected="selected"{% endif %}>{{ choice.1 }}</option>
       {% endfor %}
       </select>
-      <span class="help-inline">{{ form.year_study.errors|join:" " }}</span>
+      <span class="help-inline">
+        {{ form.year_study.errors|join:" " }} 
+        <strong>Bonus jeune participant:</strong> 5e année: +5%, 4e année: +10%, &le;3e année: +15% sur le score de la demi-finale.
+      </span>
    </div>
   </div>
 

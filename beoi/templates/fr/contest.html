@@ -15,19 +15,19 @@ $("#side-menu-contest").addClass("active");
 
 {% block content %}
 <section style="padding-top:30px;">
-  <img src="/static/pictures/2011/finale1.jpg" class="pull-right img-polaroid" width="175"/><p class="lead">L'Olympiade d'Informatique est un concours mêlant logique, algorithmique et programmation ouvert aux <strong>élèves de secondaire</strong> (niveau unique). Le concours national consiste en une demi-finale répartie à travers le pays, et d'une finale. Après un entraînement intensif, les meilleurs candidats participeront à l'Olympiade Internationale d'Informatique.</p>
+  <img src="/static/pictures/2011/finale1.jpg" class="pull-right img-polaroid" width="175"/><p class="lead">L'Olympiade d'Informatique est un concours mêlant logique, algorithmique et programmation ouvert aux <strong>élèves de secondaire</strong> (niveau unique). Le concours national consiste en une demi-finale répartie à travers le pays, d'un entraînement avancés pour les finalistes et d'une finale au terme de laquelle seront connus les quatre candidats qui participeront à l'Olympiade Internationale d'Informatique.</p>
 </section>
 
 <div class="row">
 <section class="span9">
-  <h2>Demi-finale <small>Epreuve papier <br/> 27 novembre 2013</small></h2> 
+  <h2>Demi-finale <small>Epreuve papier <br/> 19 novembre 2014</small></h2> 
   <img src="/static/img/semifinal.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
   <p>La demi-finale est la première étape de la compétition. L'épreuve se déroule
     simultanément dans <a href="{% url 'semifinal-places' %}">10 institutions</a> à travers le pays.</p>
 
-   <p>L'épreuve se déroule uniquement <strong>sur papier</strong>. Le type de questions auxquelles vous devez vous attendre sont des <strong>questions de logique, d'algorithmique et de simple problème de programmation</strong> dont vous pourrez trouver de nombreux exemples parmi les <a href="{% url 'sample-questions' %}">questions des années précédentes</a>. Vous pouvez répondre aux questions en français, néerlandais, anglais, en pseudo-code ou dans un des langages de programmation autorisés : C, C++, Pascal, Java, Python et PHP. Les 60 meilleurs participants, au maximum, seront qualifiés pour la finale.</p>
+   <p>L'épreuve se déroule uniquement <strong>sur papier</strong>. Le type de questions auxquelles vous devez vous attendre sont des <strong>questions de logique, d'algorithmique et de simple problème de programmation</strong> dont vous pourrez trouver de nombreux exemples parmi les <a href="{% url 'sample-questions' %}">questions des années précédentes</a>. Vous pouvez répondre aux questions en français, néerlandais, anglais, en pseudo-code ou dans un des langages de programmation autorisés : C, C++, Pascal, Java, Python et PHP. Les 20 à 30 meilleurs participants seront qualifiés pour la finale.</p>
 
-  <p><i class="icon-calendar"></i>&nbsp;<strong>Mercredi 27 Novembre 2013, de 14h30 à 17h30</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Mercredi 19 Novembre 2014, de 14h30 à 17h30</strong></p>
 
   {% if REGISTRATION_OPEN %}<p><a class="btn btn-success btn-large" href="{% url 'registration' %}">Inscrivez-vous avant le {{REGISTRATION_DEADLINE|date:"DATE_FORMAT"}} !</a></p>{% endif %}
 </section>
@@ -37,32 +37,29 @@ $("#side-menu-contest").addClass("active");
 Un cours (optionnel) de deux jours d'introduction à l'algorithmique et à la progammation, à destination des finalistes, devrait être organisé lors des vacances de Carnaval. Plus d'information suivront pour les candidats concernés.</div>
  -->
 
+  <h3>Entraînement des finalistes</h3>
+  <p>Les finalistes se voient proposer un programme d'entraînement à la fois en ligne et en salle. L'objectif est de leur apprendre les bases de la programmation et de leur apprendre les concepts avancés d'algorithmique. L'objectif est d'atteindre un niveau proche de l'olympiade internationale pour les meilleurs.</p> 
+
 <div class="row">
 <section class="span9">
-  <h2>Finale <small>Epreuve sur ordinateur et papier <br/> 8 février 2014, Leuven</small></h2> 
+  <h2>Finale <small>Epreuve sur ordinateur<br/> Date à définir, Bruxelles</small></h2> 
   <img src="/static/img/final.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
-  <p>La finale 2013 se déroule le samedi 8 février à <strong>Leuven</strong>. Elle se compose <strong>d'une partie sur papier et d'une partie sur ordinateur</strong>. L'épreuve commencera du matin par la partie papier, se continuera l'après-midi par la partie sur ordinateur et sera suivie directement de la proclamation.</p>
+  <p>La finale 2015 se déroule un samedi fin avril ou début mai à <strong>Bruxelles.</strong>. Elle se compose exclusivement <strong>d'une partie sur ordinateur</strong> durant une journée entière et sera suivie directement de la proclamation.  Les deux meilleurs francophones et les deux meilleurs néérlandophones sont alors sélectionnés pour faire partie de la délégation belge à l'Olympiade Internationale.</p>
 
-  <p>La partie papier est du même type que la demi-finale, bien que plus courte et de niveau légèrement plus élevé. La partie sur ordinateur consiste en plusieurs gros problèmes que les participants doivent résoudre en programmant un algorithme dans l'un des languages autorisés. Ces programmes doivent bien souvent être optimisés afin de résoudre le problème sous des contraintes de temps d'exécution ou de mémoire données.</p>
-
-  <p><i class="icon-calendar"></i>&nbsp;<strong>Samedi 8 février 2014 (journée entière)</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>Date à définir (samedi) (journée entière)</strong></p>
 </section>
 </div>
 
-<h3>Entraînement et sélection pour l'Olympiade Internationale</h3>
-<p>Parmi les lauréats de la finale nationale, une dizaine de participants se voient proposer de participer au pool d'entraînement pour l'Olympiade Internationale. Celui-ci consiste en plusieurs jours de formations communes et un important entraînement sur des sites internationaux d'entraînement en ligne. Suite à cette formation, une dernière épreuve de sélection parmi les participants les plus actifs est organisée. Les deux meilleurs francophones et les deux meilleurs néérlandophones sont alors sélectionnés pour faire partie de la délégation belge à l'Olympiade Internationale.</p> 
-
-
 <div class="row">
 <section class="span9">
-  <h2>Olympiade Internationale d'Informatique <br/><small>13-20 juillet 2014, Taipei (Taiwan)</small></h2> 
-  <img src="/static/img/ioi.png" class="span4 pull-left" style="padding-right:20px;padding-bottom:20px;"/>
+  <h2>Olympiade Internationale d'Informatique <br/><small>26 juillet - 2 août 2015, Almaty (Kazakhstan)</small></h2> 
+  <img src="/static/img/ioi.png" class="span4 pull-right" style="padding-left:20px;padding-bottom:20px;"/>
 
-  <p>L'<strong>Olympiade Internationale d'Informatique</strong> (IOI) est une compétition internationale de programmation pour élèves du secondaire qui a lieu chaque année dans un pays différent. En 2014, les membres de la délégation belge se rendront à <strong>Taiwan</strong> pour participer à cette 26ième édition. Environ 300 participants provenant de plus de 80 pays y sont représentés pour une semaine de compétition mais également de rencontre et d'échange.</p>
+  <p>L'<strong>Olympiade Internationale d'Informatique</strong> (IOI) est une compétition internationale de programmation pour élèves du secondaire qui a lieu chaque année dans un pays différent. En 2015, les membres de la délégation belge se rendront au <strong>Kazakhstan</strong> pour participer à cette 27ième édition. Environ 300 participants provenant de plus de 80 pays y sont représentés pour une semaine de compétition mais également de rencontre et d'échange.</p>
 
-  <p>L'Informatique est l'une des huit disciplines scientifiques internationales reconnues avec les mathématiques, la biologie, la chimie, la physique, la géographie, l'astronomie et la linguistique. La Belgique a participé à l'Olympiade Internationale en <a href="{% url 'archives-1992' %}#IOI">1992</a>, <a href="{% url 'archives-2010' %}#IOI">2010</a>, <a href="{% url 'archives-2011' %}#IOI">2011</a>, <a href="{% url 'archives-2012' %}#IOI">2012</a> et <a href="{% url 'archives-2013' %}#IOI">2013</a>. Cinq médailles, <strong>une d'argent et quatre de bronze</strong>, ont été remportées lors des trois dernières éditions.</p>
+  <p>L'Informatique est l'une des huit disciplines scientifiques internationales reconnues avec les mathématiques, la biologie, la chimie, la physique, la géographie, l'astronomie et la linguistique. La Belgique a participé à l'Olympiade Internationale en <a href="{% url 'archives-1992' %}#IOI">1992</a>, <a href="{% url 'archives-2010' %}#IOI">2010</a>, <a href="{% url 'archives-2011' %}#IOI">2011</a>, <a href="{% url 'archives-2012' %}#IOI">2012</a>, <a href="{% url 'archives-2013' %}#IOI">2013</a> et <a href="{% url 'archives-2013' %}#IOI">2014</a>. Cinq médailles, <strong>une d'argent et quatre de bronze</strong>, ont été remportées lors des quatre dernières éditions.</p>
 
-  <p><i class="icon-calendar"></i>&nbsp;<strong>13 au 20 juillet 2014</strong></p>
+  <p><i class="icon-calendar"></i>&nbsp;<strong>26 juillet au 2 août 2015</strong></p>
 </section>
 </div>
 

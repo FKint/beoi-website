@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block leftmenu %}{% include "menu_contest.html" %}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+$("#menu-contest").addClass("active");
+$("#side-menu-registration").addClass("active");
+</script>
+{% endblock js %}
+
+{% block title %}Inschrijven{% endblock %}
+{% block subtitle %}Gratis, gemakkelijk, snel, en toch zoveel te winnen.{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-error">
+<p>Interne fout: je inschrijving kon niet verwerkt worden. Waarschijnlijk was je al ingeschreven! </p>
+</div>
+
+{% endblock %}

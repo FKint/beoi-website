@@ -71,7 +71,7 @@ def registration(request, template):
 				transaction.savepoint_rollback(sid)
 				test = Contestant.objects.count()
 				
-				return HttpResponseRedirect(reverse("registration-error", args=[request.LANGUAGE_CODE])) 
+				return HttpResponseRedirect(reverse("registration-error")) 
 				
 			# if not cd["token"]: cd["token"] = ""
 			# contestant.token = full_token(cd["token"], contestant.registering_time)
@@ -90,11 +90,10 @@ def registration(request, template):
 						# "URLSTAT": add_domain(current_site.domain,"%s?token=%s" % (reverse("referrals", args=[request.LANGUAGE_CODE]),stat_token(cd["token"], contestant.registering_time)))
 					 })
 			mail_template = get_template("emails/"+request.LANGUAGE_CODE+"/registration.txt")
-			context["CENTER_DETAILS"] = add_domain(current_site.domain,reverse("semifinal-places",args=[request.LANGUAGE_CODE]))  
+			context["CENTER_DETAILS"] = add_domain(current_site.domain,reverse("semifinal-places"))  
 			send_mail(_("Registering to Belgian Olympiads in Informatics"), mail_template.render(context), "info@be-oi.be", [cd["email"]], fail_silently=True)
-		
 			# redirect to confirmation page
-			return HttpResponseRedirect(reverse("registration-confirm", args=[request.LANGUAGE_CODE, cd["semifinal_center"].id])) 
+			return HttpResponseRedirect(reverse("registration-confirm", args=[cd["semifinal_center"].id])) 
 			
  	else:
 		if request.LANGUAGE_CODE == "fr": 
